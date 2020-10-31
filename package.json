@@ -1,0 +1,19 @@
+{
+  "name": "ddock",
+  "version": "1.0.0",
+  "description": "DDOCK Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mramadanit/gulpfile.git"
+  },
+  "author": "Aya Adel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mramadanit/gulpfile/issues"
+  },
+  "homepage": "https://github.com/mramadanit/gulpfile#readme"
+}
