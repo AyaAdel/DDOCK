@@ -1,0 +1,24 @@
+@import '_variables';
+@import '_about';
+
+// frameWork
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.img-wrapper {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
