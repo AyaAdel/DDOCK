@@ -1,0 +1,19 @@
+// Variables
+$primary-color: #B1C110;
+$white: #fff;
+$nav-shadow: #00000033;
+$light-gray: #E5E5E5;
+$dark-gray: #9C9C9C;
+
+// Mixin
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

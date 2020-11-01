@@ -1,4 +1,67 @@
 .about {
-  .navbar {
+  header {
+    padding: 15px 20px;
+
+    .navbar {
+      padding: 0 20px;
+      background-color: $white;
+      border-radius: 6px;
+      box-shadow: 0px 3px 30px $nav-shadow;
+      @include flexBetween;
+    }
+
+    #menubar {
+      width: 35px;
+    }
+
+    #close {
+      width: 24px;
+    }
+
+    .menubar-icon {
+      margin-right: 30px;
+    }
+
+    .crumb {
+      color: $light-gray;
+      font-size: 14px;
+
+      .fa {
+        margin: 0 10px;
+      }
+    }
+
+    .nav-section {
+      display: flex;
+    }
+
+    .lang-switch {
+      border-radius: 20px;
+      font-size: 11px;
+      box-shadow: 0px 3px 10px #4937371a;
+      line-height: 19px;
+      @include flexCenter;
+
+      ul {
+        display: flex;
+      }
+
+      a {
+        color: $dark-gray;
+      }
+
+      li {
+        width: 20px;
+        border-radius: 20px;
+      }
+
+      li.active {
+        background-color: $primary-color;
+
+        a {
+          color: $white;
+        }
+      }
+    }
   }
 }
