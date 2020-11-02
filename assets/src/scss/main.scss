@@ -1,10 +1,49 @@
 @import '_variables';
 @import '_about';
 
+// Fonts
+@font-face {
+  font-family: ParRegular;
+  src: url(../fonts/ParachuteRegular.otf);
+}
+
+@font-face {
+  font-family: ParMedium;
+  src: url(../fonts/ParachuteMedium.otf);
+}
+
+@font-face {
+  font-family: ParBold;
+  src: url(../fonts/ParachuteBold.otf);
+}
+
 // frameWork
 * {
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: ParRegular;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: ParBold;
+}
+
+p {
+  color: $dark-gray;
 }
 
 ul {

@@ -1,8 +1,21 @@
 .about {
   header {
+    position: relative;
+    height: 500px;
     padding: 15px 20px;
+    background-size: cover;
+    @include flexCenter;
+
+    .overlay {
+      @include overlay;
+    }
 
     .navbar {
+      position: fixed;
+      top: 18px;
+      z-index: 5;
+      width: 97%;
+      height: 60px;
       padding: 0 20px;
       background-color: $white;
       border-radius: 6px;
@@ -12,37 +25,88 @@
 
     #menubar {
       width: 35px;
+      cursor: pointer;
     }
 
     #close {
-      width: 24px;
+      width: 35px;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+      }
     }
 
     .menubar-icon {
       margin-right: 30px;
     }
 
+    .toggle-menu {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 300px;
+      padding: 20px 30px;
+      background-color: $white;
+      border-radius: 6px;
+
+      a {
+        width: 100%;
+        color: $black;
+        @include flexBetween;
+      }
+
+      .fa-angle-down {
+        color: $primary-color;
+        font-size: 20px;
+      }
+    }
+
+    .menu-item {
+      padding: 10px 0;
+    }
+
+    .submenu-item {
+      padding: 5px 0;
+
+      a {
+        color: $dark-gray;
+      }
+    }
+
     .crumb {
       color: $light-gray;
       font-size: 14px;
+      font-family: ParRegular;
 
       .fa {
         margin: 0 10px;
       }
     }
 
+    .navbar-brand {
+      color: $black;
+      font-size: 21px;
+      font-family: ParMedium;
+    }
+
     .nav-section {
       display: flex;
+      align-items: center;
     }
 
     .lang-switch {
+      margin-right: 70px;
       border-radius: 20px;
       font-size: 11px;
+      font-family: ParRegular;
       box-shadow: 0px 3px 10px #4937371a;
       line-height: 19px;
+      cursor: pointer;
       @include flexCenter;
 
       ul {
+        height: 25px;
         display: flex;
       }
 
@@ -51,8 +115,12 @@
       }
 
       li {
-        width: 20px;
+        width: 25px;
+        height: 25px;
         border-radius: 20px;
+        line-height: 25px;
+        text-align: center;
+        transition: all 0.5s ease-in-out;
       }
 
       li.active {
@@ -61,6 +129,220 @@
         a {
           color: $white;
         }
+      }
+    }
+
+    .headsearch,
+    .menu-form {
+      position: relative;
+      border: 0;
+
+      input {
+        padding-right: 20px;
+        padding-left: 5px;
+        color: $light-gray;
+        border: 0;
+        font-size: 13px;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        background-color: transparent;
+        color: $light-gray;
+        border: 0;
+      }
+    }
+
+    .menu-form {
+      padding: 5px 0;
+      border: 1px solid $dark-gray;
+      border-radius: 6px;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 2;
+      color: $white;
+      font-size: 58px;
+      font-family: ParBold;
+      text-transform: uppercase;
+    }
+  }
+
+  .specialized-service {
+    width: 45%;
+    margin: 0 auto;
+    padding: 60px 0;
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 35px;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        color: $primary-color;
+      }
+    }
+
+    .service-description,
+    .industry-description {
+      font-size: 14px;
+    }
+
+    h3 {
+      margin: 60px 0;
+      font-size: 28px;
+      text-align: center;
+
+      span {
+        position: relative;
+
+        &::after {
+          content: '';
+          border-bottom: 6px solid #b1c110;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: 3px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .industry-description {
+      margin-bottom: 30px;
+    }
+  }
+
+  .parallex {
+    position: relative;
+    height: 400px;
+    padding-left: 20%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    .overlay {
+      @include overlay;
+    }
+
+    h2 {
+      position: relative;
+      z-index: 2;
+      color: $red;
+      font-size: 70px;
+    }
+  }
+
+  .work {
+    width: 45%;
+    margin: 0 auto;
+    padding: 60px 0;
+
+    h3 {
+      font-size: 44px;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        color: $primary-color;
+      }
+    }
+
+    p {
+      margin: 30px 0;
+    }
+  }
+
+  .between-personal {
+    @include flexCenter;
+  }
+
+  .btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-family: ParBold;
+    @include flexCenter;
+  }
+
+  .between {
+    margin-right: 10px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .personal {
+    background-color: $transparent;
+    border: 1px solid $dark-gray;
+
+    a {
+      color: $dark-gray;
+    }
+  }
+
+  .hear {
+    background-color: $hear-background;
+    color: $white;
+
+    .wrapper {
+      width: 45%;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    h3 {
+      font-size: 42px;
+      text-transform: uppercase;
+      text-align: center;
+
+      span {
+        color: $primary-color;
+      }
+    }
+
+    p {
+      margin: 30px 0;
+      color: $white;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .info {
+      ul {
+        @include flexColumnCenter;
+      }
+
+      li {
+        width: 220px;
+        height: 50px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        border: 1px solid $primary-color;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .img-wrapper {
+        width: 15px;
+        margin-right: 10px;
+      }
+
+      span {
+        color: $primary-color;
+        font-size: 13px;
       }
     }
   }

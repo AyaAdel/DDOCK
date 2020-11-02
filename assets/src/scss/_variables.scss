@@ -1,9 +1,14 @@
 // Variables
-$primary-color: #B1C110;
+$primary-color: #b1c110;
 $white: #fff;
+$black: #0b0b0b;
 $nav-shadow: #00000033;
-$light-gray: #E5E5E5;
-$dark-gray: #9C9C9C;
+$light-gray: #e5e5e5;
+$dark-gray: #9c9c9c;
+$banner-overlay: rgba(0, 0, 0, 0.5);
+$transparent: transparnet;
+$red: #ff0000;
+$hear-background: #333333;
 
 // Mixin
 @mixin flexBetween {
@@ -14,6 +19,22 @@ $dark-gray: #9C9C9C;
 
 @mixin flexCenter {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $banner-overlay;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
