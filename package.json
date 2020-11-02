@@ -1,5 +1,5 @@
 {
-  "name": "ddock",
+  "name": "designerdock",
   "version": "1.0.0",
   "description": "DDOCK Website",
   "main": "gulpfile.js",
@@ -7,15 +7,8 @@
   "scripts": {
     "deploy": "gh-pages -d assets/dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mramadanit/gulpfile.git"
-  },
   "author": "Aya Adel",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mramadanit/gulpfile/issues"
-  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -28,7 +21,6 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
-    "clean-cache": "^1.0.2",
     "gh-pages": "^3.1.0",
     "gulp-file-include": "^2.2.2"
   }
