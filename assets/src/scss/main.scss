@@ -58,13 +58,16 @@ img {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .show {
-  display: block;
+  display: block !important;
 }
 
 a:hover {
   text-decoration: none;
 }
+
+// Media Query
+@import '_responsive'; 

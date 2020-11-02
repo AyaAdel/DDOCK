@@ -1,0 +1,238 @@
+@media (max-width: 1199px) {
+  .about {
+    .specialized-service,
+    .work,
+    .hear .wrapper {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about {
+    header {
+      .navbar {
+        top: 15px;
+      }
+
+      .crumb,
+      .lang-switch {
+        display: none;
+      }
+
+      .headsearch {
+        form {
+          height: 60px;
+          @include flexCenter;
+        }
+
+        .form-search {
+          display: none;
+        }
+
+        .mob-search {
+          color: $light-gray;
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .specialized-service,
+    .work,
+    .hear .wrapper {
+      width: 70%;
+    }
+
+    .parallex {
+      padding-left: 0;
+      @include flexCenter;
+    }
+
+    footer {
+      padding: 30px 60px;
+      flex-wrap: wrap;
+
+      .logo, .links, .social-media {
+        width: 33%;
+        margin-bottom: 30px;
+      }
+
+      .subscribe, address {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    .specialized-service,
+    .work,
+    .hear .wrapper {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .about {
+    header {
+      padding: 10px;
+
+      .navbar {
+        height: 50px;
+        padding: 0 5px;
+        top: 10px;
+      }
+
+      .headsearch form {
+        height: 50px;
+      }
+
+      #menubar, #close {
+        width: 25px;
+        margin: 0;
+      }
+
+      .toggle-menu {
+        top: 55px;
+        width: 100%;
+        padding: 10px 15px;
+
+        a {
+          font-size: 14px;
+        }
+      }
+
+      .menu-item {
+        padding: 7px 0;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+
+    .navbar-brand {
+      font-size: 14px;
+    }
+
+    .specialized-service {
+      h2 {
+        margin-bottom: 20px;
+        font-size: 17px;
+      }
+
+      .industry-description, .service-description {
+        font-size: 11px;
+      }
+
+      .industry-description {
+        margin-bottom: 20px;
+      }
+    
+      h3 {
+        margin: 30px 0;
+        font-size: 17px;
+
+        span::after {
+          border-bottom: 3px solid $primary-color;
+          bottom: 2px;
+        }
+      }
+    }
+
+    .specialized-service,
+    .work,
+    .hear .wrapper {
+      padding: 30px 0;
+    }
+
+    .between-personal {
+      display: block;
+
+      .btn {
+        width: 100%;
+      }
+
+      .between {
+        margin-bottom: 10px;
+      }
+    }
+
+    .parallex h2 {
+      font-size: 35px;
+    }
+    
+    .work {
+      h3 {
+        font-size: 17px;
+      }
+
+      p {
+        margin: 20px 0;
+        font-size: 11px;
+      }
+    }
+
+    .hear {
+      h3 {
+        font-size: 17px;
+      }
+
+      p {
+        margin: 20px 0;
+        font-size: 12px;
+      }
+
+      .info {
+        li {
+          width: 100%;
+        }
+      }
+    }
+
+    footer {
+      padding: 20px;
+
+      .logo, .links, .social-media, .subscribe, .address {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .address {
+        margin-bottom: 0;
+      }
+
+      .logo, .links ul, .social-media ul {
+        height: 100%;
+      }
+
+      .navbar-brand {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      .links li {
+        margin-bottom: 5px;
+      }
+
+      .social-media {
+        span {
+          display: none;
+        }
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        .fa {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

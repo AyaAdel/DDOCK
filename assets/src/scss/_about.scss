@@ -41,10 +41,21 @@
       margin-right: 30px;
     }
 
+    .background-behind {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0.7) ;
+    }
+
     .toggle-menu {
       position: absolute;
       top: 65px;
       left: 0;
+      z-index: 4;
       width: 300px;
       padding: 20px 30px;
       background-color: $white;
@@ -82,12 +93,6 @@
       .fa {
         margin: 0 10px;
       }
-    }
-
-    .navbar-brand {
-      color: $black;
-      font-size: 21px;
-      font-family: ParMedium;
     }
 
     .nav-section {
@@ -138,8 +143,7 @@
       border: 0;
 
       input {
-        padding-right: 20px;
-        padding-left: 5px;
+        padding: 5px 20px 5px 5px;
         color: $light-gray;
         border: 0;
         font-size: 13px;
@@ -152,12 +156,26 @@
         color: $light-gray;
         border: 0;
       }
+
+      .mob-search {
+        display: none
+      }
     }
 
     .menu-form {
-      padding: 5px 0;
-      border: 1px solid $dark-gray;
-      border-radius: 6px;
+      align-items: center;
+
+      input {
+        width: 100%;
+        padding: 10px 20px 10px 5px;
+        color: $black;
+        border: 1px solid $dark-gray;
+        border-radius: 6px;
+      }
+
+      button {
+        padding: 10px 5px;
+      }
     }
 
     h1 {
@@ -321,7 +339,7 @@
       }
 
       li {
-        width: 220px;
+        width: 200px;
         height: 50px;
         margin-bottom: 10px;
         padding-left: 10px;
@@ -338,12 +356,96 @@
       .img-wrapper {
         width: 15px;
         margin-right: 10px;
+
+        &.form {
+          height: 30px;
+        }
       }
 
       span {
         color: $primary-color;
         font-size: 13px;
       }
+    }
+  }
+
+  .navbar-brand {
+    color: $black;
+    font-size: 21px;
+    font-family: ParMedium;
+  }
+
+  footer {
+    min-height: 220px;
+    padding: 30px;
+    background-color: $footer;
+    @include flexBetween;
+
+    a,
+    p,
+    .navbar-brand {
+      color: $white;
+    }
+
+    .logo {
+      height: 160px;
+      @include flexColumnBetween;
+
+      p {
+        font-size: 9px;
+      }
+    }
+
+    .links,
+    .social-media {
+      ul {
+        height: 160px;
+        @include flexColumnBetween;
+      }
+
+      a {
+        font-size: 12px;
+      }
+    }
+
+    .social-media {
+      .fa {
+        margin-right: 10px;
+      }
+    }
+
+    .subscribe {
+      p {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+
+      input {
+        width: 180px;
+        background-color: $transparent;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      button {
+        width: 40px;
+        margin-left: -5px;
+        color: $primary-color;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        font-family: ParMedium;
+      }
+
+      input,
+      button {
+        padding: 8px;
+        border: 1px solid $dark-gray;
+        font-size: 9px;
+      }
+    }
+
+    .address {
+      font-size: 12px;
     }
   }
 }

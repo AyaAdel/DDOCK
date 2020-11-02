@@ -6,9 +6,10 @@ $nav-shadow: #00000033;
 $light-gray: #e5e5e5;
 $dark-gray: #9c9c9c;
 $banner-overlay: rgba(0, 0, 0, 0.5);
-$transparent: transparnet;
+$transparent: transparent;
 $red: #ff0000;
 $hear-background: #333333;
+$footer: #000000;
 
 // Mixin
 @mixin flexBetween {
@@ -37,4 +38,10 @@ $hear-background: #333333;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@mixin flexColumnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
