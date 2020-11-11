@@ -3,6 +3,7 @@
     position: relative;
     height: 467px;
     background-size: cover;
+    background-position: center;
     @include flexCenter;
 
     .overlay {
@@ -157,6 +158,7 @@
 
       button {
         position: absolute;
+        top: 0;
         right: 0;
         background-color: transparent;
         color: $light-gray;
@@ -256,10 +258,10 @@
   .parallex {
     position: relative;
     height: 350px;
-    padding-left: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
+    background-attachment: fixed;
 
     .overlay {
       @include overlay;
