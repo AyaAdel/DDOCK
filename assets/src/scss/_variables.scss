@@ -45,3 +45,43 @@ $footer: #000000;
   flex-direction: column;
   justify-content: space-between;
 }
+
+@mixin width($size) {
+  width: calc(#{$size} * (70 / 100));
+}
+
+@mixin height($size) {
+  height: calc(#{$size} * (70 / 100));
+}
+
+@mixin margin($position, $size) {
+  margin-#{$position}: calc(#{$size} * (70 / 100));
+}
+
+@mixin padding($position, $size) {
+  padding-#{$position}: calc(#{$size} * (70 / 100));
+}
+
+@mixin fontSize($size) {
+  font-size: calc(#{$size} * (70 / 100));
+}
+
+@mixin top($size) {
+  top: calc(#{$size} * (70 / 100));
+}
+
+@mixin bottom($size) {
+  bottom: calc(#{$size} * (70 / 100));
+}
+
+@mixin left($size) {
+  left: calc(#{$size} * (70 / 100));
+}
+
+@mixin right($size) {
+  right: calc(#{$size} * (70 / 100));
+}
+
+@mixin lineHeight($size) {
+  line-height: calc(#{$size} * (70 / 100));
+}

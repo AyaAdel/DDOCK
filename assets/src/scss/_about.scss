@@ -1,8 +1,7 @@
 .about {
   header {
     position: relative;
-    height: 500px;
-    padding: 15px 20px;
+    height: 467px;
     background-size: cover;
     @include flexCenter;
 
@@ -12,19 +11,20 @@
 
     .navbar {
       position: fixed;
-      top: 18px;
       z-index: 5;
-      width: 97%;
-      height: 60px;
-      padding: 0 20px;
       background-color: $white;
       border-radius: 6px;
       box-shadow: 0px 3px 30px $nav-shadow;
       @include flexBetween;
+      @include top(31px);
+      @include width(1850px);
+      @include height(100px);
+      @include padding(left, 40px);
+      @include padding(right, 32px);
     }
 
     #menubar {
-      width: 35px;
+      width: 31px;
       cursor: pointer;
     }
 
@@ -38,7 +38,7 @@
     }
 
     .menubar-icon {
-      margin-right: 30px;
+      @include margin(right, 61px);
     }
 
     .background-behind {
@@ -48,7 +48,7 @@
       bottom: 0;
       right: 0;
       z-index: 3;
-      background-color: rgba(0, 0, 0, 0.7) ;
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     .toggle-menu {
@@ -87,11 +87,12 @@
 
     .crumb {
       color: $light-gray;
-      font-size: 14px;
       font-family: ParRegular;
+      @include fontSize(20px);
 
       .fa {
-        margin: 0 10px;
+        @include margin(left, 20px);
+        @include margin(right, 20px);
       }
     }
 
@@ -101,7 +102,6 @@
     }
 
     .lang-switch {
-      margin-right: 70px;
       border-radius: 20px;
       font-size: 11px;
       font-family: ParRegular;
@@ -109,6 +109,7 @@
       line-height: 19px;
       cursor: pointer;
       @include flexCenter;
+      @include margin(right, 106px);
 
       ul {
         height: 25px;
@@ -120,12 +121,16 @@
       }
 
       li {
-        width: 25px;
-        height: 25px;
         border-radius: 20px;
-        line-height: 25px;
         text-align: center;
         transition: all 0.5s ease-in-out;
+        @include width(40px);
+        @include height(38px);
+        @include lineHeight(40px);
+
+        a {
+          @include fontSize(15px);
+        }
       }
 
       li.active {
@@ -147,6 +152,7 @@
         color: $light-gray;
         border: 0;
         font-size: 13px;
+        @include width(185px);
       }
 
       button {
@@ -158,7 +164,16 @@
       }
 
       .mob-search {
-        display: none
+        display: none;
+      }
+
+      .fa-search {
+        @include fontSize(20px);
+      }
+
+      ::placeholder {
+        color: #dddddd;
+        @include fontSize(19px);
       }
     }
 
@@ -181,6 +196,7 @@
     h1 {
       position: relative;
       z-index: 2;
+      margin-top: 88px;
       color: $white;
       font-size: 58px;
       font-family: ParBold;
@@ -189,9 +205,11 @@
   }
 
   .specialized-service {
-    width: 45%;
+    width: 46%;
     margin: 0 auto;
-    padding: 60px 0;
+    padding-top: 100px;
+    padding-bottom: 87px;
+    line-height: 1.8;
 
     h2 {
       margin-bottom: 30px;
@@ -206,13 +224,14 @@
 
     .service-description,
     .industry-description {
-      font-size: 14px;
+      @include fontSize(20px);
     }
 
     h3 {
-      margin: 60px 0;
-      font-size: 28px;
       text-align: center;
+      @include fontSize(44px);
+      @include margin(top, 122px);
+      @include margin(bottom, 138px);
 
       span {
         position: relative;
@@ -230,13 +249,13 @@
     }
 
     .industry-description {
-      margin-bottom: 30px;
+      @include margin(bottom, 54px);
     }
   }
 
   .parallex {
     position: relative;
-    height: 400px;
+    height: 350px;
     padding-left: 20%;
     background-size: cover;
     display: flex;
@@ -255,12 +274,12 @@
   }
 
   .work {
-    width: 45%;
+    width: 46%;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 90px 0 87px;
 
     h3 {
-      font-size: 44px;
+      font-size: 35px;
       text-align: center;
       text-transform: uppercase;
 
@@ -270,7 +289,9 @@
     }
 
     p {
-      margin: 30px 0;
+      margin: 25px 0 47px;
+      @include fontSize(20px);
+      line-height: 1.8;
     }
   }
 
@@ -279,12 +300,12 @@
   }
 
   .btn {
-    width: 150px;
-    height: 40px;
     border-radius: 10px;
-    font-size: 11px;
     font-family: ParBold;
     @include flexCenter;
+    @include width(235px);
+    @include height(60px);
+    @include fontSize(16px);
   }
 
   .between {
@@ -311,15 +332,17 @@
     color: $white;
 
     .wrapper {
-      width: 45%;
+      width: 46%;
       margin: 0 auto;
-      padding: 60px 0;
+      padding: 85px 0 62px;
     }
 
     h3 {
-      font-size: 42px;
+      padding-right: 8px;
       text-transform: uppercase;
       text-align: center;
+      line-height: 52px;
+      @include fontSize(60px);
 
       span {
         color: $primary-color;
@@ -327,10 +350,10 @@
     }
 
     p {
-      margin: 30px 0;
+      margin: 15px 0 52px;
       color: $white;
-      font-size: 16px;
       text-align: center;
+      @include fontSize(25px);
     }
 
     .info {
@@ -339,10 +362,10 @@
       }
 
       li {
-        width: 200px;
+        width: 235px;
         height: 50px;
         margin-bottom: 10px;
-        padding-left: 10px;
+        padding-left: 14px;
         border: 1px solid $primary-color;
         border-radius: 6px;
         display: flex;
@@ -364,71 +387,89 @@
 
       span {
         color: $primary-color;
-        font-size: 13px;
+        font-family: ParBold;
+        @include fontSize(21px);
       }
     }
   }
 
   .navbar-brand {
+    margin: 0;
+    padding: 0;
+    margin-left: 60px;
+    margin-top: 3px;
     color: $black;
-    font-size: 21px;
     font-family: ParMedium;
+    @include fontSize(30px);
   }
 
   footer {
-    min-height: 220px;
-    padding: 30px;
+    min-height: 177px;
+    padding: 27px 47px 15px;
     background-color: $footer;
-    @include flexBetween;
+    display: flex;
 
-    a,
-    p,
+    a {
+      color: $white;
+    }
+
     .navbar-brand {
+      margin: 0;
+      margin-bottom: 91px;
       color: $white;
     }
 
     .logo {
-      height: 160px;
-      @include flexColumnBetween;
+      margin-right: 64px;
 
       p {
-        font-size: 9px;
+        @include fontSize(12px);
       }
     }
 
     .links,
     .social-media {
+      margin-right: 142px;
+      line-height: 26px;
+
       ul {
-        height: 160px;
+        // height: 160px;
         @include flexColumnBetween;
       }
 
       a {
-        font-size: 12px;
+        @include fontSize(18px);
       }
     }
 
     .social-media {
+      margin-right: 208px;
+
       .fa {
         margin-right: 10px;
       }
     }
 
     .subscribe {
+      margin-top: 3px;
+      margin-right: 137px;
+
       p {
         margin-bottom: 10px;
-        font-size: 12px;
+        @include fontSize(18px);
       }
 
       input {
         width: 180px;
+        height: 35px;
         background-color: $transparent;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
       }
 
       button {
-        width: 40px;
+        width: 50px;
+        height: 35px;
         margin-left: -5px;
         color: $primary-color;
         border-top-right-radius: 4px;
@@ -445,7 +486,9 @@
     }
 
     .address {
-      font-size: 12px;
+      margin-top: 5px;
+      line-height: 17px;
+      @include fontSize(18px);
     }
   }
 }
