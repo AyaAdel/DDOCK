@@ -432,7 +432,7 @@
       color: $white;
     }
 
-    .logo {
+    .logo, .copyright {
       p {
         @include fontSize(12px);
       }
@@ -493,6 +493,10 @@
       margin-top: 5px;
       line-height: 17px;
       @include fontSize(18px);
+    }
+
+    .copyright {
+      display: none
     }
   }
 }
