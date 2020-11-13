@@ -127,7 +127,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .about {
     .specialized-service,
     .work,
@@ -359,9 +359,12 @@
 
       .address {
         margin-bottom: 0;
-        color: $white;
         font-size: 18px;
         line-height: 25px;
+
+        p {
+          color: $white;
+        }
       }
 
       .logo,
