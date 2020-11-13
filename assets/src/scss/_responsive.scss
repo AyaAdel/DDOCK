@@ -1,6 +1,5 @@
 @media (max-width: 1199px) {
   .about {
-    .specialized-service,
     .work,
     .hear .wrapper {
       width: 60%;
@@ -8,11 +7,21 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .about {
     header {
+      height: 340px;
+
+      h1 {
+        margin-top: 70px;
+      }
+
       .navbar {
         top: 15px;
+      }
+
+      .mob-search .fa {
+        @include fontSize(27px);
       }
 
       .crumb,
@@ -38,10 +47,27 @@
       }
     }
 
-    .specialized-service,
-    .work,
-    .hear .wrapper {
-      width: 70%;
+    .specialized-service {
+      width: 80%;
+      padding: 45px 0 62px;
+
+      p {
+        width: 83%;
+        margin: 0 auto;
+      }
+
+      h3 {
+        margin: 57px 0 63px;
+      }
+
+      .industry-description {
+        margin-bottom: 35px;
+      }
+    }
+
+    .btn {
+      @include height(72px);
+      @include fontSize(20px);
     }
 
     .parallex {
@@ -49,16 +75,47 @@
       @include flexCenter;
     }
 
-    footer {
-      padding: 30px 60px;
-      flex-wrap: wrap;
+    .work {
+      padding: 70px 0 60px;
+    }
 
-      .logo, .links, .social-media {
-        width: 33%;
-        margin-bottom: 30px;
+    .hear {
+      .wrapper {
+        padding: 87px 0 90px;
       }
 
-      .subscribe, address {
+      h3 {
+        @include fontSize(50px);
+      }
+
+      p {
+        margin: -2px 0 60px;
+      }
+    }
+
+    footer {
+      padding: 45px 60px;
+      flex-wrap: wrap;
+
+      .links {
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-media {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .logo,
+      .links,
+      .social-media {
+        width: 33%;
+        margin-bottom: 55px;
+      }
+
+      .subscribe,
+      address {
         width: 50%;
       }
     }
@@ -90,7 +147,8 @@
         height: 50px;
       }
 
-      #menubar, #close {
+      #menubar,
+      #close {
         width: 25px;
         margin: 0;
       }
@@ -124,14 +182,15 @@
         font-size: 17px;
       }
 
-      .industry-description, .service-description {
+      .industry-description,
+      .service-description {
         font-size: 11px;
       }
 
       .industry-description {
         margin-bottom: 20px;
       }
-    
+
       h3 {
         margin: 30px 0;
         font-size: 17px;
@@ -164,7 +223,7 @@
     .parallex h2 {
       font-size: 35px;
     }
-    
+
     .work {
       h3 {
         font-size: 17px;
@@ -196,7 +255,11 @@
     footer {
       padding: 20px;
 
-      .logo, .links, .social-media, .subscribe, .address {
+      .logo,
+      .links,
+      .social-media,
+      .subscribe,
+      .address {
         width: 100%;
         margin-bottom: 20px;
         text-align: center;
@@ -206,7 +269,9 @@
         margin-bottom: 0;
       }
 
-      .logo, .links ul, .social-media ul {
+      .logo,
+      .links ul,
+      .social-media ul {
         height: 100%;
       }
 
