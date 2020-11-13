@@ -1,5 +1,6 @@
-@media (max-width: 1199px) {
+@media (max-width: 1250px) {
   .about {
+    .specialized-service,
     .work,
     .hear .wrapper {
       width: 60%;
@@ -171,6 +172,11 @@
       h1 {
         font-size: 36px;
       }
+
+      .nav-section-left,
+      .nav-section-right {
+        width: 10%;
+      }
     }
 
     .navbar-brand {
@@ -274,6 +280,7 @@
           margin-bottom: 15px;
 
           span {
+            color: $primary-color;
             font-size: 20px;
           }
 
