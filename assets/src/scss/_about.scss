@@ -25,12 +25,12 @@
     }
 
     #menubar {
-      width: 31px;
+      width: 30px;
       cursor: pointer;
     }
 
     #close {
-      width: 35px;
+      width: 30px;
       cursor: pointer;
 
       img {
@@ -54,7 +54,7 @@
 
     .toggle-menu {
       position: absolute;
-      top: 65px;
+      top: 75px;
       left: 0;
       z-index: 4;
       width: 300px;
@@ -432,7 +432,8 @@
       color: $white;
     }
 
-    .logo, .copyright {
+    .logo,
+    .copyright {
       p {
         @include fontSize(12px);
       }
@@ -496,7 +497,7 @@
     }
 
     .copyright {
-      display: none
+      display: none;
     }
   }
 }
