@@ -1,0 +1,170 @@
+.find-job {
+  header {
+    position: relative;
+    height: 565px;
+    padding-top: 22%;
+    color: $white;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+
+      .fa-search {
+        position: absolute;
+        top: 27px;
+        left: 20px;
+        z-index: 4;
+        color: $dark-gray;
+      }
+    }
+
+    .header-info {
+      margin-bottom: 42px;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+      font-size: 54px;
+    }
+
+    p {
+      color: $white;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+      display: flex;
+
+      .btn {
+        width: 174px;
+        height: 70px;
+        margin-left: 4px;
+        background-color: $primary-color;
+        color: #fff;
+        border-radius: 8px;
+      }
+    }
+
+    .input-search {
+      width: 300px;
+      height: 70px;
+
+      .form-control {
+        padding-left: 55px;
+        color: $dark-gray;
+        border-radius: 8px 0 0 8px;
+        border: 0;
+      }
+
+      ::placeholder {
+        color: $light-gray;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        right: 0px;
+        z-index: 4;
+        border: 1px solid $dark-gray;
+        height: 40px;
+      }
+    }
+
+    .select-options {
+      position: relative;
+
+      .fa-angle-down {
+        position: absolute;
+        top: 27px;
+        right: 25px;
+        color: $light-gray;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        right: 0px;
+        z-index: 4;
+        border: 1px solid $dark-gray;
+        height: 40px;
+      }
+    }
+
+    .custom-select {
+      height: 70px;
+      padding: 0 45px;
+      background: $white;
+      color: $light-gray;
+      border: 0;
+      border-radius: 0;
+    }
+
+    .caterogies {
+      .custom-select {
+        padding: 0 40px 0 30px;
+      }
+
+     .fa-angle-down {
+      right: 25px;
+    }
+  }
+
+    .input-checkbox {
+      width: 180px;
+      height: 70px;
+
+      .input-group-prepend,
+      .input-group-text {
+        width: 100%;
+      }
+
+      .input-group-text {
+        background-color: $white;
+        color: $light-gray;
+        border: 0;
+        border-radius: 0 8px 8px 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    input[type='checkbox'] {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -o-appearance: none;
+      outline: none;
+      content: none;
+    }
+
+    input[type='checkbox']:before {
+      font-family: 'FontAwesome';
+      content: '\f00c';
+      font-size: 11px;
+      color: transparent !important;
+      background: transparent;
+      display: block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $light-gray;
+      margin-right: 7px;
+    }
+
+    input[type='checkbox']:checked:before {
+      color: $primary-color !important;
+    }
+
+    .clear-option {
+      margin: 6px 180px 0 0;
+      font-size: 10px;
+      text-align: right;
+      cursor: pointer;
+    }
+  }
+}

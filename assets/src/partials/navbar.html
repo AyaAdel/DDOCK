@@ -1,0 +1,154 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="nav-section nav-section-left">
+    <div class="menubar-icon">
+      <div id="menubar" class="img-wrapper" onclick="displayMenu()">
+        <img src="./imgs/menubar.png" alt="Menubar" />
+      </div>
+      <div id="close" class="img-wrapper hide" onclick="hideMenu()">
+        <img src="./imgs/close.png" alt="Close" />
+      </div>
+    </div>
+    <div id="toggleMenu" class="toggle-menu hide">
+      <ul>
+        <li class="menu-item">
+          <a href="#">DESIGNERDOCK</a>
+        </li>
+        <li class="menu-item">
+          <a href="#forApplicants" data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseExample"><span>For Applicants</span><i class="fa fa-angle-down"></i></a>
+          <ul id="forApplicants" class="collapse">
+            <li class="submenu-item">
+              <a href="#">About Us</a>
+            </li>
+            <li class="submenu-item">
+              <a href="./find-job.html">Job Offers</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Application Form</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Our Contract</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Job Profiles &amp; Professions</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#forClients" data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseExample"><span>For Clients</span><i class="fa fa-angle-down"></i></a>
+          <ul id="forClients" class="collapse">
+            <li class="submenu-item">
+              <a href="#">What we offer</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Your Personnel Search</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Our Conditions</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Terms of Business</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#aboutUs" data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseExample"><span>About us</span><i class="fa fa-angle-down"></i></a></i>
+          <ul id="aboutUs" class="collapse">
+            <li class="submenu-item">
+              <a href="#">About us</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">BERLIN</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">DUSSELDORF</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">FRANKFURT</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">HAMBURG</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">MUNICH</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">STUTTGART</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">VIENNA</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Ground Rules</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#extras" data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseExample"><span>Extras</span><i class="fa fa-angle-down"></i></a>
+          <ul id="extras" class="collapse">
+            <li class="submenu-item">
+              <a href="#">Dockboerse</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Markenrecht</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Designrecht</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Onlinerecht</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Vertragsrecht</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Arbeitsrecht</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Akademie</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Beiträge</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#">FAQ</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Contact</a>
+        </li>
+        <div class="menu-form">
+          <form method="post" action="">
+            <input placeholder="Search for jobs" type="text" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </ul>
+    </div>
+    <div class="crumb">Home<i class="fa fa-angle-right"></i>@@navLink</div>
+  </div>
+  <div class="nav-section">
+    <a class="navbar-brand" href="#">DESIGNERDOCK</a>
+  </div>
+  <div class="nav-section nav-section-right">
+    <div class="lang-switch">
+      <ul>
+        <li id="eng" class="eng active" onclick="switchEng()"><a href="#">ENG</a></li>
+        <li id="dt" class="dt" onclick="switchDt()"><a href="#">DT</a></li>
+      </ul>
+    </div>
+    <div class="headsearch">
+      <form method="post" action="">
+        <div id="formSearch" class="form-search">
+          <input class="search" placeholder="Suche nach Jobs" type="text" />
+          <button><i class="fa fa-search"></i></button>
+        </div>
+        <div id="mobSearch" class="mob-search" onclick="displayForm()"><i class="fa fa-search"></i></div>
+      </form>
+    </div>
+  </div>
+</nav>

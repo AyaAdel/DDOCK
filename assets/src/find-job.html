@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./partials/head.html',{
+"title": "DESIGNERDOCK - Find Job"
+})
+
+<body>
+  <div class="find-job">
+    <header style="background-image: url('imgs/find-job-banner.png')">
+      @@include('./partials/mask.html')
+      @@include('./partials/navbar.html',{
+      "navLink": "Search Jobs"
+      })
+      <div class="header-content">
+        <div class="header-info">
+          <h1>Find Your Dream Job</h1>
+          <p>Here are just some of our current vacancies. Use the search functions to find suitable listings fast.</p>
+          <p>We have MANY MORE fresh vacancies that we haven’t listed yet.</p>
+        </div>
+        <form action="">
+          <div class="form-group">
+            <div class="input-group input-search">
+              <i class="fa fa-search"></i>
+              <input type="text" class="form-control" placeholder="Suche nach Jobs" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="select-options">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+              <select class="custom-select">
+                <option selected>All Cities</option>
+                <option value="1">Berlin</option>
+                <option value="2">Hamburg</option>
+                <option value="3">Zürich</option>
+              </select>
+            </div>
+            <div class="select-options caterogies">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+              <select class="custom-select">
+                <option selected>All Caterogies</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="input-group input-checkbox">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="checkbox" aria-label="Checkbox for following text input">
+                  <span>Show Favorites</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn">Search</button>
+          </div>
+          <div class="clear-option">Clear Options</div>
+        </form>
+      </div>
+    </header>
+    @@include('./partials/footer.html')
+  </div>
+
+  @@include('./partials/scripts.html')
+</body>
+
+</html>
