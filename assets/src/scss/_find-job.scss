@@ -19,7 +19,7 @@
         top: 27px;
         left: 20px;
         z-index: 4;
-        color: $dark-gray;
+        color: $gray;
       }
     }
 
@@ -62,7 +62,7 @@
       }
 
       ::placeholder {
-        color: $light-gray;
+        color: $gray;
       }
 
       &:after {
@@ -71,7 +71,7 @@
         top: 15px;
         right: 0px;
         z-index: 4;
-        border: 1px solid $dark-gray;
+        border: 1px solid $gray;
         height: 40px;
       }
     }
@@ -83,7 +83,7 @@
         position: absolute;
         top: 27px;
         right: 25px;
-        color: $light-gray;
+        color: $gray;
       }
 
       &:after {
@@ -92,7 +92,7 @@
         top: 15px;
         right: 0px;
         z-index: 4;
-        border: 1px solid $dark-gray;
+        border: 1px solid $gray;
         height: 40px;
       }
     }
@@ -101,7 +101,7 @@
       height: 70px;
       padding: 0 45px;
       background: $white;
-      color: $light-gray;
+      color: $gray;
       border: 0;
       border-radius: 0;
     }
@@ -111,10 +111,10 @@
         padding: 0 40px 0 30px;
       }
 
-     .fa-angle-down {
-      right: 25px;
+      .fa-angle-down {
+        right: 25px;
+      }
     }
-  }
 
     .input-checkbox {
       width: 180px;
@@ -127,7 +127,7 @@
 
       .input-group-text {
         background-color: $white;
-        color: $light-gray;
+        color: $gray;
         border: 0;
         border-radius: 0 8px 8px 0;
         display: flex;
@@ -152,7 +152,7 @@
       display: block;
       width: 15px;
       height: 15px;
-      border: 1px solid $light-gray;
+      border: 1px solid $gray;
       margin-right: 7px;
     }
 
@@ -165,6 +165,109 @@
       font-size: 10px;
       text-align: right;
       cursor: pointer;
+    }
+  }
+
+  .jobs-content {
+    padding: 68px 8% 90px;
+
+    .jobs-title {
+      margin-bottom: 38px;
+      @include flexBetween;
+    }
+
+    h3 {
+      font-size: 34px;
+    }
+
+    .clipboard-btn {
+      width: 234px;
+      height: 41px;
+      border: 1px solid $primary-color;
+      border-radius: 10px;
+      @include flexCenter;
+
+      .img-wrapper {
+        width: 14px;
+        margin: 0 10px 2px 0;
+      }
+
+      span {
+        color: $primary-color;
+        font-size: 11px;
+      }
+    }
+
+    .Jobs-category {
+      margin-bottom: 45px;
+
+      .img-wrapper {
+        width: 18px;
+        margin: 0 40px;
+      }
+
+      li {
+        height: 70px;
+        padding: 0 20px;
+        margin-bottom: 22px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.14);
+      }
+    }
+
+    .item {
+      position: relative;
+      width: 65%;
+      font-size: 21px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: 20px;
+        z-index: 4;
+        border: 1px solid $gray;
+        height: 40px;
+      }
+    }
+
+    .conturies {
+      width: 35%;
+      @include flexBetween;
+    }
+
+    .country,
+    .code {
+      font-size: 22px;
+    }
+
+    .code  {
+      color: $gray;
+    }
+
+    .country-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .fa-angle-right {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .btn-wrapper {
+      @include flexCenter;
+    }
+
+    .more-jobs {
+      width: 210px;
+      height: 50px;
+      background-color: $primary-color;
+      color: $white;
+      font-size: 13px;
+      border-radius: 10px;
     }
   }
 }
