@@ -1,8 +1,8 @@
 .find-job {
   header {
     position: relative;
-    height: 565px;
-    padding-top: 22%;
+    height: 566px;
+    padding-top: 275px;
     color: $white;
     background-size: cover;
     background-position: center;
@@ -11,6 +11,8 @@
     justify-content: center;
 
     .header-content {
+      width: 80%;
+      margin: 0 auto;
       position: relative;
       z-index: 2;
 
@@ -24,11 +26,11 @@
     }
 
     .header-info {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     h1 {
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       font-size: 54px;
     }
 
@@ -37,8 +39,10 @@
     }
 
     .form-group {
+      width: 100%;
+      margin: 0 auto;
       margin-bottom: 0;
-      display: flex;
+      @include flexBetween;
 
       .btn {
         width: 174px;
@@ -50,8 +54,13 @@
       }
     }
 
+    .form-group-input {
+      width: calc(100% - 178px);
+      display: flex;
+    }
+
     .input-search {
-      width: 300px;
+      width: 40%;
       height: 70px;
 
       .form-control {
@@ -76,7 +85,13 @@
       }
     }
 
+    .select-options-group {
+      width: 40%;
+      display: flex;
+    }
+
     .select-options {
+      width: 50%;
       position: relative;
 
       .fa-angle-down {
@@ -99,7 +114,7 @@
 
     .custom-select {
       height: 70px;
-      padding: 0 45px;
+      padding: 0 50px 0 40px;
       background: $white;
       color: $gray;
       border: 0;
@@ -108,7 +123,7 @@
 
     .caterogies {
       .custom-select {
-        padding: 0 40px 0 30px;
+        padding: 0 40px 0 15px;
       }
 
       .fa-angle-down {
@@ -117,7 +132,7 @@
     }
 
     .input-checkbox {
-      width: 180px;
+      width: 30%;
       height: 70px;
 
       .input-group-prepend,
@@ -161,35 +176,51 @@
     }
 
     .clear-option {
-      margin: 6px 180px 0 0;
+      width: 82%;
+      margin-top: 7px;
       font-size: 10px;
       text-align: right;
       cursor: pointer;
     }
+
+    .form-group-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .tab-clear-option,
+    .filter-section {
+      display: none;
+    }
   }
 
   .jobs-content {
-    padding: 68px 8% 90px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 66px 0 91px;
 
     .jobs-title {
-      margin-bottom: 38px;
+      margin-bottom: 40px;
       @include flexBetween;
     }
 
-    h3 {
+    h2 {
       font-size: 34px;
     }
 
     .clipboard-btn {
       width: 234px;
       height: 41px;
+      padding: 0 19px;
       border: 1px solid $primary-color;
       border-radius: 10px;
-      @include flexCenter;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
 
       .img-wrapper {
         width: 14px;
-        margin: 0 10px 2px 0;
+        margin: 0 10px 5px 0;
       }
 
       span {
@@ -199,17 +230,17 @@
     }
 
     .Jobs-category {
-      margin-bottom: 45px;
+      margin-bottom: 53px;
 
       .img-wrapper {
         width: 18px;
-        margin: 0 40px;
+        margin: 0 30px;
       }
 
       li {
         height: 70px;
         padding: 0 20px;
-        margin-bottom: 22px;
+        margin-bottom: 21px;
         display: flex;
         align-items: center;
         border-radius: 10px;
@@ -219,14 +250,16 @@
 
     .item {
       position: relative;
-      width: 65%;
+      overflow: hidden;
+      width: 60%;
       font-size: 21px;
+      white-space: nowrap;
 
       &:after {
         content: '';
         position: absolute;
         top: -5px;
-        right: 20px;
+        right: 0;
         z-index: 4;
         border: 1px solid $gray;
         height: 40px;
@@ -234,7 +267,8 @@
     }
 
     .conturies {
-      width: 35%;
+      width: 40%;
+      padding-left: 20px;
       @include flexBetween;
     }
 
@@ -268,6 +302,11 @@
       color: $white;
       font-size: 13px;
       border-radius: 10px;
+      text-transform: uppercase;
+    }
+
+    .mob-clipboard-btn {
+      display: none;
     }
   }
 }
