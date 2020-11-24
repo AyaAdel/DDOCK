@@ -309,6 +309,10 @@
       margin: 0;
     }
 
+    .nav-section-left, .nav-section-right {
+      width: 10%;
+    }
+
     .toggle-menu {
       top: 55px;
       width: 100%;
@@ -325,7 +329,7 @@
   }
 
   footer {
-    padding: 60px 20px;
+    padding: 60px 10px;
 
     .logo {
       order: 1;
