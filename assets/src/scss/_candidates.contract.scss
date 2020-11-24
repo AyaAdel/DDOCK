@@ -1,0 +1,19 @@
+.candidates-contract {
+  header {
+    position: relative;
+    height: 471px;
+    background-size: cover;
+    background-position: center;
+    @include flexCenter;
+
+    h1 {
+      position: relative;
+      z-index: 2;
+      margin-top: 102px;
+      color: $white;
+      font-size: 44px;
+      font-family: ParBold;
+      text-transform: uppercase;
+    }
+  }
+}
