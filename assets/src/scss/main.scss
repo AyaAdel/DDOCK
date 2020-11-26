@@ -95,9 +95,13 @@ header .overlay {
   cursor: pointer;
 }
 
-.navbar-brand .img-wrapper {
-  width: 142px;
-}  
+.navbar-brand {
+  margin: 0;
+
+  .img-wrapper {
+    width: 142px;
+  }
+}
 
 #close {
   width: 30px;
@@ -373,4 +377,4 @@ footer {
 }
 
 // Media Query
-@import '_responsive'; 
+@import '_responsive';
