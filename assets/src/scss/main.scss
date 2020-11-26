@@ -95,12 +95,8 @@ header .overlay {
   cursor: pointer;
 }
 
-.navbar-brand {
-  margin: 0;
-  padding: 0;
-  color: $black;
-  font-family: ParMedium;
-  @include fontSize(30px);
+.navbar-brand .img-wrapper {
+  width: 142px;
 }  
 
 #close {
