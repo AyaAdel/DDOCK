@@ -16,4 +16,59 @@
       text-transform: uppercase;
     }
   }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 96px 0 92px;
+
+    .dropdown-btn .btn {
+      height: 55px;
+      margin-bottom: 35px;
+      padding: 0 30px 0 65px;
+      background-color: $light-gray;
+      color: $black;
+      border-radius: 20px;
+      font-size: 20px;
+      @include flexBetween;
+
+      .btn-number {
+        position: absolute;
+        left: 30px;
+        margin-right: 30px;
+        font-size: 21px;
+      }
+
+      .fa {
+        font-size: 22px;
+        font-weight: 600;
+        vertical-align: middle;
+      }
+
+      .fa-angle-up {
+        display: none;
+      }
+    }
+
+    .dropdown-content {
+      padding: 0 30px 0 65px;
+
+      .item {
+        margin-bottom: 35px;
+      }
+    }
+
+    .item-title {
+      font-size: 13px;
+      font-family: ParMedium;
+    }
+
+    .item-content {
+      font-size: 20px;
+    }
+
+    .last-button.collapsed {
+      margin-bottom: 0;
+    }
+  }
 }
