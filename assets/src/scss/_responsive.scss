@@ -293,6 +293,34 @@
       }
     }
   }
+
+  .candidates-contract {
+    header {
+      height: 343px;
+
+      h1{
+        margin-top: 83px;
+        font-size: 34px;
+      }
+    }
+
+    .content {
+      width: 90%;
+      padding: 52px 0 76px;
+
+      .item-title {
+        font-size: 12px;
+      }
+
+      .dropdown-content {
+        margin: 29px 0 46px;
+      }
+
+      .last-dropdown-content {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -682,5 +710,61 @@
         margin-bottom: 15px;
       }
     }
+  }
+
+  .candidates-contract {
+    header {
+      height: 463px;
+
+      h1 {
+        text-align: center;
+      }
+    } 
+
+    .content {
+      width: 95%;
+      padding: 56px 0 61px;
+
+      .dropdown-btn {
+        margin-bottom: 30px;
+
+        .btn {
+          height: 60px;
+          padding: 0px 15px 0 40px;
+          font-size: 24px;
+        }
+
+        .btn-number {
+          left: 15px;
+          font-size: 24px;
+        }
+      }
+
+      .dropdown-content {
+        margin: 46px 0 37px;
+        padding: 0 15px 0 25px;
+
+        .item {
+          margin-bottom: 20px;
+        }
+      }
+
+      .item-title {
+        font-size: 14px; 
+      }
+
+      .item-content {
+        font-size: 14px;
+      }
+
+      .item-blocks {
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+      }
+
+      .last-dropdown-content {
+        margin-bottom: 0;
+      }
+    } 
   }
 }
