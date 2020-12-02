@@ -298,7 +298,7 @@
     header {
       height: 343px;
 
-      h1{
+      h1 {
         margin-top: 83px;
         font-size: 34px;
       }
@@ -307,10 +307,6 @@
     .content {
       width: 90%;
       padding: 52px 0 76px;
-
-      .item-title {
-        font-size: 12px;
-      }
 
       .dropdown-content {
         margin: 29px 0 46px;
@@ -340,7 +336,8 @@
       margin: 0;
     }
 
-    .nav-section-left, .nav-section-right {
+    .nav-section-left,
+    .nav-section-right {
       width: 10%;
     }
 
@@ -719,7 +716,7 @@
       h1 {
         text-align: center;
       }
-    } 
+    }
 
     .content {
       width: 95%;
@@ -750,7 +747,7 @@
       }
 
       .item-title {
-        font-size: 14px; 
+        font-size: 14px;
       }
 
       .item-content {
@@ -758,13 +755,13 @@
       }
 
       .item-blocks {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
       }
 
       .last-dropdown-content {
         margin-bottom: 0;
       }
-    } 
+    }
   }
 }
