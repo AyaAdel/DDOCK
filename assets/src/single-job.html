@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Single Job" })
+
+  <body>
+    <div class="single-job">
+      <header>
+        <div id="behind" class="background-behind hide" onclick="hideMenu()"></div>
+        @@include('./partials/navbar.html',{ "navLink": "Search Jobs","subNavLink": "Job Title" })
+      </header>
+      <div class="content">
+        <div class="all-jobs-btn">
+          <a href="/"><i class="fa fa-angle-left"></i>All Jobs</a>
+        </div>
+      </div>
+      @@include('./partials/footer.html')
+    </div>
+
+    @@include('./partials/scripts.html')
+  </body>
+</html>

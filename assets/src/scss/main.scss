@@ -1,7 +1,8 @@
 @import '_variables';
 @import '_about';
 @import '_find-job';
-@import '_candidates.contract';
+@import '_candidates-contract';
+@import '_single-job';
 
 // Fonts
 @font-face {
@@ -110,6 +111,10 @@ header .overlay {
   img {
     width: 24px;
   }
+}
+
+.sub-nav-link {
+  display: none;
 }
 
 .menubar-icon {

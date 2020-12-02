@@ -1,0 +1,31 @@
+.single-job {
+  header {
+    @include flexCenter;
+
+    .sub-nav-link {
+      display: inline-block;
+    }
+  }
+
+  .content {
+    width: 81%;
+    margin: 0 auto;
+    padding: 154px 0;
+
+    .all-jobs-btn {
+      a {
+        width: 88px;
+        height: 38px;
+        background-color: #f3f3f3;
+        color: #000000;
+        font-size: 14px;
+        border-radius: 5px;
+        @include flexCenter;
+
+        .fa {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
