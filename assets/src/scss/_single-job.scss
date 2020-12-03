@@ -13,6 +13,8 @@
     padding: 154px 0;
 
     .all-jobs-btn {
+      margin-bottom: 28px;
+
       a {
         width: 88px;
         height: 38px;
@@ -25,6 +27,238 @@
         .fa {
           margin-right: 7px;
         }
+      }
+    }
+
+    .job-title {
+      margin-bottom: 56px;
+    }
+
+    .job-section {
+      display: flex;
+    }
+
+    .job-description {
+      width: 70%;
+      margin-right: 71px;
+    }
+
+    h1 {
+      margin-bottom: 23px;
+      color: #000;
+      font-size: 56px;
+    }
+
+    .job-title-info {
+      margin-bottom: 22px;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      li {
+        margin-right: 33px;
+        color: #919090;
+        font-size: 14px;
+      }
+
+      .fa {
+        margin-right: 8px;
+        color: #6b3e3e;
+      }
+    }
+
+    .job-title-media {
+      ul {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        width: 71px;
+        height: 28px;
+        margin-right: 21px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        @include flexCenter;
+      }
+
+      .fa {
+        margin-right: 6px;
+
+        &.fa-facebook {
+          color: #4267b2;
+
+          & ~ span {
+            color: #4267b2;
+          }
+        }
+
+        &.fa-twitter {
+          color: #1da1f2;
+
+          & ~ span {
+            color: #1da1f2;
+          }
+        }
+
+        &.fa-link {
+          color: #919090;
+
+          & ~ span {
+            color: #919090;
+          }
+        }
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+
+    h4 {
+      margin-bottom: 11px;
+      color: #000000;
+      font-size: 17px;
+    }
+
+    .job-agency {
+      margin-bottom: 35px;
+
+      p {
+        color: #919191;
+      }
+    }
+
+    .job-spot,
+    .job-qualification {
+      margin-bottom: 35px;
+
+      ul {
+        color: #919191;
+      }
+    }
+
+    .apply-btn {
+      .btn {
+        width: 246px;
+        height: 50px;
+        background-color: #b1c110;
+        color: #ffffff;
+        font-size: 17px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        @include flexCenter;
+      }
+    }
+
+    .job-info {
+      width: 30%;
+    }
+
+    .job-card {
+      padding: 30px 35px;
+      box-shadow: 0px 10px 30px #00000014;
+      border: 2px solid #f2fdb4;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .job-card-username {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 11px;
+      background-color: #cce34f;
+      color: #919191;
+      font-size: 28px;
+      font-weight: 700;
+      border-radius: 50%;
+      @include flexCenter;
+    }
+
+    .job-card-title {
+      margin-bottom: 10px;
+      font-size: 21px;
+      font-family: ParBold;
+    }
+
+    .job-card-media {
+      width: 100%;
+      margin-bottom: 24px;
+
+      ul {
+        @include flexBetween;
+      }
+
+      li {
+        width: 35px;
+        height: 35px;
+        background-color: #f3f3f3;
+        color: #696868;
+        border-radius: 5px;
+        @include flexCenter;
+      }
+    }
+
+    .job-card-info {
+      margin-bottom: 33px;
+
+      li {
+        margin-bottom: 11px;
+        display: flex;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .fa {
+        color: #696868;
+      }
+
+      .address {
+        color: #696868;
+      }
+
+      span {
+        margin-left: 15px;
+        color: #b1c110;
+        font-size: 14px;
+      }
+    }
+
+    .job-card-apply {
+      width: 100%;
+      margin-bottom: 14px;
+
+      .btn {
+        height: 49px;
+        background-color: #b1c110;
+        color: #ffffff;
+        font-size: 17px;
+        border: 1px solid #b1c110;
+        border-radius: 10px;
+        text-transform: uppercase;
+        @include flexCenter;
+      }
+    }
+
+    .job-card-recommend {
+      width: 100%;
+
+      .btn {
+        height: 49px;
+        background-color: #ffffff;
+        color: #b1c110;
+        font-size: 17px;
+        border: 1px solid #b1c110;
+        border-radius: 10px;
+        text-transform: uppercase;
+        @include flexCenter;
       }
     }
   }
