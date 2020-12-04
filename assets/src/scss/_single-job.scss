@@ -10,10 +10,10 @@
   .content {
     width: 81%;
     margin: 0 auto;
-    padding: 154px 0;
+    padding: 154px 0 58px;
 
     .all-jobs-btn {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
 
       a {
         width: 88px;
@@ -31,7 +31,7 @@
     }
 
     .job-title {
-      margin-bottom: 56px;
+      margin-bottom: 57px;
     }
 
     .job-section {
@@ -39,18 +39,19 @@
     }
 
     .job-description {
-      width: 70%;
-      margin-right: 71px;
+      width: 73%;
+      margin-right: 50px;
     }
 
     h1 {
-      margin-bottom: 23px;
+      margin-bottom: 21px;
       color: #000;
       font-size: 56px;
+      line-height: 70px;
     }
 
     .job-title-info {
-      margin-bottom: 22px;
+      margin-bottom: 27px;
 
       ul {
         display: flex;
@@ -119,7 +120,7 @@
     }
 
     h4 {
-      margin-bottom: 11px;
+      margin-bottom: 10px;
       color: #000000;
       font-size: 17px;
     }
@@ -128,6 +129,7 @@
       margin-bottom: 35px;
 
       p {
+        font-size: 17px;
         color: #919191;
       }
     }
@@ -138,6 +140,7 @@
 
       ul {
         color: #919191;
+        font-size: 17px;
       }
     }
 
@@ -155,11 +158,12 @@
     }
 
     .job-info {
-      width: 30%;
+      width: 27%;
     }
 
     .job-card {
-      padding: 30px 35px;
+      margin-bottom: 35px;
+      padding: 30px;
       box-shadow: 0px 10px 30px #00000014;
       border: 2px solid #f2fdb4;
       border-radius: 10px;
@@ -171,7 +175,7 @@
     .job-card-username {
       width: 70px;
       height: 70px;
-      margin-bottom: 11px;
+      margin-bottom: 10px;
       background-color: #cce34f;
       color: #919191;
       font-size: 28px;
@@ -210,6 +214,7 @@
       li {
         margin-bottom: 11px;
         display: flex;
+        align-items: center;
 
         &:last-child {
           margin-bottom: 0;
@@ -217,7 +222,13 @@
       }
 
       .fa {
+        width: 18px;
         color: #696868;
+        text-align: center;
+
+        &.fa-map-marker {
+          margin-bottom: 20px;
+        }
       }
 
       .address {
@@ -259,6 +270,23 @@
         border-radius: 10px;
         text-transform: uppercase;
         @include flexCenter;
+      }
+    }
+
+    .job-talent {
+      padding: 30px;
+      box-shadow: 0px 10px 30px #00000014;
+      border: 2px solid #f8cce3;
+      border-radius: 10px;
+      text-align: center;
+
+      p {
+        color: #696868;
+        font-size: 18px;
+      }
+
+      .job-talent-worth {
+        color: #B1C110;
       }
     }
   }

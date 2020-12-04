@@ -16,6 +16,26 @@
       width: 90%;
     }
   }
+
+  .single-job {
+    .content {
+      width: 95%;
+
+      .job-description {
+        width: 73%;
+        margin-right: 30px;
+      }
+
+      .job-info {
+        width: 27%;
+      }
+
+      .job-card,
+      .job-talent {
+        padding: 30px 20px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -26,6 +46,11 @@
 
     .mob-search .fa {
       @include fontSize(27px);
+    }
+
+    .nav-section-right,
+    .nav-section-left {
+      width: 20%;
     }
 
     .crumb,
@@ -314,6 +339,109 @@
 
       .last-dropdown-content {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  .single-job {
+    .content {
+      width: 90%;
+      padding: 149px 0 70px;
+
+      .job-section {
+        display: block;
+      }
+
+      .job-description {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 49px;
+      }
+
+      .job-title {
+        margin-bottom: 49px;
+      }
+
+      .all-jobs-btn {
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        margin-bottom: 22px;
+        font-size: 44px;
+        line-height: 57px;
+      }
+
+      .job-title-info {
+        margin-bottom: 23px;
+      }
+
+      .apply-btn .btn {
+        height: 40px;
+        font-size: 14px;
+      }
+
+      .job-info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 7%;
+      }
+
+      .job-card,
+      .job-talent {
+        height: fit-content;
+        margin-bottom: 0;
+        padding: 30px;
+      }
+
+      .job-card-username {
+        width: 58px;
+        height: 58px;
+        font-size: 23px;
+      }
+
+      .job-card-title {
+        font-size: 17px;
+      }
+
+      .job-card-media {
+        margin-bottom: 21px;
+
+        li {
+          width: 29px;
+          height: 29px;
+
+          .fa {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .job-card-info {
+        margin-bottom: 29px;
+
+        .fa.fa-map-marker {
+          margin-bottom: 0;
+        }
+
+        span {
+          font-size: 11px;
+        }
+      }
+
+      .job-card-apply .btn,
+      .job-card-recommend .btn {
+        height: 40px;
+        font-size: 14px;
+      }
+
+      .job-card-apply {
+        margin-bottom: 12px;
+      }
+
+      .job-talent p {
+        font-size: 14px;
       }
     }
   }
@@ -761,6 +889,133 @@
 
       .last-dropdown-content {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  .single-job {
+    .content {
+      width: 95%;
+      padding: 128px 0 100px;
+
+      .all-jobs-btn {
+        margin-bottom: 20px;
+
+        a {
+          width: 90px;
+          height: 35px;
+          font-size: 15px;
+        }
+      }
+
+      .job-description {
+        margin-bottom: 70px;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+        font-size: 26px;
+        line-height: 33px;
+      }
+
+      .job-title {
+        margin-bottom: 52px;
+      }
+
+      .job-title-info {
+        margin-bottom: 30px;
+
+        ul {
+          display: block;
+        }
+
+        li {
+          margin-bottom: 15px;
+          font-size: 15px;
+        }
+      }
+
+      .job-title-media {
+        a {
+          width: 90px;
+          height: 35px;
+        }
+
+        span {
+          font-size: 15px;
+        }
+      }
+
+      h4,
+      .job-agency p,
+      .job-spot ul,
+      .job-qualification ul {
+        font-size: 15px;
+      }
+
+      .job-agency,
+      .job-spot {
+        margin-bottom: 25px;
+      }
+
+      .job-qualification {
+        margin-bottom: 30px;
+      }
+
+      .apply-btn .btn {
+        width: 100%;
+        height: 58px;
+        font-size: 20px;
+      }
+
+      .job-info {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 35px;
+      }
+
+      .job-card-username {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+      }
+
+      .job-card-title {
+        font-size: 21px;
+      }
+
+      .job-card-media {
+        margin-bottom: 25px;
+
+        li {
+          width: 35px;
+          height: 36px;
+
+          .fa {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .job-card-info {
+        margin-bottom: 34px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      .job-card-recommend .btn,
+      .job-card-apply .btn {
+        height: 49px;
+        font-size: 17px;
+      }
+
+      .job-card-apply {
+        margin-bottom: 14px;
+      }
+
+      .job-talent p {
+        font-size: 18px;
       }
     }
   }
