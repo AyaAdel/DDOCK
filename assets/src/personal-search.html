@@ -6,49 +6,23 @@
 })
 
 <body>
-  <div class="about">
-    <header style="background-image: url('imgs/about-banner.png')">
-      @@include('./partials/mask.html')
+  <div class="personal-search">
+    <header>
+      <div id="behind" class="background-behind hide" onclick="hideMenu()"></div>
       @@include('./partials/navbar.html',{
-      "navLink": "About Us"
+      "navLink": "Personnel Search"
       })
-      <h1>About Us</h1>
     </header>
-    <section class="specialized-service">
-      <h2>Our <span>specialized</span> service</h2>
-      <p class="service-description">In the German-speaking world, DESIGNERDOCK is THE personnel consultancy for the
-        communications industry. Since our founding in 1996, we’ve helped find permanent and freelance staff for more
-        than 3000 companies – including marketing, mobile, PR, digital, advertising and design agencies. Whether
-        temporary or permanent, for a single task or a whole campaign, we’ll find seasoned specialists or an entire team
-        of professionals to suit your needs.</p>
-      <h3>“<span>Our strength is industry specialisation.</span>”</h3>
-      <h3 class="hide">“<span>Our strength is industry</span><br /><span>specialisation.</span>”</h3>
-      <p class="industry-description">
-        All DESIGNERDOCK consultants have years of experience in the communications industry and know what skills good
-        staff need. Whether it’s account managers, coders, art directors or managing directors, all our candidates are
-        carefully interviewed and selected. Only those with the right professional and personal qualities are accepted
-        into the DESIGNERDOCK’s 40 000-strong pool.
-      </p>
-      <div class="between-personal">
-        <div class="btn between"><a href="#">BEWERBEN</a></div>
-        <div class="btn personal"><a href="#">PERSONAL FINDEN</a></div>
+    <section class="search-section" style="background-image: url('imgs/personal-search-banner.png')">
+      <div class="search-section-wrapper">
+        <div class="search-title">
+          <h1>Your Personal Search</h1>
+          <p>Fill in this form quickly let us know your recruitment needs. We’ll contact you as soon as we’ve reviewed your
+            information.</p>
+          <span>FEE STRUCTURE</span>
+        </div>
       </div>
     </section>
-    <section class="backgound-img-fluid" style="background-image: url('./imgs/parallex.png');">
-      <div class="overlay"></div>
-    </section>
-    <section class="work">
-      <h3>This is <span>how we work</span></h3>
-      <p>Together with our client, we formulate a precise job profile. We identify candidates in our network database
-        and through research who match the profile. Our personnel consultants evaluate the results. Appropriate
-        candidates are then contacted and reviewed again with specific reference to the position. When this is done, we
-        send the client a selection of suitable and available candidates.</p>
-      <div class="between-personal">
-        <div class="btn between"><a href="#">PERSONAL FINDEN</a></div>
-        <div class="btn personal"><a href="#">DIE KONDITIONEN</a></div>
-      </div>
-    </section>
-    @@include('./partials/contact-form.html')
     @@include('./partials/footer.html')
   </div>
 
