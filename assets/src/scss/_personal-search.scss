@@ -1,0 +1,135 @@
+.personal-search {
+  header {
+    @include flexCenter;
+  }
+
+  .search-section {
+    position: relative;
+    padding: 207px 0;
+
+    .background-image-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      background-image: linear-gradient(#abaea3, #b1c100, #b1c100, #b1c100, #b1c100);
+      opacity: 0.7;
+    }
+
+    .search-section-wrapper {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .search-title {
+      margin-bottom: 66px;
+      text-align: center;
+
+      p {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+      }
+
+      span {
+        color: #939393;
+        font-size: 11px;
+      }
+    }
+
+    h1 {
+      margin-bottom: 14px;
+      color: #ffffff;
+      font-size: 56px;
+    }
+
+    .form-group {
+      margin-bottom: 35px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 35px;
+
+      &:nth-of-type(7) {
+        margin-bottom: 0;
+      }
+    }
+
+    .form-item {
+      position: relative;
+
+      .fa {
+        position: absolute;
+        right: 15px;
+        bottom: 13px;
+        font-weight: 700;
+      }
+
+      .fa-angle-up {
+        display: none;
+      }
+    }
+
+    label {
+      margin-bottom: 7px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .form-control {
+      height: 45px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
+
+      &::placeholder {
+        color: #cecece;
+        font-size: 14px;
+      }
+    }
+
+    .form-position {
+      display: block;
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+      height: 45px;
+    }
+
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-textarea {
+      height: 106px;
+      resize: none;
+    }
+
+    .btn-wrapper {
+      @include flexCenter;
+    }
+
+    .form-send {
+      margin-top: 59px;
+      width: 211px;
+      height: 51px;
+      background-color: #ffffff;
+      color: #b1c100;
+      font-size: 14px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @import '_find-job';
 @import '_candidates-contract';
 @import '_single-job';
+@import '_personal-search';
 
 // Fonts
 @font-face {
@@ -41,7 +42,8 @@ p {
 
 h1,
 h2,
-h3, h4 {
+h3,
+h4 {
   font-family: ParBold;
 }
 

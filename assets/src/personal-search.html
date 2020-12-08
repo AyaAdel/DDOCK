@@ -1,32 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Personal Search" })
 
-@@include('./partials/head.html',{
-"title": "DESIGNERDOCK - Personal Search"
-})
-
-<body>
-  <div class="personal-search">
-    <header>
-      <div id="behind" class="background-behind hide" onclick="hideMenu()"></div>
-      @@include('./partials/navbar.html',{
-      "navLink": "Personnel Search"
-      })
-    </header>
-    <section class="search-section" style="background-image: url('imgs/personal-search-banner.png')">
-      <div class="search-section-wrapper">
-        <div class="search-title">
-          <h1>Your Personal Search</h1>
-          <p>Fill in this form quickly let us know your recruitment needs. We’ll contact you as soon as we’ve reviewed your
-            information.</p>
-          <span>FEE STRUCTURE</span>
+  <body>
+    <div class="personal-search">
+      <header>
+        <div id="behind" class="background-behind hide" onclick="hideMenu()"></div>
+        @@include('./partials/navbar.html',{ "navLink": "Personnel Search" })
+      </header>
+      <section class="search-section">
+        <div class="background-image-banner" style="background-image: url('imgs/personal-search-banner.png')"></div>
+        <div class="mask"></div>
+        <div class="search-section-wrapper">
+          <div class="search-title">
+            <h1>Your Personal Search</h1>
+            <p>
+              Fill in this form quickly let us know your recruitment needs.<br />
+              We’ll contact you as soon as we’ve reviewed your information.
+            </p>
+            <span>FEE STRUCTURE</span>
+          </div>
+          <form action="">
+            <div class="form-group">
+              <div class="form-item">
+                <label for="nickName">Vorname / Nachname <span>*</span></label>
+                <input type="text" class="form-control" id="nickName" placeholder="John Doe" required />
+              </div>
+              <div class="form-item">
+                <label for="company">Company <span>*</span></label>
+                <input type="text" class="form-control" id="company" placeholder="Your company name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <label for="phone">Phone <span>*</span></label>
+                <input type="number" class="form-control" id="phone" placeholder="+1 (…) …. .. .." required />
+              </div>
+              <div class="form-item">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="example@mailbox.com" required />
+              </div>
+            </div>
+            <div class="form-group form-position">
+              <div class="form-item">
+                <label for="position">Position Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="position"
+                  placeholder="Type positions that your company looking for…"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <label for="office">Which DESIGNERDOCK office closest to you?</label>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+                <select class="form-control form-select" aria-label="Default select example" id="office">
+                  <option selected>Choose</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="date">Preferred commencement date</label>
+                <input type="date" class="form-control" id="date" placeholder="MM/DD/YYYY" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <label for="contract">Type of Contract</label>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+                <select class="form-control form-select" aria-label="Default select example" id="contract">
+                  <option selected>Select as many items as you want</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="experience">Experience Level</label>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+                <select class="form-control form-select" aria-label="Default select example" id="experience">
+                  <option selected>Select as many items as you want</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group form-position">
+              <div class="form-item">
+                <label for="information">Additional Information</label>
+                <textarea class="form-control form-textarea" id="information"></textarea>
+              </div>
+            </div>
+            <div class="form-group form-position">
+              <div class="form-item">
+                <label for="other">Other</label>
+                <textarea class="form-control form-textarea" id="other"></textarea>
+              </div>
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn form-send">SEND SEARCH</button>
+            </div>
+          </form>
         </div>
-      </div>
-    </section>
-    @@include('./partials/footer.html')
-  </div>
+      </section>
+      @@include('./partials/footer.html')
+    </div>
 
-  @@include('./partials/scripts.html')
-</body>
-
+    @@include('./partials/scripts.html')
+  </body>
 </html>
