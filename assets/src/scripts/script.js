@@ -52,15 +52,22 @@ const displayContentFromBtnCollapse1 = () => {
   faAngleDown1.classList.toggle('hide');
   faAngleUp1.classList.toggle('show');
 };
+
 const displayContentFromBtnCollapse2 = () => {
   faAngleDown2.classList.toggle('hide');
   faAngleUp2.classList.toggle('show');
 };
+
 const displayContentFromBtnCollapse3 = () => {
   faAngleDown3.classList.toggle('hide');
   faAngleUp3.classList.toggle('show');
 };
+
 const displayContentFromBtnCollapse4 = () => {
   faAngleDown4.classList.toggle('hide');
   faAngleUp4.classList.toggle('show');
-}; 
+};
+
+$(document).ready(function () {
+  $('.js-example-basic-single').select2();
+});
