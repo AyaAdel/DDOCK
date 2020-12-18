@@ -235,6 +235,18 @@
       .img-wrapper {
         width: 18px;
         margin: 0 30px;
+        display: flex;
+    align-items: center;
+
+        .fa {
+          color: #b1c110;
+          font-size: 20px;
+          cursor: pointer;
+        }
+
+        .fa-star {
+          display: none;
+        }
       }
 
       li {
@@ -257,6 +269,7 @@
       position: relative;
       overflow: hidden;
       width: 60%;
+      color: #000;
       font-size: 21px;
       white-space: nowrap;
 

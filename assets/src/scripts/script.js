@@ -18,6 +18,8 @@ const faAngleUp3 = document.getElementById('faAngleUp3');
 const btnCollapse4 = document.getElementById('btnCollapse4');
 const faAngleDown4 = document.getElementById('faAngleDown4');
 const faAngleUp4 = document.getElementById('faAngleUp4');
+const star = document.getElementsByClassName('.fa-star-o');
+const glowStar = document.querySelector('.fa-star');
 
 const displayMenu = () => {
   menubar.classList.add('hide');
@@ -67,6 +69,11 @@ const displayContentFromBtnCollapse4 = () => {
   faAngleDown4.classList.toggle('hide');
   faAngleUp4.classList.toggle('show');
 };
+
+// const changeStar = () => {
+//   star.classList.toggle('hide');
+//   glowStar.classList.toggle('show');
+// };  
 
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
