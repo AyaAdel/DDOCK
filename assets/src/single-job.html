@@ -4,7 +4,7 @@
 
   <body>
     <div class="single-job">
-      <header>
+      <header id="header">
         <div id="behind" class="background-behind hide" onclick="hideMenu()"></div>
         @@include('./partials/navbar.html',{ "navLink": "Search Jobs","subNavLink": "Job Title" })
       </header>
@@ -86,13 +86,27 @@
               <div class="job-card-info">
                 <ul>
                   <li>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i
-                    ><span class="address">Bergmannstraße 102, 10961, Berlin</span>
+                    <a href="#">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i
+                      ><span class="address">Bergmannstraße 102, 10961, Berlin</span>
+                    </a>
                   </li>
-                  <li><i class="fa fa-users" aria-hidden="true"></i><span>View on Google Maps</span></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i><span>+49 30 6959 660</span></li>
-                  <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+49 30 6959 6612</span></li>
-                  <li><i class="fa fa-envelope" aria-hidden="true"></i><span>berlin@designerdock.com</span></li>
+                  <li>
+                    <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span>View on Google Maps</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span>+49 30 6959 660</span></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+49 30 6959 6612</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-envelope" aria-hidden="true"></i><span>berlin@designerdock.com</span></a
+                    >
+                  </li>
                 </ul>
               </div>
               <div class="job-card-apply">

@@ -213,12 +213,16 @@
 
       li {
         margin-bottom: 11px;
-        display: flex;
-        align-items: center;
 
         &:last-child {
           margin-bottom: 0;
         }
+      }
+
+      a {
+        color: #b1c110;
+        display: flex;
+        align-items: center;
       }
 
       .fa {
@@ -286,7 +290,7 @@
       }
 
       .job-talent-worth {
-        color: #B1C110;
+        color: #b1c110;
       }
     }
   }

@@ -7,7 +7,7 @@
 
 <body>
   <div class="find-job">
-    <header style="background-image: url('imgs/find-job-banner.png')">
+    <header style="background-image: url('imgs/find-job-banner.png')" id="header">
       @@include('./partials/mask.html')
       @@include('./partials/navbar.html',{
       "navLink": "Search Jobs"
@@ -89,8 +89,8 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
+                    
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -108,8 +108,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -127,8 +126,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -146,8 +144,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -165,8 +162,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -184,8 +180,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -203,8 +198,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -222,8 +216,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -241,8 +234,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -260,8 +252,7 @@
                 </div>
                 <div class="country-info">
                   <span class="code">B13381</span>
-                  <div class="img-wrapper" onclick="changeStar()">
-                    <!-- <img src="./imgs/star.svg" alt="Star"> -->
+                  <div class="img-wrapper" onclick="changeStar(this)">
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
@@ -270,7 +261,6 @@
               </div>
             </p>
           </li>
-          
         </ul>
       </div>
       <div class="btn-wrapper">

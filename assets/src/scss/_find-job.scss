@@ -236,7 +236,7 @@
         width: 18px;
         margin: 0 30px;
         display: flex;
-    align-items: center;
+        align-items: center;
 
         .fa {
           color: #b1c110;
@@ -246,6 +246,16 @@
 
         .fa-star {
           display: none;
+        }
+
+        &.favorite {
+          .fa-star {
+            display: block;
+          }
+
+          .fa-star-o {
+            display: none;
+          }
         }
       }
 
@@ -262,7 +272,7 @@
 
     .item-link {
       color: #000;
-      display: contents
+      display: contents;
     }
 
     .item {
@@ -295,7 +305,7 @@
       font-size: 22px;
     }
 
-    .code  {
+    .code {
       color: $gray;
     }
 

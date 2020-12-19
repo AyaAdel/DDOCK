@@ -1,6 +1,4 @@
-const menubar = document.getElementById('menubar');
-const close = document.getElementById('close');
-const toggleMenu = document.getElementById('toggleMenu');
+const header = document.getElementById('header');
 const eng = document.getElementById('eng');
 const dt = document.getElementById('dt');
 const behind = document.getElementById('behind');
@@ -18,21 +16,13 @@ const faAngleUp3 = document.getElementById('faAngleUp3');
 const btnCollapse4 = document.getElementById('btnCollapse4');
 const faAngleDown4 = document.getElementById('faAngleDown4');
 const faAngleUp4 = document.getElementById('faAngleUp4');
-const star = document.getElementsByClassName('.fa-star-o');
-const glowStar = document.querySelector('.fa-star');
 
 const displayMenu = () => {
-  menubar.classList.add('hide');
-  close.classList.remove('hide');
-  toggleMenu.classList.remove('hide');
-  behind.classList.remove('hide');
+  header.classList.toggle('display-menu');
 };
 
 const hideMenu = () => {
-  close.classList.add('hide');
-  toggleMenu.classList.add('hide');
-  menubar.classList.remove('hide');
-  behind.classList.add('hide');
+  header.classList.remove('display-menu');
 };
 
 const switchEng = () => {
@@ -70,10 +60,9 @@ const displayContentFromBtnCollapse4 = () => {
   faAngleUp4.classList.toggle('show');
 };
 
-// const changeStar = () => {
-//   star.classList.toggle('hide');
-//   glowStar.classList.toggle('show');
-// };  
+const changeStar = (element) => {
+  element.classList.toggle('favorite');
+};
 
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
