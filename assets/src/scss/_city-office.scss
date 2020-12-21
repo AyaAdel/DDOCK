@@ -1,0 +1,100 @@
+.city-office {
+  header {
+    @include flexCenter;
+  }
+
+  .city-live {
+    height: 754px;
+    display: flex;
+
+    .city-live-banner {
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .city-live-content {
+      width: 50%;
+      height: 100%;
+      @include flexCenter
+    }
+
+    .city-live-info {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 7px;
+      color: #333333;
+      font-size: 44px;
+
+      span {
+        color: #B1C100;
+      }
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: #717171;
+      font-size: 14px;
+    }
+
+    .city-live-link {
+      font-size: 13px;
+      font-family: ParMedium;
+
+      span {
+        color: #333333;
+        border-bottom: 1px solid #E1017A;
+      }
+
+      .fa {
+        margin-left: 7px;
+        color:#E1017A;
+      }
+    }
+  }
+
+  .team {
+    width: 80%;
+    margin: 0 auto;
+    padding: 101px 0;
+
+    h2 {
+      margin-bottom: 86px;
+      text-align: center;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 51px;
+    }
+
+    li {
+      flex-direction: column;
+      @include flexCenter;
+    }
+
+    .img-wrapper {
+      width: 210px;
+      margin-bottom: 28px;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+      color:#333333;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    span {
+      color: #333333;
+      font-size: 16px;
+      opacity: 50%;
+      text-align: center;
+    }
+  }
+}
