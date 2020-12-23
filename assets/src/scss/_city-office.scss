@@ -60,7 +60,7 @@
   .team {
     width: 80%;
     margin: 0 auto;
-    padding: 101px 0 121px;
+    padding: 101px 0 118px;
 
     h2 {
       margin-bottom: 86px;
@@ -71,7 +71,7 @@
     ul {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 51px;
+      grid-gap: 46px;
     }
 
     li {
@@ -222,7 +222,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        grid-gap: 50px 0;
+        grid-gap: 45px 0;
       }
 
       li {
@@ -239,7 +239,7 @@
       }
 
       .contact-us-content {
-        padding: 47px 0;
+        padding: 49px 0;
       }
 
       .contact-us-info {
@@ -253,6 +253,112 @@
       .contact-info {
         width: 40%;
         margin-left: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .city-office {
+    .city-live {
+      height: 660px;
+
+      .city-live-info {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .city-live-link {
+        font-size: 19px;
+      }
+    }
+
+    .team {
+      padding: 70px 0 64px;
+
+      h2 {
+        margin-bottom: 72px;
+        font-size: 36px;
+      }
+
+      ul {
+        grid-gap: 48px 0;
+      }
+
+      li {
+        width: 100%;
+      }
+
+      .img-wrapper {
+        width: 217px;
+        margin-bottom: 30px;
+      }
+
+      h4,
+      span {
+        font-size: 17px;
+      }
+
+      h4 {
+        margin-bottom: 3px;
+      }
+    }
+
+    .contact-us {
+      .map {
+        display: none;
+      }
+
+      .contact-us-content {
+        padding: 53px 0;
+        display: block;
+      }
+
+      .contact-us-info {
+        display: block;
+      }
+
+      h2 {
+        margin-bottom: 35px;
+        font-size: 36px;
+        text-align: center;
+      }
+
+      h4 {
+        margin-bottom: 15px;
+        font-size: 25px;
+      }
+
+      .address {
+        margin-bottom: 25px;
+      }
+
+      .links {
+        margin-bottom: 43px;
+
+        a:first-child {
+          margin-bottom: 15px;
+        }
+
+        span {
+          font-size: 19px;
+        }
+      }
+
+      .contact-info {
+        width: 100%;
+        margin-left: 0;
+
+        li {
+          margin-bottom: 15px;
+        }
       }
     }
   }
