@@ -222,11 +222,16 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        grid-gap: 45px 0;
+        grid-gap: 0;
       }
 
       li {
         width: 50%;
+        margin-bottom: 45px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -288,12 +293,13 @@
         font-size: 36px;
       }
 
-      ul {
-        grid-gap: 48px 0;
-      }
-
       li {
         width: 100%;
+        margin-bottom: 48px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       .img-wrapper {

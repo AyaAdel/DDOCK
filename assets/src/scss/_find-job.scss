@@ -178,6 +178,7 @@
     .clear-option {
       width: 82%;
       margin-top: 7px;
+      color: #fff;
       font-size: 10px;
       text-align: right;
       cursor: pointer;
@@ -212,6 +213,7 @@
       width: 234px;
       height: 41px;
       padding: 0 19px;
+      color: $primary-color;
       border: 1px solid $primary-color;
       border-radius: 10px;
       text-transform: uppercase;
