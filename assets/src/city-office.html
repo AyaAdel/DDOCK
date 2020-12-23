@@ -1,99 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./partials/head.html',{ "title": "DESIGNERDOCK - Berlin Office" })
+  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Berlin Office" })
 
-<body>
-  <div class="city-office">
-    <header id="header">
-      <div id="behind" class="background-behind" onclick="hideMenu()"></div>
-      @@include('./partials/navbar.html',{ "navLink": "City Office" })
-    </header>
-    <section class="city-live">
-      <div class="city-live-banner" style="background-image: url('./imgs/city-live.png')"></div>
-      <div class="city-live-content">
-        <div class="city-live-info">
-          <h1>Willkommen in <span> Berlin!</span></h1>
-          <p>Berlin ist Party, S-Bahn-Chaos, Currywurst und Flughafen. Berlin ist Kommen und Gehen, von allem zu viel
-            und von
-            Vielem zu wenig. Berlin ist Hauptstadt - arm, aber sexy. Start-up, erfinderisch und kreativ. Berlin ist
-            Deutschlands Gründerhauptstadt Nummer Eins.</p>
-          <div class="city-live-link">
-            <a href="#"><span>Unsere Jobs in Berlin!</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  <body>
+    <div class="city-office">
+      <header id="header">
+        <div id="behind" class="background-behind" onclick="hideMenu()"></div>
+        @@include('./partials/navbar.html',{ "navLink": "City Office" })
+      </header>
+      <section class="city-live">
+        <div class="city-live-banner" style="background-image: url('./imgs/city-live.png')"></div>
+        <div class="city-live-content">
+          <div class="city-live-info">
+            <h1>Willkommen in <span> Berlin!</span></h1>
+            <p>
+              Berlin ist Party, S-Bahn-Chaos, Currywurst und Flughafen. Berlin ist Kommen und Gehen, von allem zu viel
+              und von Vielem zu wenig. Berlin ist Hauptstadt - arm, aber sexy. Start-up, erfinderisch und kreativ.
+              Berlin ist Deutschlands Gründerhauptstadt Nummer Eins.
+            </p>
+            <div class="city-live-link">
+              <a href="#"><span>Unsere Jobs in Berlin!</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="team">
-      <h2>Berlin Team</h2>
-      <ul class="team-photos">
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team1.png" alt="Team photo">
+      </section>
+      <section class="team">
+        <h2>Berlin Team</h2>
+        <ul class="team-photos">
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team1.png" alt="Team photo" />
+            </div>
+            <h4>Alexandr Dewhirst</h4>
+            <span>Founder</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team2.png" alt="Team photo" />
+            </div>
+            <h4>Kristin Louis</h4>
+            <span>Coo</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team3.png" alt="Team photo" />
+            </div>
+            <h4>Karin Hoppmann</h4>
+            <span>Personnel Manager</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team1.png" alt="Team photo" />
+            </div>
+            <h4>Alexandr Dewhirst</h4>
+            <span>Founder</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team2.png" alt="Team photo" />
+            </div>
+            <h4>Kristin Louis</h4>
+            <span>Coo</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team3.png" alt="Team photo" />
+            </div>
+            <h4>Karin Hoppmann</h4>
+            <span>Personnel Manager</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team1.png" alt="Team photo" />
+            </div>
+            <h4>Alexandr Dewhirst</h4>
+            <span>Founder</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team2.png" alt="Team photo" />
+            </div>
+            <h4>Kristin Louis</h4>
+            <span>Coo</span>
+          </li>
+          <li>
+            <div class="img-wrapper">
+              <img src="./imgs/team3.png" alt="Team photo" />
+            </div>
+            <h4>Karin Hoppmann</h4>
+            <span>Personnel Manager</span>
+          </li>
+        </ul>
+      </section>
+      <section class="contact-us">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2429.4025995269394!2d13.3871979!3d52.4899515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85027dcd02179%3A0xfed30b2bdf97c71!2sDESIGNERDOCK%20Berlin%20GmbH!5e0!3m2!1sen!2seg!4v1608678229153!5m2!1sen!2seg"
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+        <div class="contact-us-content">
+          <div class="contact-us-info">
+            <div>
+              <h2>Contact Us</h2>
+              <div class="address">
+                <h4>Address</h4>
+                <p>DESIGNERDOCK Headquarters Ltd. Bergmannstraße 102 10961 Berlin</p>
+              </div>
+              <div class="links">
+                <a href="#"><span>How to find us?</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="#"><span>View on GoogleMaps</span><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <ul class="contact-info">
+              <li>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>030 69 59 66 19</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>030 69 59 66 12</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@designerdock.com</a>
+              </li>
+            </ul>
           </div>
-          <h4>Alexandr Dewhirst</h4>
-          <span>Founder</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team2.png" alt="Team photo">
-          </div>
-          <h4>Kristin Louis</h4>
-          <span>Coo</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team3.png" alt="Team photo">
-          </div>
-          <h4>Karin Hoppmann</h4>
-          <span>Personnel Manager</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team1.png" alt="Team photo">
-          </div>
-          <h4>Alexandr Dewhirst</h4>
-          <span>Founder</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team2.png" alt="Team photo">
-          </div>
-          <h4>Kristin Louis</h4>
-          <span>Coo</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team3.png" alt="Team photo">
-          </div>
-          <h4>Karin Hoppmann</h4>
-          <span>Personnel Manager</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team1.png" alt="Team photo">
-          </div>
-          <h4>Alexandr Dewhirst</h4>
-          <span>Founder</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team2.png" alt="Team photo">
-          </div>
-          <h4>Kristin Louis</h4>
-          <span>Coo</span>
-        </li>
-        <li>
-          <div class="img-wrapper">
-            <img src="./imgs/team3.png" alt="Team photo">
-          </div>
-          <h4>Karin Hoppmann</h4>
-          <span>Personnel Manager</span>
-        </li>
-      </ul>
-    </section>
-  </div>
+        </div>
+      </section>
+      @@include('./partials/footer.html')
+    </div>
 
-  @@include('./partials/scripts.html')
-</body>
-
+    @@include('./partials/scripts.html')
+  </body>
 </html>
