@@ -1,0 +1,157 @@
+.professions {
+  header {
+    position: relative;
+    height: 468px;
+    padding-top: 157px;
+    @include flexCenter;
+
+    .header-content {
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #ffffff;
+      font-size: 57px;
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+
+  .job-description {
+    width: 50%;
+    margin: 0 auto;
+    padding: 57px 0 88px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 44px;
+      color: #000000;
+      font-size: 33px;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 35.29px;
+    }
+
+    li {
+      a {
+        height: 57.33px;
+        padding: 0 20px;
+        color: #b1c100;
+        border: 1px solid #b1c100;
+        border-radius: 10px;
+        @include flexBetween;
+      }
+
+      span {
+        color: #b1c100;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .for-change {
+    height: 773px;
+    background-color: #b1c110;
+  }
+}
+
+// Media Query
+@media (max-width: 1230px) {
+  .professions {
+    header .header-content,
+    .job-description {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .professions {
+    header {
+      height: 343px;
+      padding-top: 109px;
+
+      .header-content {
+        width: 90%;
+      }
+
+      h1 {
+        margin-bottom: 1px;
+        font-size: 43px;
+      }
+    }
+
+    .job-description {
+      width: 90%;
+      padding: 43px 0 67px;
+
+      h2 {
+        margin-bottom: 46px;
+        font-size: 31px;
+      }
+    }
+
+    .for-change {
+      height: 1107px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .professions {
+    header {
+      height: 461px;
+      padding-top: 109px;
+
+      h1 {
+        margin-bottom: 14px;
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+
+    .job-description {
+      padding: 46px 0 75px;
+
+      h2 {
+        margin-bottom: 54px;
+        font-size: 36px;
+      }
+
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px 0;
+      }
+
+      li {
+        a {
+          height: 82px;
+        }
+
+        span,
+        .fa {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .for-change {
+      height: 1475px;
+    }
+  }
+}

@@ -5,6 +5,7 @@
 @import '_single-job';
 @import '_personal-search';
 @import '_city-office';
+@import '_professions';
 
 // Fonts
 @font-face {
@@ -511,5 +512,139 @@ footer {
   transition: none !important;
 }
 
+// Talk Section
+.section-talk {
+  width: 80%;
+  margin: 0 auto;
+  padding: 136px 0;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-gap: 15px;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 21px 16px;
+  }
+
+  li {
+    height: 49px;
+    padding: 0 10px;
+    border: 1px solid #b1c110;
+    border-radius: 5px;
+    @include flexBetween;
+  }
+
+  .section-talk-town {
+    color: #000000;
+    font-size: 14px;
+  }
+
+  .talk-icons {
+    display: flex;
+  }
+
+  .icon-wrapper {
+    width: 25px;
+    height: 25px;
+    background-color: #b1c110;
+    border-radius: 5px;
+    @include flexCenter;
+
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    .fa {
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+
+  h2 {
+    font-size: 56px;
+    line-height: 59px;
+  }
+
+  .section-talk-wanna {
+    color: #b1c110;
+  }
+
+  .section-talk-talk {
+    color: #000;
+  }
+
+  form {
+    display: none;
+  }
+}
+
 // Media Query
+@media (max-width: 1199px) {
+  .section-talk li {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-talk {
+    padding: 74px 0;
+    display: block;
+
+    ul {
+      margin-bottom: 45px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      padding: 0 15px;
+    }
+
+    h2 {
+      font-size: 104px;
+      line-height: 97px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-talk {
+    width: 90%;
+    padding: 157px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      display: none;
+    }
+
+    h2 {
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    form {
+      width: 100%;
+      display: block;
+    }
+
+    .select2-container .select2-selection--single {
+      background-color: #b1c100;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      color: #fff;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+      border-color: #fff transparent transparent transparent;
+    }
+
+    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+      border-color: transparent transparent #fff transparent;
+    }
+  }
+}
+
 @import '_responsive';
