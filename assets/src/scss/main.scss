@@ -6,6 +6,7 @@
 @import '_personal-search';
 @import '_city-office';
 @import '_professions';
+@import '_terms-business';
 
 // Fonts
 @font-face {
@@ -30,6 +31,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: ParRegular;
 }
 
@@ -577,6 +579,10 @@ footer {
   form {
     display: none;
   }
+}
+
+.select2-container {
+  z-index: 3;
 }
 
 // Media Query
