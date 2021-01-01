@@ -24,6 +24,11 @@
   src: url(../fonts/ParachuteBold.otf);
 }
 
+@font-face {
+  font-family: Dock40;
+  src: url(../fonts/DOCK-40.ttf);
+}
+
 // frameWork
 * {
   box-sizing: border-box;
@@ -346,11 +351,9 @@ header.display-menu {
 // Footer
 footer {
   min-height: 177px;
-  padding: 25px 0;
+  padding: 25px 10px;
   background-color: $footer;
   display: flex;
-  @include padding(left, 60px);
-  @include padding(right, 60px);
   @include flexBetween;
 
   a {
@@ -497,7 +500,7 @@ footer {
 
     span {
       color: $primary-color;
-      font-family: ParBold;
+      font-family: ParMedium;
       @include fontSize(21px);
     }
   }
