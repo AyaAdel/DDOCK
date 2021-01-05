@@ -146,90 +146,6 @@
       text-align: center;
     }
   }
-
-  .contact-us {
-    height: 489px;
-    display: grid;
-    grid-template-columns: 67% 33%;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
-
-    .contact-us-content {
-      background-color: #333333;
-      @include flexCenter;
-    }
-
-    .contact-us-info {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    h2 {
-      margin-bottom: 17px;
-      color: #ffffff;
-      font-size: 35px;
-    }
-
-    .address {
-      margin-bottom: 18px;
-    }
-
-    h4 {
-      margin-bottom: 12px;
-      color: #ffffff;
-      font-size: 17px;
-    }
-
-    p {
-      color: #ffffff80;
-      font-size: 20px;
-    }
-
-    .links {
-      margin-bottom: 40px;
-
-      a {
-        width: fit-content;
-        display: block;
-
-        &:first-child {
-          margin-bottom: 11px;
-        }
-      }
-
-      span {
-        color: #ffffff;
-        font-size: 13px;
-        border-bottom: 1px solid #b1c100;
-      }
-
-      .fa {
-        margin-left: 9px;
-        color: #b1c100;
-        font-size: 14px;
-      }
-    }
-
-    .contact-info {
-      li {
-        margin-bottom: 11px;
-      }
-
-      a {
-        color: #ffffff;
-        font-size: 14px;
-      }
-
-      .fa {
-        width: 15px;
-        margin-right: 9px;
-        color: #b1c100;
-      }
-    }
-  }
 }
 
 // Media Query
@@ -280,32 +196,6 @@
         &:last-child {
           margin-bottom: 0;
         }
-      }
-    }
-
-    .contact-us {
-      height: auto;
-      grid-template-columns: repeat(1, 1fr);
-
-      .map {
-        height: 490px;
-      }
-
-      .contact-us-content {
-        padding: 49px 0;
-      }
-
-      .contact-us-info {
-        @include flexCenter;
-      }
-
-      .links {
-        margin-bottom: 0;
-      }
-
-      .contact-info {
-        width: 40%;
-        margin-left: 40px;
       }
     }
   }
@@ -362,57 +252,6 @@
 
       h4 {
         margin-bottom: 3px;
-      }
-    }
-
-    .contact-us {
-      .map {
-        display: none;
-      }
-
-      .contact-us-content {
-        padding: 53px 0;
-        display: block;
-      }
-
-      .contact-us-info {
-        display: block;
-      }
-
-      h2 {
-        margin-bottom: 35px;
-        font-size: 36px;
-        text-align: center;
-      }
-
-      h4 {
-        margin-bottom: 15px;
-        font-size: 25px;
-      }
-
-      .address {
-        margin-bottom: 25px;
-      }
-
-      .links {
-        margin-bottom: 43px;
-
-        a:first-child {
-          margin-bottom: 15px;
-        }
-
-        span {
-          font-size: 19px;
-        }
-      }
-
-      .contact-info {
-        width: 100%;
-        margin-left: 0;
-
-        li {
-          margin-bottom: 15px;
-        }
       }
     }
   }
