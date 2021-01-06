@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./partials/head.html',{ "title": "DESIGNERDOCK - Contacts" })
+  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Contacts" })
 
-<body>
-  <div class="contacts">
-    <header id="header">
-      @@include('./partials/navbar.html',{ "navLink": "Contact" })
-    </header>
-    <section class="contact">
-      <h1>Contact Us</h1>
-      @@include('./partials/contact-us.html',{"title": "BERLIN"})
-      @@include('./partials/contact-us.html',{"title": "DÜSSELDORF"})
-      @@include('./partials/contact-us.html',{"title": "FRANKFURT"})
-      @@include('./partials/contact-us.html',{"title": "BERLIN"})
-      @@include('./partials/contact-us.html',{"title": "BERLIN"})
-      @@include('./partials/contact-us.html',{"title": "BERLIN"})
-      @@include('./partials/contact-us.html',{"title": "BERLIN"})
-    </section>
-    @@include('./partials/footer.html')
-  </div>
+  <body>
+    <div class="contacts">
+      <header id="header">@@include('./partials/navbar.html',{ "navLink": "Contact" })</header>
+      <section class="contact">
+        <h1>Contact Us</h1>
+        @@include('./partials/contact-us.html',{"title": "BERLIN"}) @@include('./partials/contact-us.html',{"title":
+        "DÜSSELDORF"}) @@include('./partials/contact-us.html',{"title": "FRANKFURT"})
+        @@include('./partials/contact-us.html',{"title": "BERLIN"}) @@include('./partials/contact-us.html',{"title":
+        "BERLIN"}) @@include('./partials/contact-us.html',{"title": "BERLIN"})
+        @@include('./partials/contact-us.html',{"title": "BERLIN"})
+      </section>
+      @@include('./partials/footer.html')
+    </div>
 
-  @@include('./partials/scripts.html')
-</body>
-
+    @@include('./partials/scripts.html')
+  </body>
 </html>

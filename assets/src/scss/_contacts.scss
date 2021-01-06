@@ -1,17 +1,17 @@
 .contacts {
   header {
     height: 148px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     @include flexCenter;
   }
 
   .contact {
     padding: 80px 0;
     background-color: #333333;
-    
+
     h1 {
       margin-bottom: 113px;
-      color: #FFFFFF;
+      color: #ffffff;
       font-size: 44px;
       text-align: center;
     }
@@ -41,10 +41,11 @@
         width: 80%;
         margin: 0 auto;
         font-size: 34px;
-        text-align: left
+        text-align: left;
       }
 
-      .map, h4 {
+      .map,
+      h4 {
         display: none;
       }
 
@@ -78,5 +79,35 @@
       }
     }
   }
+}
 
+@media (max-width: 767px) {
+  .contacts {
+    header {
+      height: 98px;
+    }
+
+    .contact {
+      padding: 57px 0 0;
+
+      h1 {
+        margin-bottom: 4px;
+        text-align: center;
+      }
+
+      .contact-us h2 {
+        margin-bottom: 15px;
+        font-size: 25px;
+        text-align: left;
+      }
+
+      .contact-info {
+        margin-left: 0;
+
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
