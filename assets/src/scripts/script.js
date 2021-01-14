@@ -38,4 +38,9 @@ const changeStar = (element) => {
 
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
+
+  $('.marking-design-slider').slick({
+    prevArrow: '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+    nextArrow: '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+  });
 });
