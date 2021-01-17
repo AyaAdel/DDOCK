@@ -31,6 +31,42 @@
   src: url(../fonts/DOCK-40.ttf);
 }
 
+@font-face {
+  font-family: PFRegular;
+  src: url('./../assets/fonts/PFDINDisplayPro-Regular.eot');
+  src: url('./../assets/fonts/PFDINDisplayPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/PFDINDisplayPro-Regular.woff2') format('woff2'),
+    url('./../assets/fonts/PFDINDisplayPro-Regular.woff') format('woff'),
+    url('./../assets/fonts/PFDINDisplayPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: PFMedium;
+  src: url('./../assets/fonts/PFDINDisplayPro-Medium.eot');
+  src: url('./../assets/fonts/PFDINDisplayPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/PFDINDisplayPro-Medium.woff2') format('woff2'),
+    url('./../assets/fonts/PFDINDisplayPro-Medium.woff') format('woff'),
+    url('./../assets/fonts/PFDINDisplayPro-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: PFBold;
+  src: url('./../assets/fonts/PFDINDisplayPro-Bold.eot');
+  src: url('./../assets/fonts/PFDINDisplayPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/PFDINDisplayPro-Bold.woff2') format('woff2'),
+    url('./../assets/fonts/PFDINDisplayPro-Bold.woff') format('woff'),
+    url('./../assets/fonts/PFDINDisplayPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
 // frameWork
 * {
   box-sizing: border-box;

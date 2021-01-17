@@ -1,100 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- Slick Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
 
-  <!-- Slick Slider -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Select 2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 
-  <!-- Select 2 -->
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./css/styles.min.css" />
 
-  <!-- Custom Style -->
-  <link rel="stylesheet" href="./css/styles.min.css" />
+    <title>DESIGNERDOCK - Homepage</title>
+  </head>
 
-  <title>DESIGNERDOCK - Homepage</title>
-</head>
-
-<body>
-  <div class="homepage">
-    <header style="background-image: url('imgs/homepage-banner.png')" id="header">
-      <div id="behind" class="background-behind" onclick="hideMenu()"></div>
-      @@include('./partials/navbar.html')
-      <div class="header-content">
-        <div class="header-content-info">
-          <h1><span>JUMPSTART</span>YOUR CAREER</h1>
-          <p>Ready to go to the next level? We'll support you all the way. For free.</p>
-          <div class="editing-section">
-            <a href="#" class="btn editing">Bewerben</a>
-            <div class="editing-section-links">
-              <a href="#"><span>309 Offene Stellen</span><i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
-              <a href="#"><span>Personal Finden</span><i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
+  <body>
+    <div class="homepage">
+      <header style="background-image: url('imgs/homepage-banner.png')" id="header">
+        <div id="behind" class="background-behind" onclick="hideMenu()"></div>
+        @@include('./partials/navbar.html')
+        <div class="header-content">
+          <div class="header-content-info">
+            <h1><span>JUMPSTART</span>YOUR CAREER</h1>
+            <p>Ready to go to the next level? We'll support you all the way. For free.</p>
+            <div class="editing-section">
+              <a href="#" class="btn editing">Bewerben</a>
+              <div class="editing-section-links">
+                <a href="#"><span>309 Offene Stellen</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                <a href="#"><span>Personal Finden</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+              </div>
             </div>
           </div>
+          <ul>
+            <li><a href="#">BERLIN</a></li>
+            <li><a href="#">DÜSSELDORF</a></li>
+            <li><a href="#">FRANKFURT</a></li>
+            <li><a href="#">HAMBURG</a></li>
+            <li><a href="#">MÜNCHEN</a></li>
+            <li><a href="#">STUTTGART</a></li>
+            <li><a href="#">WIEN</a></li>
+          </ul>
         </div>
-        <ul>
-          <li><a href="#">BERLIN</a></li>
-          <li><a href="#">DÜSSELDORF</a></li>
-          <li><a href="#">FRANKFURT</a></li>
-          <li><a href="#">HAMBURG</a></li>
-          <li><a href="#">MÜNCHEN</a></li>
-          <li><a href="#">STUTTGART</a></li>
-          <li><a href="#">WIEN</a></li>
-        </ul>
-      </div>
-    </header>
-    <section class="marking-design">
-      <div class="marking-design-slider">
-        <div><img src="./imgs/design-marketing.png" alt="Design Marketing"></div>
-        <div><img src="./imgs/homepage-banner.png" alt="Applicants"></div>
-        <div><img src="./imgs/applicants.png" alt="Customers"></div>
-      </div>
-      <div class="marking-design-content">
-        <h2><span>DIE PERSONALBERATUNG</span> FÜR KOMMUNIKATION, MARKETING UND DESIGN</h2>
-        <p>Seit 1996 sind wir die erfolgreichste Personalberatung für Werbung, Grafik, Design, Digital, Marketing und die
-          gesamte Kommunikations-branche im deutschsprachigen Raum – mit Büros in Berlin, Düsseldorf, Frankfurt a.M., Hamburg,
-          München, Stuttgart und Wien.</p>
-        <p>Wir verstehen wovon wir reden, denn alle Personalberater*innen sind Spezialist*innen aus dem jeweiligen
-          Fachbereich, den sie betreuen. Diese Fachkompetenz, gepaart mit persönlicher Betreuung und langfristig angelegter
-          Beratung, macht uns besonders und einzigartig. Wir helfen Dir dabei Schwung in Deine Karriere zu bringen und neue
-          Wege zu gehen!</p>
-      </div>
-    </section>
-    @@include('./partials/footer.html')
-  </div>
+      </header>
+      <section class="marking-design">
+        <div class="marking-design-slider">
+          <div><img src="./imgs/design-marketing.png" alt="Design Marketing" /></div>
+          <div><img src="./imgs/homepage-banner.png" alt="Applicants" /></div>
+          <div><img src="./imgs/applicants.png" alt="Customers" /></div>
+        </div>
+        <div class="marking-design-content">
+          <h2>
+            <span>DIE PERSONALBERATUNG</span><br />
+            FÜR KOMMUNIKATION, MARKETING UND DESIGN
+          </h2>
+          <p>
+            Seit 1996 sind wir die erfolgreichste Personalberatung für Werbung, Grafik, Design, Digital, Marketing und
+            die gesamte Kommunikations-branche im deutschsprachigen Raum – mit Büros in Berlin, Düsseldorf, Frankfurt
+            a.M., Hamburg, München, Stuttgart und Wien.
+          </p>
+          <p>
+            Wir verstehen wovon wir reden, denn alle Personalberater*innen sind Spezialist*innen aus dem jeweiligen
+            Fachbereich, den sie betreuen. Diese Fachkompetenz, gepaart mit persönlicher Betreuung und langfristig
+            angelegter Beratung, macht uns besonders und einzigartig. Wir helfen Dir dabei Schwung in Deine Karriere zu
+            bringen und neue Wege zu gehen!
+          </p>
+        </div>
+      </section>
+      @@include('./partials/footer.html')
+    </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  <!-- Slick Slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  
-  <!-- Select2 Plugin  -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-  
-  <!-- Custom Script -->
-  <script src="./scripts/scripts.min.js"></script>
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 
+    <!-- Slick Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Select2 Plugin  -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="./scripts/scripts.min.js"></script>
+  </body>
 </html>
