@@ -117,16 +117,16 @@
   .marking-design {
     width: 85%;
     margin: 0 auto;
-    padding: 160px 0;
-    display: flex;
+    padding: 161px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
 
     .marking-design-slider {
-      width: 581px;
+      width: 100%;
       height: 413px;
-      margin-right: 8%;
 
       img {
-        width: 581px;
+        width: 100%;
         height: 413px;
         cursor: grab;
       }
@@ -159,6 +159,10 @@
       outline: 0;
     }
 
+    .marking-design-content {
+      padding-left: 90px;
+    }
+
     h2 {
       margin-bottom: 30px;
       color: #000000;
@@ -178,6 +182,96 @@
 
       &:first-of-type {
         margin-bottom: 28px;
+      }
+    }
+  }
+
+  .applicants-customers-wrapper {
+    padding: 76px 0;
+    background-color: #B1C100;
+
+    .applicants-customers-container {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .applicants,
+    .customers {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      box-shadow: 0 3px 40px rgba(0, 0, 0, 0.26);
+      border-radius: 6px;
+    }
+
+    .applicants {
+      margin-bottom: 70px;
+    }
+
+    .applicants-img,
+    .customers-img {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .applicants-info,
+    .customers-info {
+      padding: 30px 40px;
+      background-color: #FFFFFF;
+    }
+
+    h3 {
+      margin-bottom: 22px;
+      color: #000000;
+      font-size: 30px;
+      font-family: ParMedium;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: 7px;
+      color: #717171;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .link {
+      margin-bottom: 20px;
+      color: #E1017A;
+      font-size: 14px;
+      display: block;
+
+      .fa {
+        margin-left: 8px;
+      }
+    }
+
+    .applicants-customers-btn {
+      display: flex;
+    }
+
+    .btn {
+      width: 165px;
+      height: 42px;
+      font-size: 11px;
+      font-family: ParBold;
+      border-radius: 6px;
+      @include flexCenter;
+
+      &.primary {
+        margin-right: 10px;
+        background-color: #B1C110;
+        color: #FFFFFF;
+        border: 1px solid #B1C110;
+      }
+
+      &.secondary {
+        background-color: #FFFFFF;
+        color: #717171;
+        border: 1px solid #969696;
       }
     }
   }

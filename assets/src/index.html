@@ -69,7 +69,7 @@
         <div class="marking-design-slider">
           <div><img src="./imgs/design-marketing.png" alt="Design Marketing" /></div>
           <div><img src="./imgs/homepage-banner.png" alt="Applicants" /></div>
-          <div><img src="./imgs/applicants.png" alt="Customers" /></div>
+          <div><img src="./imgs/customers.png" alt="Customers" /></div>
         </div>
         <div class="marking-design-content">
           <h2>
@@ -89,6 +89,46 @@
           </p>
         </div>
       </section>
+      <section style="background-image: url('./imgs/applicants.png')">
+      </section>
+      <section class="applicants-customers-wrapper">
+        <div class="applicants-customers-container">
+          <div class="applicants">
+            <div class="applicants-img" style="background-image: url('./imgs/applicants.png')"></div>
+            <div class="applicants-info">
+              <h3>für bewerber*INNEN</h3>
+              <p>Egal, ob Du eine Festanstellung suchst oder als Freelancer*in arbeiten möchtest. Wir wollen, dass Du einen
+                Job
+                findest, der zu Dir passt. Aktuell sind hunderte Stellen zu besetzen – von Projektmanager*innen,
+                Kundenberater*innen über Texter*innen, Social Media Manager*innen bis hin zu UX Designer*innen, Art
+                Direktor*innen und vielen weiteren. Unsere spezialisierten Personalberater*innen unterstützen dich kostenlos
+                dabei Deine Karriereziele zu erreichen. Fair, transparent, persönlich und kostenfrei.</p>
+              <a href="#" class="link">Weiterlesen <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+              <div class="applicants-customers-btn">
+                <a href="#" class="btn primary">Zur Bewerbung</a>
+                <a href="#" class="btn secondary">DESIGNERDOCKVERTRAG</a>
+              </div>
+            </div>
+          </div>
+          <div class="customers">
+            <div class="customers-info">
+              <h3>FÜR KUND*INNEN</h3>
+              <p>Alle unsere Personalberater*innen kennen die Kommunikationsbranche aus eigener Erfahrung. Wir wissen, worauf
+                es ankommt. Egal ob Kundenberater*innen, Programmierer*innen, Art Direktor*innen, Texter*innen,
+                Geschäftsführer*innen oder Assistent*innen – Wir finden die passenden Talente, die Ihr Unternehmen
+                voranbringen.</p>
+              <a href="#" class="link">Weiterlesen <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+              <div class="applicants-customers-btn">
+                <a href="#" class="btn primary">PERSONAL FINDEN</a>
+                <a href="#" class="btn secondary">DIE KONDITIONEN</a>
+              </div>
+            </div>
+            <div class="customers-img" style="background-image: url('./imgs/customers.png')">
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('./partials/just-cards.html')
       @@include('./partials/footer.html')
     </div>
 
@@ -115,6 +155,9 @@
 
     <!-- Select2 Plugin  -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <!-- Swiper plugin-->
+    <script src="./scripts/swiper.min.js"></script>
 
     <!-- Custom Script -->
     <script src="./scripts/scripts.min.js"></script>
