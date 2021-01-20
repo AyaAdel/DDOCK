@@ -188,7 +188,7 @@
 
   .applicants-customers-wrapper {
     padding: 76px 0;
-    background-color: #B1C100;
+    background-color: #b1c100;
 
     .applicants-customers-container {
       width: 85%;
@@ -209,18 +209,32 @@
       margin-bottom: 70px;
     }
 
-    .applicants-img,
+    .block {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+    .img-parallax {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 3;
+      width: 120%;
+      height: 100vh;
+      transform: translate(-50%, 0);
+      pointer-events: none;
+    }
+
     .customers-img {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      width: 100%;
     }
 
     .applicants-info,
     .customers-info {
       padding: 30px 40px;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
     }
 
     h3 {
@@ -240,7 +254,7 @@
 
     .link {
       margin-bottom: 20px;
-      color: #E1017A;
+      color: #e1017a;
       font-size: 14px;
       display: block;
 
@@ -263,13 +277,13 @@
 
       &.primary {
         margin-right: 10px;
-        background-color: #B1C110;
-        color: #FFFFFF;
-        border: 1px solid #B1C110;
+        background-color: #b1c110;
+        color: #ffffff;
+        border: 1px solid #b1c110;
       }
 
       &.secondary {
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         color: #717171;
         border: 1px solid #969696;
       }

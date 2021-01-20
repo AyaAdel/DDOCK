@@ -1,42 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-
-    <!-- Slick Slider -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <!-- Select 2 -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="./css/styles.min.css" />
-
-    <title>DESIGNERDOCK - Homepage</title>
-  </head>
-
+  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Homepage" })
   <body>
     <div class="homepage">
       <header style="background-image: url('imgs/homepage-banner.png')" id="header">
@@ -89,20 +53,23 @@
           </p>
         </div>
       </section>
-      <section style="background-image: url('./imgs/applicants.png')">
-      </section>
+      <section style="background-image: url('./imgs/applicants.png')"></section>
       <section class="applicants-customers-wrapper">
         <div class="applicants-customers-container">
           <div class="applicants">
-            <div class="applicants-img" style="background-image: url('./imgs/applicants.png')"></div>
+            <div class="block">
+              <img src="./imgs/applicants.png" data-speed="-1" class="img-parallax" />
+            </div>
             <div class="applicants-info">
               <h3>für bewerber*INNEN</h3>
-              <p>Egal, ob Du eine Festanstellung suchst oder als Freelancer*in arbeiten möchtest. Wir wollen, dass Du einen
-                Job
-                findest, der zu Dir passt. Aktuell sind hunderte Stellen zu besetzen – von Projektmanager*innen,
-                Kundenberater*innen über Texter*innen, Social Media Manager*innen bis hin zu UX Designer*innen, Art
-                Direktor*innen und vielen weiteren. Unsere spezialisierten Personalberater*innen unterstützen dich kostenlos
-                dabei Deine Karriereziele zu erreichen. Fair, transparent, persönlich und kostenfrei.</p>
+              <p>
+                Egal, ob Du eine Festanstellung suchst oder als Freelancer*in arbeiten möchtest. Wir wollen, dass Du
+                einen Job findest, der zu Dir passt. Aktuell sind hunderte Stellen zu besetzen – von
+                Projektmanager*innen, Kundenberater*innen über Texter*innen, Social Media Manager*innen bis hin zu UX
+                Designer*innen, Art Direktor*innen und vielen weiteren. Unsere spezialisierten Personalberater*innen
+                unterstützen dich kostenlos dabei Deine Karriereziele zu erreichen. Fair, transparent, persönlich und
+                kostenfrei.
+              </p>
               <a href="#" class="link">Weiterlesen <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
               <div class="applicants-customers-btn">
                 <a href="#" class="btn primary">Zur Bewerbung</a>
@@ -113,53 +80,169 @@
           <div class="customers">
             <div class="customers-info">
               <h3>FÜR KUND*INNEN</h3>
-              <p>Alle unsere Personalberater*innen kennen die Kommunikationsbranche aus eigener Erfahrung. Wir wissen, worauf
-                es ankommt. Egal ob Kundenberater*innen, Programmierer*innen, Art Direktor*innen, Texter*innen,
+              <p>
+                Alle unsere Personalberater*innen kennen die Kommunikationsbranche aus eigener Erfahrung. Wir wissen,
+                worauf es ankommt. Egal ob Kundenberater*innen, Programmierer*innen, Art Direktor*innen, Texter*innen,
                 Geschäftsführer*innen oder Assistent*innen – Wir finden die passenden Talente, die Ihr Unternehmen
-                voranbringen.</p>
+                voranbringen.
+              </p>
               <a href="#" class="link">Weiterlesen <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
               <div class="applicants-customers-btn">
                 <a href="#" class="btn primary">PERSONAL FINDEN</a>
                 <a href="#" class="btn secondary">DIE KONDITIONEN</a>
               </div>
             </div>
-            <div class="customers-img" style="background-image: url('./imgs/customers.png')">
+            <div class="block">
+              <img src="./imgs/customers.png" data-speed="-1" class="img-parallax customers-img" />
             </div>
           </div>
         </div>
       </section>
       @@include('./partials/just-cards.html')
-      @@include('./partials/footer.html')
+      <section class="for-change">
+        <div class="for-change-container">
+          <div class="for-change-heading">
+            <h2>
+              <span>READY</span><br />
+              fOR A CHANGE?
+            </h2>
+            <p>Jetzt kostenlos bewerben!</p>
+          </div>
+          <form action="">
+            <div class="form-group">
+              <div class="form-item">
+                <label for="nickName">Vorname / Nachname</label>
+                <input type="text" class="form-control" id="nickName" placeholder="John Doe" />
+              </div>
+              <div class="form-item">
+                <label for="email">E-Mail</label>
+                <input type="email" class="form-control" id="email" placeholder="example@gmail.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <label for="contract">Arbeitsort wählen</label>
+                <select class="js-example-basic-single form-control" name="state">
+                  <option value="1">Berlin</option>
+                  <option value="2">Düsseldorf</option>
+                  <option value="3">Frankfurt</option>
+                  <option value="4">Hamburg</option>
+                  <option value="5">München</option>
+                  <option value="6">Stuttgart</option>
+                  <option value="7">Wien</option>
+                  <option value="8">Zürich</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="experience">Interviewort wählen</label>
+                <select class="js-example-basic-single form-control" name="state">
+                  <option value="1">Berlin</option>
+                  <option value="2">Düsseldorf</option>
+                  <option value="3">Frankfurt</option>
+                  <option value="4">Hamburg</option>
+                  <option value="5">München</option>
+                  <option value="6">Stuttgart</option>
+                  <option value="7">Wien</option>
+                  <option value="8">Zürich</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group radio">
+              <div class="form-item">
+                <label>Bewerbung auf eine spezifische Stelle?</label>
+                <!-- <div></div> -->
+                <div class="onoffswitch">
+                  <input
+                    type="checkbox"
+                    name="onoffswitch1"
+                    class="onoffswitch-checkbox"
+                    id="myonoffswitch1"
+                    tabindex="0"
+                    checked="false"
+                  />
+                  <label class="onoffswitch-label" for="myonoffswitch1" onclick="checkRadio(this)">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+                <div class="job-number" id="job-number">
+                  <span>Job Number:</span>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="form-item">
+                <label>Designerdock Newsletter erhalten?</label>
+                <div class="onoffswitch">
+                  <input
+                    type="checkbox"
+                    name="onoffswitch2"
+                    class="onoffswitch-checkbox"
+                    id="myonoffswitch2"
+                    tabindex="0"
+                  />
+                  <label class="onoffswitch-label" for="myonoffswitch2">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group radio">
+              <div class="form-item">
+                <label>Designerdock Mitarbeiter*in wählen</label>
+                <div class="onoffswitch">
+                  <input
+                    type="checkbox"
+                    name="onoffswitch3"
+                    class="onoffswitch-checkbox"
+                    id="myonoffswitch3"
+                    tabindex="0"
+                  />
+                  <label class="onoffswitch-label" for="myonoffswitch3">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-item">
+                <label>Designerdock wurde mir empfohlen</label>
+                <div class="onoffswitch">
+                  <input
+                    type="checkbox"
+                    name="onoffswitch4"
+                    class="onoffswitch-checkbox"
+                    id="myonoffswitch4"
+                    tabindex="0"
+                  />
+                  <label class="onoffswitch-label" for="myonoffswitch4">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group file-upload">
+              <div class="dropzone" id="fileUpload">
+                <div class="fallback">
+                  <input name="file" type="file" multiple />
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-textarea">
+              <div class="form-item">
+                <label for="information">Message to DESIGNERDOCK</label>
+                <textarea class="form-control form-textarea" id="information"></textarea>
+              </div>
+            </div>
+            <div class="for-change-btn">
+              <button class="btn for-change-btn">jetzt senden</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      @@include('./partials/talk-section.html') @@include('./partials/footer.html')
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Slick Slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-    <!-- Select2 Plugin  -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-
-    <!-- Swiper plugin-->
-    <script src="./scripts/swiper.min.js"></script>
-
-    <!-- Custom Script -->
-    <script src="./scripts/scripts.min.js"></script>
+    @@include('./partials/scripts.html')
   </body>
 </html>
