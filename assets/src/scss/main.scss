@@ -722,6 +722,10 @@ footer {
   padding: 50px 0;
   background-color: #b1c110;
 
+  .select2-container {
+    width: 100% !important;
+  }
+
   .for-change-container {
     width: 60%;
     margin: 0 auto;
@@ -763,6 +767,7 @@ footer {
 
     input {
       height: 45px;
+      border: 0;
       border-radius: 10px;
       box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
     }
@@ -774,7 +779,7 @@ footer {
       @include flexBetween;
     }
 
-    .job-number {
+    .display-radio-job {
       position: absolute;
       top: 35px;
       z-index: 3;
@@ -785,7 +790,10 @@ footer {
       border-radius: 10px;
       display: flex;
       align-items: center;
-      display: none;
+
+      ::placeholder {
+        color: transparent
+      }
 
       span {
         width: 25%;
@@ -797,16 +805,73 @@ footer {
       input {
         width: 75%;
         height: 27px;
+        padding: 0 10px;
         background-color: transparent;
+        color: #fff;
+        font-size: 13px;
         border: 1px solid #fff;
       }
+    }
+
+    .display-radio {
+      display: none;
     }
 
     label {
       margin-bottom: 0;
     }
 
-    .show + .job-number {
+    .specific-employees {
+      position: absolute;
+      top: 35px;
+      overflow: hidden;
+      z-index: 3;
+      width: 100%;
+      background-color: hsl(66, 100%, 30%);
+      border-radius: 10px;
+      display: none;
+
+      .display-radio-job {
+        position: static;
+        border-radius: 0;
+        overflow: hidden;
+      }
+
+      ::placeholder {
+        color: transparent
+      }
+    }
+
+    .specific-employees-list {
+      padding: 10px 15px;
+      max-height: 400px;
+      overflow-y: auto;
+
+      ul {
+        padding: 5px 20px;
+      }
+
+      .heading-item {
+        color: #ffffff;
+        font-size: 13px;
+      }
+
+      li {
+        color: #b1c110;
+        font-size: 13px;
+        font-family: ParBold;
+      }
+    }
+
+    .specific-employees-list-wrapper {
+      margin-top: 10px;
+    }
+
+    .checked + .display-radio {
+      display: flex;
+    }
+
+    .checked + .specific-employees {
       display: block;
     }
   }
@@ -820,10 +885,12 @@ footer {
     -ms-user-select: none;
   }
 
-  .onoffswitch-checkbox {
+  .form-group .onoffswitch-checkbox {
     position: absolute;
+    width: 100%;
+    height: 100%;
     opacity: 0;
-    pointer-events: none;
+    cursor: pointer;
   }
 
   .onoffswitch-label {
@@ -950,6 +1017,7 @@ footer {
 
     textarea {
       height: 44px;
+      bottom: 0;
     }
   }
 
@@ -973,6 +1041,10 @@ footer {
 @media (max-width: 1199px) {
   .section-talk li {
     padding: 0 5px;
+  }
+
+  .for-change .for-change-container {
+    width: 70%;
   }
 }
 
@@ -1023,6 +1095,35 @@ footer {
   }
 }
 
+@media (max-width: 991px) {
+  .for-change {
+    padding: 70px 0;
+
+    .for-change-container {
+      width: 60%;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 22px;
+
+      input,
+      textarea {
+        height: 50px;
+      }
+    }
+
+    .select2-container .select2-selection--single {
+      height: 50px;
+    }
+
+    .for-change-btn .btn {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .section-talk {
     width: 90%;
@@ -1047,6 +1148,7 @@ footer {
 
     .select2-container .select2-selection--single {
       background-color: #b1c100;
+      border: 0;
     }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -1111,6 +1213,132 @@ footer {
         margin-bottom: 15px;
       }
     }
+  }
+
+  .for-change {
+    .for-change-container {
+      width: 90%;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 36px;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 33px;
+      grid-gap: 33px;
+
+      input {
+        height: 70px;
+        font-size: 24px;
+      }
+
+      textarea {
+        height: 80px
+      }
+
+      label {
+        font-size: 20px;
+      }
+    }
+
+    .radio {
+      label {
+        width: 70%;
+      }
+
+      .onoffswitch {
+        width: 88px;
+        height: 40px;
+
+        .onoffswitch-label {
+          width: 100%;
+        }
+
+        .onoffswitch-inner {
+          height: 100%;
+        }
+
+        ::before, ::after {
+          height: 100%;
+          font-size: 12px;
+          line-height: 40px;
+        }
+
+        ::after {
+          padding-right: 20px;
+        }
+
+        ::before {
+          padding-left: 20px;
+        }
+
+        .onoffswitch-switch {
+          width: 32px;
+          height: 32px;
+          margin: 4px;
+          right: 48px
+        }
+      }
+
+      .specific-employees {
+        top: 60px;
+
+        .specific-employees-list {
+          .heading-item, li {
+            font-size: 20px;
+          }
+
+          li {
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .display-radio-job {
+        top: 60px;
+        height: 63px;
+        padding: 0;
+        background-color: #B1C110;
+
+        span {
+          display: none;
+        }
+
+        input {
+          height: 100%;
+          width: 100%;
+          background-color: #B1C110;
+          color: #fff;
+          font-size: 20px;
+          border: 2px solid #fff;
+        }
+
+        ::placeholder {
+          color: #E5E5E5;
+        }
+      }
+    }
+
+    .for-change-btn .btn {
+      height: 80px;
+      font-size: 24px;
+    }
+
+    .file-upload .dz-button {
+      height: 80px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    ::placeholder {
+      color: #969696
+    }
+  }
+
+  .select2-selection.select2-selection--single {
+    font-size: 24px;
   }
 }
 

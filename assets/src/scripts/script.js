@@ -36,30 +36,7 @@ const changeStar = (element) => {
   element.classList.toggle('favorite');
 };
 
-const jobNumber = document.getElementById('job-number');
-
-const checkRadio = (element) => {
-  // console.log(element.classList);
-  // debugger;
-  // console.log('element', element);
-  // element.classList.remove('aya');
-  // // debugger;
-  // if (element.classList.contains('aya')) {
-  //   // jobNumber.style.display = 'block';
-  //   element.classList.remove('aya');
-  // } else {
-  //   // jobNumber.style.display = 'block';
-  //   element.classList.add('aya');
-  // }
-  // jobNumber.style.display = 'block';
-  // element.classList.toggle('show');
-  // element.classList.add('aya');
-};
-
-$('.onoffswitch').on('click', function (e) {
-  e.stopPropagation();
-  $('label').toggleClass('aya');
-});
+const radioChecked = (element) => element.classList.toggle('checked');
 
 const jobCardSlider = new Swiper('.block-job__slider', {
   slidesPerView: 'auto',

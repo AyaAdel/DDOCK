@@ -53,7 +53,7 @@
     }
 
     .header-content-info {
-      margin-left: 71px;
+      margin-left: 7%;
     }
 
     h1 {
@@ -111,6 +111,10 @@
         color: #e1017a;
         font-size: 13px;
       }
+    }
+
+    .choose-your-city {
+      display: none;
     }
   }
 
@@ -200,7 +204,7 @@
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 50% 50%;
       box-shadow: 0 3px 40px rgba(0, 0, 0, 0.26);
       border-radius: 6px;
     }
@@ -273,6 +277,7 @@
       font-size: 11px;
       font-family: ParBold;
       border-radius: 6px;
+      text-transform: uppercase;
       @include flexCenter;
 
       &.primary {
@@ -288,5 +293,272 @@
         border: 1px solid #969696;
       }
     }
+  }
+}
+
+// Media Query
+@media (max-width: 1250px) {
+  .homepage {
+    .marking-design .marking-design-content {
+      padding-left: 60px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .homepage {
+    .marking-design {
+      width: 90%;
+
+      .marking-design-content {
+        padding-left: 35px;
+      }
+    }
+
+    .applicants-customers-wrapper .applicants-customers-container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .homepage {
+    header {
+      height: 1007px;
+
+      .header-content-info {
+        margin: 0;
+        text-align: center;
+        @include flexColumnCenter;
+      }
+
+      .editing-section-links,
+      .header-content ul {
+        display: none;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .editing {
+        margin-right: 0;
+      }
+
+      .editing-section {
+        margin: 10px 0 29.07px;
+      }
+
+      .choose-your-city {
+        display: block;
+        margin-bottom: 64.23px;
+      }
+
+      .select2-container .select2-selection--single {
+        height: 70.05px;
+        background: #6c767a;
+        border: 0;
+        border-radius: 5px;
+
+        .select2-selection__rendered {
+          color: #fff;
+          font-size: 23px;
+        }
+
+        .select2-selection__arrow b {
+          margin-left: -20px;
+          border-color: #B1C100 transparent transparent transparent;
+          border-width: 10px 9px 0 9px;
+        }
+      }
+
+      .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
+        border-radius: 5px !important;
+      }
+    }
+
+    .marking-design {
+      padding: 67px 0;
+      display: flex;
+      flex-direction: column;
+
+      .marking-design-slider {
+        order: 2;
+      }
+
+      .marking-design-content {
+        margin-bottom: 49px;
+        padding-left: 0;
+        order: 1;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 24px;
+        font-size: 35px;
+      }
+    }
+
+    .applicants-customers-wrapper {
+      padding: 70px 0;
+
+      .applicants-info,
+      .customers-info {
+        padding: 30px;
+      }
+
+      h3 {
+        margin-bottom: 14px;
+        font-size: 25px;
+      }
+
+      .applicants-customers-btn {
+        display: block;
+
+        .btn {
+          width: 100%;
+          margin-bottom: 8.93px;
+          font-size: 14px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+      }
+    }
+  }
+
+  .block-job__btn {
+    width: 272px;
+  }
+
+  .select2-dropdown--above, .select2-dropdown--below {
+    border-radius: 5px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .homepage {
+    header {
+      height: 766px;
+
+      h1 {
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      p {
+        display: none;
+      }
+
+      .editing {
+        width: 250px;
+        height: 60px;
+        font-size: 20px;
+      }
+
+      .editing-section {
+        margin: 9px 0 54px;
+      }
+
+      .choose-your-city {
+        margin-bottom: 11px;
+      }
+    }
+
+    .marking-design {
+      padding: 67px 0;
+
+      .marking-design-content {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 24px;
+        line-height: 33px;
+      }
+
+      .marking-design-slider .fa {
+        width: 32px;
+        height: 32px;
+
+        &.fa-angle-right {
+          right: -16px
+        }
+
+        &.fa-angle-left {
+          left: -16px
+        }
+      }
+    }
+
+    .applicants-customers-wrapper {
+      padding: 67px 0;
+
+      .block {
+        display: none;
+      }
+
+      .applicants,
+      .customers {
+        display: block;
+      }
+
+      .applicants {
+        margin-bottom: 50px;
+      }
+
+      .applicants-info,
+      .customers-info {
+        padding: 49px 30px;
+      }
+
+      h3 {
+        margin-bottom: 24px;
+        font-size: 28px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .link {
+        font-size: 20px;
+      }
+
+      .applicants-customers-btn {
+        .btn {
+          height: 60px;
+          margin-bottom: 15px;
+          font-size: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+      }
+    }
+  }
+
+  .select2-results__option {
+    font-size: 20px;
+  }
+
+  .block-job .block-job__btn {
+    width: 270px;
+    height: 72px;
+    font-size: 20px;
+  }
+
+  .select2-dropdown--above, .select2-dropdown--below,
+  .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+    border-radius: 5px !important;
   }
 }

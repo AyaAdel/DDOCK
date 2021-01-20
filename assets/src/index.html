@@ -27,7 +27,21 @@
             <li><a href="#">STUTTGART</a></li>
             <li><a href="#">WIEN</a></li>
           </ul>
-        </div>
+          <form class="choose-your-city">
+            <div class="form-item">
+              <select class="js-example-basic-single form-control" name="state">
+                <option value="1">Berlin</option>
+                <option value="2">Düsseldorf</option>
+                <option value="3">Frankfurt</option>
+                <option value="4">Hamburg</option>
+                <option value="5">München</option>
+                <option value="6">Stuttgart</option>
+                <option value="7">Wien</option>
+                <option value="8">Zürich</option>
+              </select>
+            </div>
+          </form>
+          </div>
       </header>
       <section class="marking-design">
         <div class="marking-design-slider">
@@ -148,26 +162,24 @@
               </div>
             </div>
             <div class="form-group radio">
-              <div class="form-item">
+              <div class="form-item" id="formItem">
                 <label>Bewerbung auf eine spezifische Stelle?</label>
-                <!-- <div></div> -->
-                <div class="onoffswitch">
+                <div class="onoffswitch" onclick="radioChecked(this)">
                   <input
                     type="checkbox"
                     name="onoffswitch1"
                     class="onoffswitch-checkbox"
                     id="myonoffswitch1"
                     tabindex="0"
-                    checked="false"
                   />
-                  <label class="onoffswitch-label" for="myonoffswitch1" onclick="checkRadio(this)">
+                  <label class="onoffswitch-label" for="myonoffswitch1">
                     <span class="onoffswitch-inner"></span>
                     <span class="onoffswitch-switch"></span>
                   </label>
                 </div>
-                <div class="job-number" id="job-number">
+                <div class="display-radio-job display-radio">
                   <span>Job Number:</span>
-                  <input type="text" />
+                  <input type="text" placeholder="Job Number" />
                 </div>
               </div>
               <div class="form-item">
@@ -190,7 +202,7 @@
             <div class="form-group radio">
               <div class="form-item">
                 <label>Designerdock Mitarbeiter*in wählen</label>
-                <div class="onoffswitch">
+                <div class="onoffswitch" onclick="radioChecked(this)">
                   <input
                     type="checkbox"
                     name="onoffswitch3"
@@ -202,6 +214,40 @@
                     <span class="onoffswitch-inner"></span>
                     <span class="onoffswitch-switch"></span>
                   </label>
+                </div>
+                <div class="specific-employees">
+                  <div class="display-radio-job">
+                    <span>Your Contact:</span>
+                    <input type="text" placeholder="Type Your Contact" />
+                  </div>
+                  <div class="specific-employees-list">
+                    <div class="specific-employees-list-wrapper">
+                      <div class="heading-item">DD_Berlin and Regio</div>
+                      <ul>
+                        <li>Esther Funk</li>
+                        <li>Indra Sarkar</li>
+                        <li>Torsten Haase</li>
+                        <li>Karin Hoppmann</li>
+                        <li>Sybille Dieckert</li>
+                      </ul>
+                    </div>
+                    <div class="specific-employees-list-wrapper">
+                      <div class="heading-item">DD_Düsseldorf and Region</div>
+                      <ul>
+                        <li>Andre Sendel</li>
+                        <li>Lutz Augustin</li>
+                        <li>Simone Hepp</li>
+                        <li>Karin Hoppmann</li>
+                        <li>Sybille Dieckert</li>
+                      </ul>
+                    </div>
+                    <div class="specific-employees-list-wrapper">
+                      <div class="heading-item">DD_Frankfurt and Region</div>
+                      <ul>
+                        <li>Andre Sendel</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="form-item">
