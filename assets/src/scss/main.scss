@@ -587,6 +587,14 @@ footer {
   .section-talk-town {
     color: #000000;
     font-size: 14px;
+
+    a {
+      color: #000000;
+
+      &:hover {
+        color: #b1c110;
+      }
+    }
   }
 
   .talk-icons {
@@ -792,7 +800,7 @@ footer {
       align-items: center;
 
       ::placeholder {
-        color: transparent
+        color: transparent;
       }
 
       span {
@@ -838,7 +846,7 @@ footer {
       }
 
       ::placeholder {
-        color: transparent
+        color: transparent;
       }
     }
 
@@ -1235,7 +1243,7 @@ footer {
       }
 
       textarea {
-        height: 80px
+        height: 80px;
       }
 
       label {
@@ -1260,7 +1268,8 @@ footer {
           height: 100%;
         }
 
-        ::before, ::after {
+        ::before,
+        ::after {
           height: 100%;
           font-size: 12px;
           line-height: 40px;
@@ -1278,7 +1287,7 @@ footer {
           width: 32px;
           height: 32px;
           margin: 4px;
-          right: 48px
+          right: 48px;
         }
       }
 
@@ -1286,7 +1295,8 @@ footer {
         top: 60px;
 
         .specific-employees-list {
-          .heading-item, li {
+          .heading-item,
+          li {
             font-size: 20px;
           }
 
@@ -1300,7 +1310,7 @@ footer {
         top: 60px;
         height: 63px;
         padding: 0;
-        background-color: #B1C110;
+        background-color: #b1c110;
 
         span {
           display: none;
@@ -1309,14 +1319,14 @@ footer {
         input {
           height: 100%;
           width: 100%;
-          background-color: #B1C110;
+          background-color: #b1c110;
           color: #fff;
           font-size: 20px;
           border: 2px solid #fff;
         }
 
         ::placeholder {
-          color: #E5E5E5;
+          color: #e5e5e5;
         }
       }
     }
@@ -1333,7 +1343,7 @@ footer {
     }
 
     ::placeholder {
-      color: #969696
+      color: #969696;
     }
   }
 
