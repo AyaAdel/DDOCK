@@ -220,6 +220,11 @@
     //   height: 100%;
     // }
 
+    .applicants-wrapper,
+    .customers-wrapper {
+      overflow: hidden;
+    }
+
     .block {
       -webkit-animation: action 3s infinite alternate;
       animation: action 3s infinite alternate;
@@ -342,7 +347,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .homepage {
     header {
       height: 1007px;
