@@ -213,37 +213,16 @@
       margin-bottom: 70px;
     }
 
-    // .block {
-    //   position: relative;
-    //   overflow: hidden;
-    //   width: 100%;
-    //   height: 100%;
-    // }
+    .block {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
 
     .applicants-wrapper,
     .customers-wrapper {
       overflow: hidden;
-    }
-
-    .block {
-      -webkit-animation: action 3s infinite alternate;
-      animation: action 3s infinite alternate;
-    }
-    @-webkit-keyframes action {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-30px);
-      }
-    }
-    @keyframes action {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-30px);
-      }
     }
 
     .img-parallax {
