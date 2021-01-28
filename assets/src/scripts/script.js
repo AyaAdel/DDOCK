@@ -103,15 +103,17 @@ var defaultMessage = 'Upload Or Drop your CV/Portfolio',
   cancelMessage = 'Cancel upload',
   fileTooBig = 'Your attachment is too big! Please limit them to 30MB';
 
-var dropzone2 = new Dropzone('#fileUpload', {
-  paramName: 'file',
-  url: 'http://ddock.webofficeit.com/',
-  addRemoveLinks: true,
-  createImageThumbnails: false,
-  dictDefaultMessage: defaultMessage,
-  dictRemoveFile: deleteMessage,
-  dictCancelUpload: cancelMessage,
-  dictFileTooBig: fileTooBig,
-  maxFiles: 3,
-  maxFilesize: 30,
-});
+if (document.getElementById('fileUpload')) {
+  var dropzone2 = new Dropzone('#fileUpload', {
+    paramName: 'file',
+    url: 'http://ddock.webofficeit.com/',
+    addRemoveLinks: true,
+    createImageThumbnails: false,
+    dictDefaultMessage: defaultMessage,
+    dictRemoveFile: deleteMessage,
+    dictCancelUpload: cancelMessage,
+    dictFileTooBig: fileTooBig,
+    maxFiles: 3,
+    maxFilesize: 30,
+  });
+}
