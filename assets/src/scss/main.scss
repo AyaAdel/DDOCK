@@ -395,7 +395,7 @@ header.display-menu {
 // Footer
 footer {
   min-height: 177px;
-  padding: 25px 10px;
+  padding: 25px 20px;
   background-color: $footer;
   display: flex;
   @include flexBetween;
@@ -665,6 +665,7 @@ footer {
     margin-bottom: 17px;
     color: #ffffff;
     font-size: 35px;
+    font-family: ParMedium;
   }
 
   .address {
