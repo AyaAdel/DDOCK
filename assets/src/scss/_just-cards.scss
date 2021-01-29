@@ -650,6 +650,10 @@ mark,
   font-size: 11px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+
+  a {
+    color: #fff;
+  }
 }
 
 @media (max-width: 991.98px) {
