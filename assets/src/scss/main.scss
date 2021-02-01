@@ -561,6 +561,10 @@ footer {
   transition: none !important;
 }
 
+.select2-container--default .select2-selection--single {
+  border: 0
+}
+
 // Talk Section
 .section-talk {
   width: 80%;

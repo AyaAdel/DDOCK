@@ -139,9 +139,9 @@
               </div>
             </div>
             <div class="form-group">
-              <div class="form-item">
+              <div class="formBerlin <span>Fest</span>-item">
                 <label for="contract">Arbeitsort wählen</label>
-                <select class="js-example-basic-single form-control" name="state">
+                <!-- <select class="js-example-basic-single form-control" name="state">
                   <option value="" disabled selected>Select</option>
                   <option value="1">Berlin</option>
                   <option value="2">Düsseldorf</option>
@@ -151,7 +151,23 @@
                   <option value="6">Stuttgart</option>
                   <option value="7">Wien</option>
                   <option value="8">Zürich</option>
-                </select>
+                </select> -->
+                <button class="btn btn-collapse" type="button" data-toggle="collapse" data-target="#btnCollapse" aria-expanded="false"
+                  aria-controls="btnCollapse">Select <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                <div class="collapse multi-collapse" id="btnCollapse">
+                  <div class="card card-body">
+                    <ul>
+                      <li>Berlin <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                      <li>Düsseldorf <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                      <li>Frankfurt <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                      <li>Hamburg <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                      <li>München <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                      <li>Stuttgart <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                      <li>Wien <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                      <li>Zürich <span>Fest</span><span>Frei</span><span>Teilz</span><span>Vollz</span></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="form-item">
                 <label for="experience">Interviewort wählen</label>
