@@ -38,6 +38,8 @@ const changeStar = (element) => {
 
 const diaplayActiveSelect = (element) => element.classList.toggle('active');
 
+const diaplaySelectItems = (element) => element.parentElement.classList.toggle('show-items');
+
 const radioChecked = (element) => element.classList.toggle('checked');
 
 const jobCardSlider = new Swiper('.block-job__slider', {

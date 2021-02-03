@@ -861,6 +861,10 @@ input[type='checkbox']:checked:before {
     border: 0;
     border-radius: 10px;
 
+    .fa {
+      display: none;
+    }
+
     li {
       height: 45px;
       padding: 0 20px;
@@ -1238,7 +1242,8 @@ input[type='checkbox']:checked:before {
       grid-gap: 22px;
 
       input,
-      textarea {
+      textarea,
+      .btn-collapse {
         height: 50px;
       }
     }
@@ -1358,7 +1363,8 @@ input[type='checkbox']:checked:before {
       margin-bottom: 33px;
       grid-gap: 33px;
 
-      input {
+      input,
+      .btn-collapse {
         height: 70px;
         font-size: 24px;
       }
@@ -1370,6 +1376,53 @@ input[type='checkbox']:checked:before {
       label {
         font-size: 20px;
       }
+    }
+
+    .card-body {
+      li {
+        height: 60px;
+      }
+
+      .city {
+        font-size: 24px;
+      }
+
+      .fa {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .select-item {
+        width: 100%;
+        justify-content: space-between;
+        display: none;
+
+        span {
+          width: 55px;
+          height: 25px;
+          font-size: 16px;
+        }
+      }
+
+      .show-items .city,
+      .show-items .fa {
+        display: none;
+      }
+
+      .show-items .select-item {
+        display: flex;
+      }
+    }
+
+    input[type='checkbox']:checked:before {
+      align-items: center;
+    }
+
+    input[type='checkbox']:before {
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
     }
 
     .radio {
