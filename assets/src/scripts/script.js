@@ -56,6 +56,46 @@ const jobCardSlider = new Swiper('.block-job__slider', {
   slideActiveClass: 'is-active',
 });
 
+const searchEmployees = () => {
+  let contactEmployees = document.getElementById('contactEmployees');
+  let filter = contactEmployees.value.toUpperCase();
+  let specificEmployees = document.getElementById('specificEmployees');
+  let li = specificEmployees.getElementsByTagName('li');
+
+  for (let i = 0; i < li.length; i++) {
+    let textValue = li[i].textContent || li[i].innerText;
+
+    if (textValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = '';
+    } else {
+      li[i].style.display = 'none';
+    }
+  }
+
+  let specificEmployeesListWrapper = document.getElementsByClassName('specific-employees-list-wrapper');
+
+  for (let i = 0; i < specificEmployeesListWrapper.length; i++) {
+    let childrenLi = specificEmployeesListWrapper[i].childNodes[1].childNodes;
+    let allHidden = false;
+
+    for (let v = 0; v < childrenLi.length; v++) {
+      if (getComputedStyle(childrenLi[v]).display !== 'none') {
+        allHidden = false;
+        break;
+      }
+      allHidden = true;
+    }
+
+    if (allHidden) {
+      specificEmployeesListWrapper[i].childNodes[0].style.display = 'none';
+      specificEmployeesListWrapper[i].style.display = 'none';
+    } else {
+      specificEmployeesListWrapper[i].childNodes[0].style.display = '';
+      specificEmployeesListWrapper[i].style.display = '';
+    }
+  }
+};
+
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
 

@@ -408,10 +408,16 @@
                     <span class="onoffswitch-switch"></span>
                   </label>
                 </div>
-                <div class="specific-employees">
+                <div class="specific-employees" id="specificEmployees">
                   <div class="display-radio-job">
                     <span>Your Contact:</span>
-                    <input type="text" placeholder="Type Your Contact" />
+                    <input
+                      type="text"
+                      placeholder="Type Your Contact"
+                      id="contactEmployees"
+                      onkeyup="searchEmployees()"
+                      autocomplete="off"
+                    />
                   </div>
                   <div class="specific-employees-list">
                     <div class="specific-employees-list-wrapper">
