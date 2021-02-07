@@ -94,6 +94,26 @@ const searchEmployees = () => {
   }
 };
 
+var defaultMessage = 'Upload Or Drop your CV/Portfolio',
+  deleteMessage = 'Remove file',
+  cancelMessage = 'Cancel upload',
+  fileTooBig = 'Your attachment is too big! Please limit them to 30MB';
+
+if (document.getElementById('fileUpload')) {
+  var dropzone2 = new Dropzone('#fileUpload', {
+    paramName: 'file',
+    url: 'http://ddock.webofficeit.com/',
+    addRemoveLinks: true,
+    createImageThumbnails: false,
+    dictDefaultMessage: defaultMessage,
+    dictRemoveFile: deleteMessage,
+    dictCancelUpload: cancelMessage,
+    dictFileTooBig: fileTooBig,
+    maxFiles: 3,
+    maxFilesize: 30,
+  });
+}
+
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
 
@@ -138,24 +158,44 @@ $(document).ready(function () {
       },
     });
   });
+
 });
 
-var defaultMessage = 'Upload Or Drop your CV/Portfolio',
-  deleteMessage = 'Remove file',
-  cancelMessage = 'Cancel upload',
-  fileTooBig = 'Your attachment is too big! Please limit them to 30MB';
+$(document).ready(function () {
+    var jobNumberSelect = $('#jobNumber').materialize_autocomplete({
+      dropdown: {
+        el: '#singleDropdown',
+      },
+      getData: function (value, callback) {
+        if (value.length < 4) return;
+        data = selectData.filter(function (el) {
+          return el.id.toLowerCase().indexOf(value.toLowerCase()) > -1;
+        });
+        callback(value, data);
+      },
+    });
+  
 
-if (document.getElementById('fileUpload')) {
-  var dropzone2 = new Dropzone('#fileUpload', {
-    paramName: 'file',
-    url: 'http://ddock.webofficeit.com/',
-    addRemoveLinks: true,
-    createImageThumbnails: false,
-    dictDefaultMessage: defaultMessage,
-    dictRemoveFile: deleteMessage,
-    dictCancelUpload: cancelMessage,
-    dictFileTooBig: fileTooBig,
-    maxFiles: 3,
-    maxFilesize: 30,
-  });
-}
+  // if ($('#jobNumbers-hidden').val() != '') {
+  //   $('#only-initiativ').fadeOut();
+  //   favs = $('#jobNumbers-hidden').val().split(', ');
+  //   $.each(favs, function (index) {
+  //     var favIndex = index;
+  //     $.each(selectData, function (index, values) {
+  //       if (values.id == favs[favIndex]) {
+  //         autocomplete.setValue(values);
+  //       }
+  //     });
+  //   });
+  // }
+
+  // $('#jobNumbers-hidden').change(function () {
+  //   $('#jobnumber-error').hide();
+  //   favs = $(this).val().split(',');
+  //   if (favs.length > 1) {
+  //     toggleOfficeField(true);
+  //   } else {
+  //     toggleOfficeField(false);
+  //   }
+  // });
+});
