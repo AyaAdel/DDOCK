@@ -1010,6 +1010,18 @@ footer {
       &.show-list {
         border-radius: 10px 10px 0 0;
       }
+
+      .clear-job-selection {
+        position: absolute;
+        top: 9px;
+        right: 14px;
+        z-index: 4;
+        width: 0;
+        color: #b1c110;
+        font-size: 18px;
+        display: none;
+        cursor: pointer;
+      }
     }
 
     .display-radio-job.display-radio {
@@ -1038,6 +1050,7 @@ footer {
         font-size: 13px;
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         &:hover {
           background-color: #2f2f2f;
@@ -1054,6 +1067,7 @@ footer {
       background-color: hsl(66, 100%, 30%);
       border-radius: 10px;
       display: none;
+      cursor: pointer;
 
       .display-radio-job {
         position: static;

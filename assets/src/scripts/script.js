@@ -130,18 +130,22 @@ var jobNumberSelect = function () {
   const jobNumber = document.getElementById('jobNumber');
   const singleDropdown = document.getElementById('singleDropdown');
   const displayRadioJob = document.getElementById('displayRadioJob');
+  const closeJob = document.getElementById('closeJob');
   let filter = jobNumber.value.toUpperCase();
+
   if (filter.length >= 4) {
     let filterJobNumbers = jobNumbers.filter((item) => item.id.includes(filter));
 
     for (let job of filterJobNumbers) {
       singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
       displayRadioJob.classList.add('show-list');
+      closeJob.classList.add('show');
     }
   } else {
     filterJobNumbers = [];
     singleDropdown.innerHTML = '';
     displayRadioJob.classList.remove('show-list');
+    closeJob.classList.remove('show');
   }
 };
 
@@ -149,6 +153,13 @@ const setValue = (element) => {
   jobNumber.value = element.innerText;
   singleDropdown.innerHTML = '';
   displayRadioJob.classList.remove('show-list');
+  closeJob.classList.add('show');
+};
+
+const clearJob = () => {
+  jobNumber.value = '';
+  closeJob.classList.remove('show');
+  singleDropdown.innerHTML = '';
 };
 
 $(document).ready(function () {
