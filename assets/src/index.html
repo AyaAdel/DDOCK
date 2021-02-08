@@ -562,12 +562,17 @@
                     <span class="onoffswitch-switch"></span>
                   </label>
                 </div>
-                <div class="display-radio-job display-radio">
+                <div class="display-radio-job display-radio" id="displayRadioJob">
                   <span>Job Number:</span>
-                  <input type="text" placeholder="Job Number" id="jobNumber" data-activates="singleDropdown" data-beloworigin="true"
-                    autocomplete="off" />
-                  <ul id="singleDropdown" class=""></ul>
+                  <input
+                    type="text"
+                    placeholder="Job Number"
+                    id="jobNumber"
+                    onkeyup="jobNumberSelect()"
+                    autocomplete="off"
+                  />
                 </div>
+                <ul id="singleDropdown" class="single-dropdown"></ul>
               </div>
               <div class="form-item">
                 <label>Designerdock Newsletter erhalten?</label>

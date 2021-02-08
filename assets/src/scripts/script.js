@@ -114,6 +114,43 @@ if (document.getElementById('fileUpload')) {
   });
 }
 
+var jobNumbers;
+
+(function () {
+  var xhr = new XMLHttpRequest();
+  xhr.open('get', 'scripts/jobNumber.json');
+  xhr.send();
+
+  xhr.onload = function () {
+    jobNumbers = JSON.parse(xhr.responseText);
+  };
+})();
+
+var jobNumberSelect = function () {
+  const jobNumber = document.getElementById('jobNumber');
+  const singleDropdown = document.getElementById('singleDropdown');
+  const displayRadioJob = document.getElementById('displayRadioJob');
+  let filter = jobNumber.value.toUpperCase();
+  if (filter.length >= 4) {
+    let filterJobNumbers = jobNumbers.filter((item) => item.id.includes(filter));
+
+    for (let job of filterJobNumbers) {
+      singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
+      displayRadioJob.classList.add('show-list');
+    }
+  } else {
+    filterJobNumbers = [];
+    singleDropdown.innerHTML = '';
+    displayRadioJob.classList.remove('show-list');
+  }
+};
+
+const setValue = (element) => {
+  jobNumber.value = element.innerText;
+  singleDropdown.innerHTML = '';
+  displayRadioJob.classList.remove('show-list');
+};
+
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
 
@@ -158,44 +195,4 @@ $(document).ready(function () {
       },
     });
   });
-
-});
-
-$(document).ready(function () {
-    var jobNumberSelect = $('#jobNumber').materialize_autocomplete({
-      dropdown: {
-        el: '#singleDropdown',
-      },
-      getData: function (value, callback) {
-        if (value.length < 4) return;
-        data = selectData.filter(function (el) {
-          return el.id.toLowerCase().indexOf(value.toLowerCase()) > -1;
-        });
-        callback(value, data);
-      },
-    });
-  
-
-  // if ($('#jobNumbers-hidden').val() != '') {
-  //   $('#only-initiativ').fadeOut();
-  //   favs = $('#jobNumbers-hidden').val().split(', ');
-  //   $.each(favs, function (index) {
-  //     var favIndex = index;
-  //     $.each(selectData, function (index, values) {
-  //       if (values.id == favs[favIndex]) {
-  //         autocomplete.setValue(values);
-  //       }
-  //     });
-  //   });
-  // }
-
-  // $('#jobNumbers-hidden').change(function () {
-  //   $('#jobnumber-error').hide();
-  //   favs = $(this).val().split(',');
-  //   if (favs.length > 1) {
-  //     toggleOfficeField(true);
-  //   } else {
-  //     toggleOfficeField(false);
-  //   }
-  // });
 });

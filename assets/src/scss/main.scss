@@ -1006,14 +1006,43 @@ footer {
         font-size: 13px;
         border: 1px solid #fff;
       }
+
+      &.show-list {
+        border-radius: 10px 10px 0 0;
+      }
     }
 
-    .display-radio {
+    .display-radio-job.display-radio {
       display: none;
     }
 
     label {
       margin-bottom: 0;
+    }
+
+    .single-dropdown {
+      position: absolute;
+      top: 78px;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      overflow: auto;
+      max-height: 400px;
+      background-color: #8a9900;
+      border-radius: 0 0 10px 10px;
+
+      li {
+        height: 70px;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: #2f2f2f;
+        }
+      }
     }
 
     .specific-employees {
@@ -1075,9 +1104,6 @@ footer {
     position: relative;
     width: 62px;
     height: 28px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
   }
 
   .form-group .onoffswitch-checkbox {
@@ -1308,6 +1334,10 @@ footer {
       }
     }
 
+    .radio .single-dropdown li {
+      height: 45px;
+    }
+
     .select2-container .select2-selection--single {
       height: 50px;
     }
@@ -1525,6 +1555,15 @@ footer {
         }
       }
 
+      .single-dropdown {
+        top: 123px;
+
+        li {
+          height: 70px;
+          font-size: 20px;
+        }
+      }
+
       .specific-employees {
         top: 60px;
 
@@ -1543,8 +1582,7 @@ footer {
       .display-radio-job {
         top: 60px;
         height: 63px;
-        padding: 0;
-        background-color: #b1c110;
+        padding: 5px;
 
         span {
           display: none;
