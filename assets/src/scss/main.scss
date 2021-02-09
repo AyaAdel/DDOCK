@@ -1044,8 +1044,7 @@ footer {
       border-radius: 0 0 10px 10px;
 
       li {
-        height: 70px;
-        padding: 0 15px;
+        padding: 15px;
         color: #fff;
         font-size: 13px;
         display: flex;
@@ -1613,6 +1612,13 @@ footer {
 
         ::placeholder {
           color: #e5e5e5;
+        }
+
+        .clear-job-selection {
+          color: #2f2f2f;
+          top: 14px;
+          right: 17px;
+          font-size: 25px;
         }
       }
     }
