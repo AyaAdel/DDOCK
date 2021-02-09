@@ -137,7 +137,7 @@ var jobNumberSelect = function () {
     let filterJobNumbers = jobNumbers.filter((item) => item.id.includes(filter));
 
     for (let job of filterJobNumbers) {
-      singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.id}</li>`;
+      singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
       displayRadioJob.classList.add('show-list');
       closeJob.classList.add('show');
     }
@@ -150,7 +150,7 @@ var jobNumberSelect = function () {
 };
 
 const setValue = (element) => {
-  jobNumber.value = element.innerText;
+  jobNumber.value = element.innerText.substring(0, 6);
   singleDropdown.innerHTML = '';
   displayRadioJob.classList.remove('show-list');
   closeJob.classList.add('show');
