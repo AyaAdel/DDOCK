@@ -549,13 +549,14 @@
             <div class="form-group radio">
               <div class="form-item" id="formItem">
                 <label>Bewerbung auf eine spezifische Stelle?</label>
-                <div class="onoffswitch" onclick="radioChecked(this)">
+                <div class="onoffswitch">
                   <input
                     type="checkbox"
                     name="onoffswitch1"
                     class="onoffswitch-checkbox"
                     id="myonoffswitch1"
                     tabindex="0"
+                    onclick="radioChecked(this)"
                   />
                   <label class="onoffswitch-label" for="myonoffswitch1">
                     <span class="onoffswitch-inner"></span>
@@ -568,7 +569,7 @@
                     type="text"
                     placeholder="Job Number"
                     id="jobNumber"
-                    onkeyup="jobNumberSelect()"
+                    onkeyup="if(!(event.keyCode>36&&event.keyCode<41)){jobNumberSelect()}"
                     autocomplete="off"
                   />
                   <span id="closeJob" onclick="clearJob()" class="clear-job-selection"
@@ -597,13 +598,14 @@
             <div class="form-group radio">
               <div class="form-item">
                 <label>Designerdock Mitarbeiter*in wählen</label>
-                <div class="onoffswitch" onclick="radioChecked(this)">
+                <div class="onoffswitch">
                   <input
                     type="checkbox"
                     name="onoffswitch3"
                     class="onoffswitch-checkbox"
                     id="myonoffswitch3"
                     tabindex="0"
+                    onclick="radioChecked(this)"
                   />
                   <label class="onoffswitch-label" for="myonoffswitch3">
                     <span class="onoffswitch-inner"></span>
