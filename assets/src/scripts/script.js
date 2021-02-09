@@ -137,7 +137,7 @@ var jobNumberSelect = function () {
     let filterJobNumbers = jobNumbers.filter((item) => item.id.includes(filter));
 
     for (let job of filterJobNumbers) {
-      singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
+      singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.id}</li>`;
       displayRadioJob.classList.add('show-list');
       closeJob.classList.add('show');
     }
