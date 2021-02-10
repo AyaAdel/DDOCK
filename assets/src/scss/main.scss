@@ -1269,6 +1269,28 @@ footer {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
     }
   }
+
+  &.display-first-model {
+    .mask-background {
+      display: block;
+    }
+
+    button[data-target="#btnCollapseFirst"] {
+      position: relative;
+      z-index: 4;
+    }
+  }
+
+  &.display-second-model {
+    .mask-background {
+      display: block;
+    }
+
+    button[data-target="#btnCollapseSecond"] {
+      position: relative;
+      z-index: 4;
+    }
+  }
 }
 
 // Media Query

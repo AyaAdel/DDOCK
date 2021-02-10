@@ -118,7 +118,8 @@
         </div>
       </section>
       @@include('./partials/just-cards.html')
-      <section class="for-change">
+      <section class="for-change" id="forChange">
+        <div class="mask-background" onclick="removeMaskBackground()"></div>
         <div class="for-change-container">
           <div class="for-change-heading">
             <h2>
@@ -148,6 +149,8 @@
                   data-target="#btnCollapseFirst"
                   aria-expanded="false"
                   aria-controls="btnCollapse"
+                  id="selectBtnFirst"
+                  onclick="displayMaskBackgroundForFirstModel()"
                 >
                   Select <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </button>
@@ -455,6 +458,8 @@
                   data-target="#btnCollapseSecond"
                   aria-expanded="false"
                   aria-controls="btnCollapse"
+                  id="selectBtnSecond"
+                  onclick="displayMaskBackgroundForSecondModel()"
                 >
                   Select <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </button>

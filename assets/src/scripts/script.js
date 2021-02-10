@@ -162,6 +162,24 @@ const clearJob = () => {
   singleDropdown.innerHTML = '';
 };
 
+const forChange = document.getElementById('forChange');
+const btnCollapseFirst = document.getElementById('btnCollapseFirst');
+const btnCollapseSecond = document.getElementById('btnCollapseSecond');
+const selectBtnFirst = document.getElementById('selectBtnFirst');
+const selectBtnSecond = document.getElementById('selectBtnSecond');
+
+const displayMaskBackgroundForFirstModel = () => forChange.classList.toggle('display-first-model');
+const removeMaskBackground = () => {
+  forChange.classList.remove('display-first-model');
+  forChange.classList.remove('display-second-model');
+  btnCollapseFirst.classList.remove('show');
+  btnCollapseSecond.classList.remove('show');
+  selectBtnFirst.setAttribute('aria-expanded', 'false');
+  selectBtnSecond.setAttribute('aria-expanded', 'false');
+};
+
+const displayMaskBackgroundForSecondModel = () => forChange.classList.toggle('display-second-model');
+
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
 
