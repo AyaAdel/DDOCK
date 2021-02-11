@@ -1028,11 +1028,48 @@ footer {
       display: none;
     }
 
+    .job-number-container {
+      padding: 0 15px;
+      background-color: #2f2f2f;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .job-number-selected {
+      position: relative;
+      margin-right: 10px;
+      padding: 5px 0;
+      color: #fff;
+      font-size: 13px;
+
+      span {
+        width: 100px;
+        height: 30px;
+        padding: 0 10px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        line-height: 10px;
+        @include flexBetween;
+      }
+
+      .fa {
+        position: absolute;
+        top: 14px;
+        right: 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: #8a9900;
+        }
+      }
+    }
+
     label {
       margin-bottom: 0;
     }
 
-    .single-dropdown {
+    .job-number-wrapper {
       position: absolute;
       top: 78px;
       left: 0;
@@ -1040,8 +1077,11 @@ footer {
       z-index: 4;
       overflow: auto;
       max-height: 400px;
-      background-color: #8a9900;
       border-radius: 0 0 10px 10px;
+    }
+
+    .single-dropdown {
+      background-color: #8a9900;
 
       li {
         padding: 15px;
@@ -1275,7 +1315,7 @@ footer {
       display: block;
     }
 
-    button[data-target="#btnCollapseFirst"] {
+    button[data-target='#btnCollapseFirst'] {
       position: relative;
       z-index: 4;
     }
@@ -1286,7 +1326,7 @@ footer {
       display: block;
     }
 
-    button[data-target="#btnCollapseSecond"] {
+    button[data-target='#btnCollapseSecond'] {
       position: relative;
       z-index: 4;
     }
@@ -1590,8 +1630,17 @@ footer {
         }
       }
 
-      .single-dropdown {
+      .job-number-wrapper {
         top: 123px;
+
+        .job-number-selected {
+          font-size: 20px;
+
+          span {
+            width: 150px;
+            height: 40px;
+          }
+        }
 
         li {
           height: 70px;

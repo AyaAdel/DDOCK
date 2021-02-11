@@ -126,34 +126,62 @@ var jobNumbers;
   };
 })();
 
+const jobNumberContainer = document.getElementById('jobNumberContainer');
+
 var jobNumberSelect = function () {
   const jobNumber = document.getElementById('jobNumber');
   const singleDropdown = document.getElementById('singleDropdown');
   const displayRadioJob = document.getElementById('displayRadioJob');
   const closeJob = document.getElementById('closeJob');
   let filter = jobNumber.value.toUpperCase();
+  const jobNumberSelected = jobNumberContainer.getElementsByClassName('job-number-selected');
+
+  closeJob.classList.add('show');
 
   if (filter.length >= 4) {
     let filterJobNumbers = jobNumbers.filter((item) => item.id.includes(filter));
 
+    singleDropdown.innerHTML = '';
+
     for (let job of filterJobNumbers) {
-      singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
-      displayRadioJob.classList.add('show-list');
-      closeJob.classList.add('show');
+      let matchselectedJob = false;
+      for (let selectedJob of jobNumberSelected) {
+        if (selectedJob.childNodes[1].innerText === job.id) {
+          matchselectedJob = true;
+        }
+      }
+      if (!matchselectedJob) {
+        singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
+        closeJob.classList.add('show');
+      }
+
+      if (singleDropdown.length !== 0 || jobNumber.value !== '') {
+        displayRadioJob.classList.add('show-list');
+      } else {
+        displayRadioJob.classList.remove('show-list');
+      }
     }
   } else {
     filterJobNumbers = [];
     singleDropdown.innerHTML = '';
-    displayRadioJob.classList.remove('show-list');
     closeJob.classList.remove('show');
   }
 };
 
 const setValue = (element) => {
-  jobNumber.value = element.innerText.substring(0, 6);
-  singleDropdown.innerHTML = '';
-  displayRadioJob.classList.remove('show-list');
+  jobNumberContainer.innerHTML += `<div class="job-number-selected">
+  <span>
+  ${element.innerText.substring(0, 6)}
+  </span>
+  <div onclick="removeJob(this)"><i class="fa fa-times" aria-hidden="true"></i></div>
+  </div>`;
+  element.classList.add('hide');
   closeJob.classList.add('show');
+};
+
+const removeJob = (element) => {
+  element.parentElement.remove();
+  jobNumberSelect();
 };
 
 const clearJob = () => {
