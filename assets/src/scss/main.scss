@@ -1078,6 +1078,7 @@ footer {
       overflow: auto;
       max-height: 400px;
       border-radius: 0 0 10px 10px;
+      display: none;
     }
 
     .single-dropdown {
@@ -1144,8 +1145,14 @@ footer {
       margin-top: 10px;
     }
 
-    .checked + .display-radio {
-      display: flex;
+    .checked {
+      & + .display-radio {
+        display: flex;
+      }
+
+      & ~ .job-number-wrapper {
+        display: block;
+      }
     }
 
     .checked + .specific-employees {
