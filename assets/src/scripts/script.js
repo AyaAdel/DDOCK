@@ -38,7 +38,7 @@ const changeStar = (element) => {
 
 const diaplaySelectItems = (element) => element.parentElement.classList.toggle('show-items');
 
-const radioChecked = (element) => element.parentElement.classList.toggle('checked');
+const radioChecked = (element) => element.parentElement.parentElement.classList.toggle('checked');
 
 const jobCardSlider = new Swiper('.block-job__slider', {
   slidesPerView: 'auto',
