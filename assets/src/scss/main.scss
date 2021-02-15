@@ -1093,6 +1093,7 @@ footer {
       border-radius: 0 0 10px 10px;
       transition: all 0.5s ease-in-out;
       opacity: 0;
+      height: 0;
     }
 
     .single-dropdown {
@@ -1170,6 +1171,7 @@ footer {
       & ~ .job-number-wrapper {
         opacity: 1;
         z-index: 4;
+        height: auto;
       }
     }
 
