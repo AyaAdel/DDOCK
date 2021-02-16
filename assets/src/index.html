@@ -144,7 +144,8 @@
             <div class="form-item btn-collapse-wrapper btn-collapse-first">
               <label for="contract">Arbeitsort wählen</label>
               <button class="btn btn-collapse" type="button" data-toggle="collapse" data-target="#btnCollapseFirst"
-                aria-expanded="false" aria-controls="btnCollapse" id="selectBtnFirst" onclick="displayMaskBackgroundForFirstModel()">
+                aria-expanded="false" aria-controls="btnCollapse" id="selectBtnFirst"
+                onclick="displayMaskBackgroundForFirstModel()">
                 Select <i class="fa fa-angle-down" aria-hidden="true"></i>
               </button>
               <div class="collapse multi-collapse" id="btnCollapseFirst">
@@ -576,23 +577,25 @@
           <div class="form-group radio">
             <div class="form-item radio-form">
               <div class="switch-slider-select">
-              <label>Designerdock Mitarbeiter*in wählen</label>
-              <div class="onoffswitch">
-                <input type="checkbox" name="onoffswitch3" class="onoffswitch-checkbox" id="myonoffswitch3" tabindex="0"
-                  onclick="radioChecked(this)" />
-                <label class="onoffswitch-label" for="myonoffswitch3">
-                  <span class="onoffswitch-inner"></span>
-                  <span class="onoffswitch-switch"></span>
-                </label>
+                <label>Designerdock Mitarbeiter*in wählen</label>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch3" class="onoffswitch-checkbox" id="myonoffswitch3" tabindex="0"
+                    onclick="radioChecked(this)" />
+                  <label class="onoffswitch-label" for="myonoffswitch3">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
               </div>
-            </div>
               <div class="specific-employees" id="specificEmployees">
                 <div class="display-radio-job">
                   <span>Your Contact:</span>
                   <input type="text" placeholder="Type Your Contact" id="contactEmployees" onkeyup="searchEmployees()"
                     autocomplete="off" />
+                  <span id="closeRegion" onclick="clearRegion(this)" class="clear-job-selection"><i class="fa fa-times-circle"
+                      aria-hidden="true"></i></span>
                 </div>
-                <div class="specific-employees-list">
+                <div class="specific-employees-list" id="specificEmployeesList">
                   <div class="specific-employees-list-wrapper">
                     <div class="heading-item">DD_Berlin and Regio</div>
                     <ul>

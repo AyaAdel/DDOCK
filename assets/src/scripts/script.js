@@ -54,17 +54,19 @@ const jobCardSlider = new Swiper('.block-job__slider', {
   slideActiveClass: 'is-active',
 });
 
+const closeRegion = document.getElementById('closeRegion');
+
 const searchEmployees = () => {
   let contactEmployees = document.getElementById('contactEmployees');
   let filter = contactEmployees.value.toUpperCase();
-  let specificEmployees = document.getElementById('specificEmployees');
-  let li = specificEmployees.getElementsByTagName('li');
 
   for (let i = 0; i < li.length; i++) {
     let textValue = li[i].textContent || li[i].innerText;
 
     if (textValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = '';
+      specificEmployeesList.classList.remove('hide');
+      closeRegion.classList.add('show');
     } else {
       li[i].style.display = 'none';
     }
@@ -92,6 +94,24 @@ const searchEmployees = () => {
       specificEmployeesListWrapper[i].style.display = '';
     }
   }
+};
+
+const specificEmployeesList = document.getElementById('specificEmployeesList');
+const specificEmployees = document.getElementById('specificEmployees');
+const li = specificEmployees.getElementsByTagName('li');
+
+for (let i = 0; i < li.length; i++) {
+  li[i].addEventListener('click', function selectRegion() {
+    contactEmployees.value = this.innerText;
+    specificEmployeesList.classList.add('hide');
+    closeRegion.classList.add('show');
+  });
+}
+
+const clearRegion = (item) => {
+  contactEmployees.value = '';
+  searchEmployees();
+  item.classList.remove('show');
 };
 
 var defaultMessage = 'Upload Or Drop your CV/Portfolio',
