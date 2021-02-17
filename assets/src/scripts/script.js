@@ -66,10 +66,15 @@ const searchEmployees = () => {
     if (textValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = '';
       specificEmployeesList.classList.remove('hide');
-      closeRegion.classList.add('show');
     } else {
       li[i].style.display = 'none';
     }
+  }
+
+  if (contactEmployees.value === '') {
+    closeRegion.classList.remove('show');
+  } else {
+    closeRegion.classList.add('show');
   }
 
   let specificEmployeesListWrapper = document.getElementsByClassName('specific-employees-list-wrapper');
@@ -173,6 +178,7 @@ var jobNumberSelect = function () {
       if (!matchselectedJob) {
         singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
         closeJob.classList.add('show');
+        forChange.classList.add('display-job-number-list');
       }
 
       if (singleDropdown.length !== 0 || jobNumber.value !== '') {
@@ -185,6 +191,7 @@ var jobNumberSelect = function () {
     filterJobNumbers = [];
     singleDropdown.innerHTML = '';
     closeJob.classList.remove('show');
+    forChange.classList.remove('display-first-model');
   }
 };
 
@@ -217,13 +224,16 @@ const selectBtnFirst = document.getElementById('selectBtnFirst');
 const selectBtnSecond = document.getElementById('selectBtnSecond');
 
 const displayMaskBackgroundForFirstModel = () => forChange.classList.toggle('display-first-model');
+
 const removeMaskBackground = () => {
   forChange.classList.remove('display-first-model');
   forChange.classList.remove('display-second-model');
+  forChange.classList.remove('display-job-number-list');
   btnCollapseFirst.classList.remove('show');
   btnCollapseSecond.classList.remove('show');
   selectBtnFirst.setAttribute('aria-expanded', 'false');
   selectBtnSecond.setAttribute('aria-expanded', 'false');
+  clearJob();
 };
 
 const displayMaskBackgroundForSecondModel = () => forChange.classList.toggle('display-second-model');

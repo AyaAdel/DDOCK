@@ -1365,6 +1365,21 @@ footer {
       z-index: 4;
     }
   }
+
+  &.display-job-number-list {
+    .mask-background {
+      display: block;
+    }
+
+    #myonoffswitch1 {
+      z-index: 4;
+    }
+
+    .job-number-wrapper {
+      position: relative;
+      z-index: 4;
+    }
+  }
 }
 
 // Media Query
