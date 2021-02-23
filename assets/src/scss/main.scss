@@ -773,6 +773,7 @@ footer {
 
 .btn-collapse-first {
   .input-group-text {
+    position: relative;
     padding: 0;
     background-color: transparent;
     border: 0;
@@ -787,11 +788,11 @@ footer {
     -o-appearance: none;
     outline: none;
     content: none;
+    cursor: pointer;
   }
 
   input[type='checkbox']:before {
-    font-size: 10px;
-    color: #fff !important;
+    content: '';
     background: transparent;
     display: block;
     width: 39px;
@@ -802,15 +803,6 @@ footer {
     @include flexCenter;
   }
 
-  input[type='checkbox'].select-fest:before {
-    content: 'Fest';
-  }
-  input[type='checkbox'].select-frei:before {
-    content: 'Frei';
-  }
-  input[type='checkbox'].select-teilz:before {
-    content: 'Teilz';
-  }
   input[type='checkbox'].select-vollz:before {
     content: 'Vollz';
   }
@@ -877,6 +869,14 @@ footer {
       border: 0;
       border-radius: 10px;
       box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+    }
+
+    label.select-item {
+      position: absolute;
+      top: 2px;
+      color: #fff !important;
+      font-size: 10px;
+      cursor: pointer;
     }
   }
 
