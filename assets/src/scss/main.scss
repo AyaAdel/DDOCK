@@ -631,7 +631,9 @@ footer {
     width: 25px;
     height: 25px;
     background-color: #b1c110;
+    border: 1px solid #b1c110;
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
     @include flexCenter;
 
     &:first-child {
@@ -641,6 +643,14 @@ footer {
     .fa {
       font-size: 15px;
       color: #fff;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      .fa {
+        color: #b1c110;
+      }
     }
   }
 
