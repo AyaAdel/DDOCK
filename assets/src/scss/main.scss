@@ -312,6 +312,7 @@ header.display-menu {
     border-radius: 20px;
     text-align: center;
     transition: opacity 0.8s ease-in-out;
+    text-transform: capitalize;
     @include width(40px);
     @include height(38px);
     @include lineHeight(40px);
