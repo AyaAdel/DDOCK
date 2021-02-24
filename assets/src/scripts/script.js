@@ -1,7 +1,7 @@
 const header = document.getElementById('header');
+const langSwitch = document.getElementById('langSwitch');
 const eng = document.getElementById('eng');
 const dt = document.getElementById('dt');
-const behind = document.getElementById('behind');
 const formSearch = document.getElementById('formSearch');
 const mobSearch = document.getElementById('mobSearch');
 
@@ -14,13 +14,13 @@ const hideMenu = () => {
 };
 
 const switchEng = () => {
-  eng.classList.add('active');
-  dt.classList.remove('active');
+  langSwitch.classList.remove('is-dt');
+  langSwitch.classList.add('is-eng');
 };
 
 const switchDt = () => {
-  eng.classList.remove('active');
-  dt.classList.add('active');
+  langSwitch.classList.remove('is-eng');
+  langSwitch.classList.add('is-dt');
 };
 
 const displayForm = () => {

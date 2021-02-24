@@ -290,6 +290,7 @@ header.display-menu {
 }
 
 .lang-switch {
+  position: relative;
   border-radius: 20px;
   font-size: 11px;
   font-family: ParRegular;
@@ -298,6 +299,33 @@ header.display-menu {
   cursor: pointer;
   @include flexCenter;
   @include margin(right, 106px);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 27px;
+    height: 27px;
+    background-color: $primary-color;
+    z-index: -1;
+    display: block;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.is-eng:before {
+    left: 1px;
+  }
+
+  &.is-dt:before {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+  &.is-eng .eng a,
+  &.is-dt .dt a {
+    color: #fff;
+  }
 
   ul {
     height: 25px;
@@ -319,14 +347,6 @@ header.display-menu {
 
     a {
       @include fontSize(15px);
-    }
-  }
-
-  li.active {
-    background-color: $primary-color;
-
-    a {
-      color: $white;
     }
   }
 }
