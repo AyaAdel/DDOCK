@@ -272,6 +272,14 @@ header.display-menu {
     @include margin(left, 20px);
     @include margin(right, 20px);
   }
+
+  a {
+    color: $light-gray;
+
+    &:hover {
+      color: $primary-color
+    }
+  }
 }
 
 .nav-section {
