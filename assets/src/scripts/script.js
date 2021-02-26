@@ -45,6 +45,10 @@ const jobCardSlider = new Swiper('.block-job__slider', {
   spaceBetween: 20,
   centeredSlides: true,
   loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   loopedSlides: 150,
   freeMode: true,
   freeModeMomentumRatio: 0.6,
