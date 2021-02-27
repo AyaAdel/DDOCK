@@ -6,7 +6,8 @@
     <div class="single-job">
       <header id="header">
         <div id="behind" class="background-behind" onclick="hideMenu()"></div>
-        @@include('./partials/navbar.html',{ "navLink": '<a href="./find-job.html">Search Jobs</a>',"subNavLink": "Job Title" })
+        @@include('./partials/navbar.html',{ "navLink": '<a href="./find-job.html">Search Jobs</a>', "subNavLink":
+        "JobTitle" })
       </header>
       <div class="content">
         <div class="all-jobs-btn">
@@ -20,7 +21,7 @@
                 <ul>
                   <li><i class="fa fa-map-marker" aria-hidden="true"></i>Berlin</li>
                   <li><i class="fa fa-code" aria-hidden="true"></i>Frontend development</li>
-                  <li><i class="fa fa-hashtag" aria-hidden="true"></i>B34632</li>
+                  <li id="singleJobNumber"><i class="fa fa-hashtag" aria-hidden="true"></i>B34632</li>
                   <li><i class="fa fa-map-marker" aria-hidden="true"></i>Berlin</li>
                   <li><i class="fa fa-user" aria-hidden="true"></i>Indra Sarkar</li>
                 </ul>
@@ -67,7 +68,7 @@
               </ul>
             </div>
             <div class="apply-btn">
-              <a href="#" class="btn">Apply Now</a>
+              <button class="btn" onclick="moveJobToApplicationForm()">Apply Now</button>
             </div>
           </div>
           <div class="job-info">

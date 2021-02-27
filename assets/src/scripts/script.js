@@ -107,7 +107,7 @@ const searchEmployees = () => {
 
 const specificEmployeesList = document.getElementById('specificEmployeesList');
 const specificEmployees = document.getElementById('specificEmployees');
-const li = specificEmployees.getElementsByTagName('li');
+const li = document.getElementsByClassName('specific-employees-item');
 
 for (let i = 0; i < li.length; i++) {
   li[i].addEventListener('click', function selectRegion() {
@@ -199,13 +199,17 @@ var jobNumberSelect = function () {
   }
 };
 
-const setValue = (element) => {
+const addJobNumber = (element) => {
   jobNumberContainer.innerHTML += `<div class="job-number-selected">
   <span>
-  ${element.innerText.substring(0, 6)}
+  ${element}
   </span>
   <div onclick="removeJob(this)"><i class="fa fa-times" aria-hidden="true"></i></div>
   </div>`;
+};
+
+const setValue = (element) => {
+  addJobNumber(element.innerText.substring(0, 6));
   element.classList.add('hide');
   closeJob.classList.add('show');
 };
@@ -241,6 +245,28 @@ const removeMaskBackground = () => {
 };
 
 const displayMaskBackgroundForSecondModel = () => forChange.classList.toggle('display-second-model');
+
+const singleJobNumber = document.getElementById('singleJobNumber');
+const switchSliderCheckedfirst = document.getElementById('switchSliderCheckedfirst');
+
+const moveJobToApplicationForm = () => {
+  localStorage.setItem('jobNumber', singleJobNumber.innerText);
+  window.location.assign('index.html#forChange');
+};
+
+window.onload = () => {
+  if (localStorage.getItem('jobNumber') !== '') {
+    document.getElementById('myonoffswitch1').checked = true;
+
+    if (document.getElementById('myonoffswitch1').checked) {
+      switchSliderCheckedfirst.classList.add('checked');
+    }
+
+    displayRadioJob.classList.add('show-list');
+    addJobNumber(localStorage.getItem('jobNumber'));
+    localStorage.setItem('jobNumber', '');
+  }
+};
 
 $(document).ready(function () {
   $('.js-example-basic-single').select2();
