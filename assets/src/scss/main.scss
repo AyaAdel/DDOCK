@@ -321,11 +321,11 @@ header.display-menu {
     transition: all 0.3s ease-in-out;
   }
 
-  &.is-eng:before {
+  &.is-dt:before {
     left: 0;
   }
 
-  &.is-dt:before {
+  &.is-eng:before {
     left: 100%;
     transform: translateX(-100%);
   }
@@ -336,7 +336,7 @@ header.display-menu {
   }
 
   ul {
-    height: 27px;
+    height: 26px;
     display: flex;
   }
 
