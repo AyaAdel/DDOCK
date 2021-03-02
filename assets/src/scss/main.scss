@@ -311,7 +311,7 @@ header.display-menu {
   &:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -1px;
     width: 27px;
     height: 27px;
     background-color: $primary-color;
@@ -322,7 +322,7 @@ header.display-menu {
   }
 
   &.is-eng:before {
-    left: 1px;
+    left: 0;
   }
 
   &.is-dt:before {
@@ -346,15 +346,15 @@ header.display-menu {
   }
 
   li {
+    width: 27px;
+    height: 27px;
     border-radius: 20px;
     text-align: center;
     transition: opacity 0.8s ease-in-out;
-    @include width(40px);
-    @include height(38px);
-    @include lineHeight(40px);
+    @include flexCenter;
 
     a {
-      @include fontSize(15px);
+      @include fontSize(13px);
     }
   }
 }
