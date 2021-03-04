@@ -1,0 +1,9 @@
+.application-form {
+  header {
+    @include flexCenter;
+  }
+
+  .for-change {
+    padding: 150px 0 50px;
+  }
+}

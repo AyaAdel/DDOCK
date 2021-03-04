@@ -143,18 +143,6 @@ if (document.getElementById('fileUpload')) {
   });
 }
 
-var jobNumbers;
-
-(function () {
-  var xhr = new XMLHttpRequest();
-  xhr.open('get', 'scripts/jobNumber.json');
-  xhr.send();
-
-  xhr.onload = function () {
-    jobNumbers = JSON.parse(xhr.responseText);
-  };
-})();
-
 const jobNumberContainer = document.getElementById('jobNumberContainer');
 
 var jobNumberSelect = function () {

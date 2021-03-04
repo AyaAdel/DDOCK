@@ -737,6 +737,18 @@
           </form>
         </div>
       </section>
+      <script>
+        var jobNumbers;
+        (function () {
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'scripts/jobNumber.json');
+          xhr.send();
+
+          xhr.onload = function () {
+            jobNumbers = JSON.parse(xhr.responseText);
+          };
+        })();
+      </script>
       @@include('./partials/talk-section.html') @@include('./partials/footer.html')
     </div>
 
