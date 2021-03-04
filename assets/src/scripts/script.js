@@ -143,6 +143,20 @@ if (document.getElementById('fileUpload')) {
   });
 }
 
+var jobNumbers;
+
+(function () {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open('GET', 'https://dev9.designerdock.de/?tx_ddapplicationform_applicationform%5Baction%5D=jobjson');
+  // xhttp.open('get', 'scripts/jobNumber.json');
+  xhttp.send();
+  console.log(xhttp.responseText);
+  xhttp.onload = function () {
+    jobNumbers = JSON.parse(xhttp.responseText);
+    console.log(jobNumbers);
+  };
+})();
+
 const jobNumberContainer = document.getElementById('jobNumberContainer');
 
 var jobNumberSelect = function () {
@@ -156,7 +170,7 @@ var jobNumberSelect = function () {
   closeJob.classList.add('show');
 
   if (filter.length >= 4) {
-    let filterJobNumbers = jobNumbers.filter((item) => item.id.includes(filter));
+    let filterJobNumbers = jobNumbers.filter((item) => item.id !== null && item.id.includes(filter));
 
     singleDropdown.innerHTML = '';
 
