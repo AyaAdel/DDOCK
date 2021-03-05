@@ -147,7 +147,10 @@ var jobNumbers;
 
 (function () {
   var xhttp = new XMLHttpRequest();
-  xhttp.open('GET', 'https://dev9.designerdock.de/?tx_ddapplicationform_applicationform%5Baction%5D=jobjson');
+  xhttp.open(
+    'GET',
+    '?type=100&tx_ddapplicationform_applicationform%5Baction%5D=renderjob&tx_ddapplicationform_applicationform%5Bcontroller%5D=Application'
+  );
   // xhttp.open('get', 'scripts/jobNumber.json');
   xhttp.send();
   console.log(xhttp.responseText);
