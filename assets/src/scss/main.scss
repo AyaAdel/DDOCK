@@ -35,11 +35,11 @@
 
 @font-face {
   font-family: PFRegular;
-  src: url('./../assets/fonts/PFDINDisplayPro-Regular.eot');
-  src: url('./../assets/fonts/PFDINDisplayPro-Regular.eot?#iefix') format('embedded-opentype'),
-    url('./../assets/fonts/PFDINDisplayPro-Regular.woff2') format('woff2'),
-    url('./../assets/fonts/PFDINDisplayPro-Regular.woff') format('woff'),
-    url('./../assets/fonts/PFDINDisplayPro-Regular.ttf') format('truetype');
+  src: url(../fonts/PFDINDisplayPro-Regular.eot);
+  src: url(../fonts/PFDINDisplayPro-Regular.eot?#iefix) format('embedded-opentype'),
+    url(./../assets/fonts/PFDINDisplayPro-Regular.woff2) format('woff2'),
+    url(../fonts/PFDINDisplayPro-Regular.woff) format('woff'),
+    url(../fonts/PFDINDisplayPro-Regular.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -47,11 +47,10 @@
 
 @font-face {
   font-family: PFMedium;
-  src: url('./../assets/fonts/PFDINDisplayPro-Medium.eot');
-  src: url('./../assets/fonts/PFDINDisplayPro-Medium.eot?#iefix') format('embedded-opentype'),
-    url('./../assets/fonts/PFDINDisplayPro-Medium.woff2') format('woff2'),
-    url('./../assets/fonts/PFDINDisplayPro-Medium.woff') format('woff'),
-    url('./../assets/fonts/PFDINDisplayPro-Medium.ttf') format('truetype');
+  src: url(../fonts/PFDINDisplayPro-Medium.eot);
+  src: url(../fonts/PFDINDisplayPro-Medium.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/PFDINDisplayPro-Medium.woff2) format('woff2'), url(../fonts/PFDINDisplayPro-Medium.woff) format('woff'),
+    url(../fonts/PFDINDisplayPro-Medium.ttf) format('truetype');
   font-weight: medium;
   font-style: normal;
   text-rendering: optimizeLegibility;
