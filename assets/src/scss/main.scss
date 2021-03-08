@@ -354,6 +354,9 @@ header.display-menu {
     @include flexCenter;
 
     a {
+      width: 100%;
+      height: 100%;
+      @include flexCenter;
       @include fontSize(13px);
     }
   }
