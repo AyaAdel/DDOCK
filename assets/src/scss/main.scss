@@ -299,6 +299,7 @@ header.display-menu {
 
 .lang-switch {
   position: relative;
+  width: 54px;
   border-radius: 20px;
   font-size: 11px;
   font-family: ParRegular;
@@ -312,6 +313,8 @@ header.display-menu {
     content: '';
     position: absolute;
     top: -1px;
+    right: 0;
+    bottom: 0;
     width: 27px;
     height: 27px;
     background-color: $primary-color;
@@ -323,11 +326,14 @@ header.display-menu {
 
   &.is-dt:before {
     left: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
   }
 
   &.is-eng:before {
-    left: 100%;
-    transform: translateX(-100%);
+    left: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
   }
 
   &.is-eng .eng a,
