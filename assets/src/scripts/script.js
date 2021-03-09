@@ -108,10 +108,12 @@ const searchEmployees = () => {
 const specificEmployeesList = document.getElementById('specificEmployeesList');
 const specificEmployees = document.getElementById('specificEmployees');
 const li = document.getElementsByClassName('specific-employees-item');
+const employeeId = document.getElementById("employee_id");
 
 for (let i = 0; i < li.length; i++) {
   li[i].addEventListener('click', function selectRegion() {
     contactEmployees.value = this.innerText;
+    employeeId.value = this.innerText;
     specificEmployeesList.classList.add('hide');
     closeRegion.classList.add('show');
   });
@@ -161,6 +163,7 @@ var jobNumbers;
 })();
 
 const jobNumberContainer = document.getElementById('jobNumberContainer');
+const jobnumbersHidden = document.getElementById('jobnumbers-hidden');
 
 var jobNumberSelect = function () {
   const jobNumber = document.getElementById('jobNumber');
@@ -215,6 +218,7 @@ const addJobNumber = (element) => {
 
 const setValue = (element) => {
   addJobNumber(element.innerText.substring(0, 6));
+  jobnumbersHidden.value = addJobNumber(element.innerText.substring(0, 6));
   element.classList.add('hide');
   closeJob.classList.add('show');
 };
