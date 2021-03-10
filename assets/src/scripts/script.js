@@ -216,9 +216,13 @@ const addJobNumber = (element) => {
   </div>`;
 };
 
+let hiddenJobNumbers = [];
+
 const setValue = (element) => {
+
   addJobNumber(element.innerText.substring(0, 6));
-  jobnumbersHidden.value = addJobNumber(element.innerText.substring(0, 6));
+  hiddenJobNumbers.push(element.innerText.substring(0, 6));
+  jobnumbersHidden.value = JSON.stringify(hiddenJobNumbers);
   element.classList.add('hide');
   closeJob.classList.add('show');
 };
