@@ -118,6 +118,11 @@ img {
   display: block !important;
 }
 
+a,
+a:hover {
+  color: #b1c110;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -1388,12 +1393,22 @@ footer {
     .btn {
       width: 210px;
       height: 50.37px;
+      margin-bottom: 35px;
       background-color: #fff;
       color: #b1c100;
       font-size: 14px;
       font-family: ParMedium;
       text-transform: uppercase;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
+    }
+  }
+
+  .privacy-link-wrapper {
+    text-align: center;
+
+    a {
+      color: #fff;
+      border-bottom: 1px solid #fff;
     }
   }
 
@@ -1509,6 +1524,10 @@ footer {
       .btn-collapse {
         height: 50px;
       }
+    }
+
+    .for-change-btn .btn {
+      margin-bottom: 22px;
     }
 
     .select2-container .select2-selection--single {
@@ -1639,6 +1658,14 @@ footer {
       label {
         font-size: 20px;
       }
+    }
+
+    .for-change-btn .btn {
+      margin-bottom: 33px;
+    }
+
+    .privacy-link-wrapper a {
+      font-size: 24px;
     }
 
     .card-body {
