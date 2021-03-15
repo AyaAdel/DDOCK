@@ -276,7 +276,8 @@ const switchSliderCheckedfirst = document.getElementById(
 
 const moveJobToApplicationForm = () => {
   localStorage.setItem("jobNumber", singleJobNumber.innerText);
-  window.location.assign("index.html#forChange");
+  window.location.assign("/applicationform?tx_ddapplicationform_applicationform%5Baction%5D=show&amp;tx_ddapplicationform_applicationform%5Bcontroller%5D=Applicationform&amp;tx_ddapplicationform_applicationform%5Bjob%5D=9701&amp;cHash=aa72d725a99c045ee3e785e153c6a2ea");
+  // window.location.assign("index.html#forChange");
 };
 
 window.onload = () => {

@@ -578,6 +578,11 @@ mark,
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: grab;
+
+  &:hover .job-card__tag a {
+    color: #e1017a;
+    transition: all .3s ease-in-out;
+  }
 }
 
 .job-card__header {
