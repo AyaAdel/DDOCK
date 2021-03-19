@@ -36,21 +36,19 @@ const changeStar = (element) => {
   element.classList.toggle("favorite");
 };
 
-const diaplaySelectItems = (element) =>
-  element.parentElement.classList.toggle("show-items");
+const diaplaySelectItems = (element) => element.parentElement.classList.toggle("show-items");
 
-const radioChecked = (element) =>
-  element.parentElement.parentElement.classList.toggle("checked");
+const radioChecked = (element) => element.parentElement.parentElement.classList.toggle("checked");
 
 const jobCardSlider = new Swiper(".block-job__slider", {
   slidesPerView: "auto",
   spaceBetween: 20,
   centeredSlides: true,
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   loopedSlides: 150,
   freeMode: true,
   freeModeMomentumRatio: 0.6,
@@ -58,6 +56,21 @@ const jobCardSlider = new Swiper(".block-job__slider", {
   wrapperClass: "block-job__slider-container",
   slideClass: "block-job__slider-item",
   slideActiveClass: "is-active",
+});
+
+// Initial state
+var scrollPos = 0;
+// adding scroll event
+window.addEventListener('scroll', function(){
+  // detects new state and compares it with the new one
+  if ((document.body.getBoundingClientRect()).top > scrollPos)
+		// document.getElementById('info-box').setAttribute('data-scroll-direction', 'UP');
+    jobCardSlider.slidePrev(1000);
+	else
+		// document.getElementById('info-box').setAttribute('data-scroll-direction', 'DOWN');
+    jobCardSlider.slideNext(1000);
+	// saves the new position for iteration.
+	scrollPos = (document.body.getBoundingClientRect()).top;
 });
 
 const closeRegion = document.getElementById("closeRegion");
@@ -83,9 +96,7 @@ const searchEmployees = () => {
     closeRegion.classList.add("show");
   }
 
-  let specificEmployeesListWrapper = document.getElementsByClassName(
-    "specific-employees-list-wrapper"
-  );
+  let specificEmployeesListWrapper = document.getElementsByClassName("specific-employees-list-wrapper");
 
   for (let i = 0; i < specificEmployeesListWrapper.length; i++) {
     let childrenLi = specificEmployeesListWrapper[i].childNodes[1].childNodes;
@@ -175,16 +186,12 @@ var jobNumberSelect = function () {
   const displayRadioJob = document.getElementById("displayRadioJob");
   const closeJob = document.getElementById("closeJob");
   let filter = jobNumber.value.toUpperCase();
-  const jobNumberSelected = jobNumberContainer.getElementsByClassName(
-    "job-number-selected"
-  );
+  const jobNumberSelected = jobNumberContainer.getElementsByClassName("job-number-selected");
 
   closeJob.classList.add("show");
 
   if (filter.length >= 4) {
-    let filterJobNumbers = jobNumbers.filter(
-      (item) => item.id !== null && item.id.includes(filter)
-    );
+    let filterJobNumbers = jobNumbers.filter((item) => item.id !== null && item.id.includes(filter));
 
     singleDropdown.innerHTML = "";
 
@@ -252,8 +259,7 @@ const btnCollapseSecond = document.getElementById("btnCollapseSecond");
 const selectBtnFirst = document.getElementById("selectBtnFirst");
 const selectBtnSecond = document.getElementById("selectBtnSecond");
 
-const displayMaskBackgroundForFirstModel = () =>
-  forChange.classList.toggle("display-first-model");
+const displayMaskBackgroundForFirstModel = () => forChange.classList.toggle("display-first-model");
 
 const removeMaskBackground = () => {
   forChange.classList.remove("display-first-model");
@@ -266,17 +272,16 @@ const removeMaskBackground = () => {
   clearJob();
 };
 
-const displayMaskBackgroundForSecondModel = () =>
-  forChange.classList.toggle("display-second-model");
+const displayMaskBackgroundForSecondModel = () => forChange.classList.toggle("display-second-model");
 
 const singleJobNumber = document.getElementById("singleJobNumber");
-const switchSliderCheckedfirst = document.getElementById(
-  "switchSliderCheckedfirst"
-);
+const switchSliderCheckedfirst = document.getElementById("switchSliderCheckedfirst");
 
 const moveJobToApplicationForm = () => {
   localStorage.setItem("jobNumber", singleJobNumber.innerText);
-  window.location.assign("/applicationform?tx_ddapplicationform_applicationform%5Baction%5D=show&amp;tx_ddapplicationform_applicationform%5Bcontroller%5D=Applicationform&amp;tx_ddapplicationform_applicationform%5Bjob%5D=9701&amp;cHash=aa72d725a99c045ee3e785e153c6a2ea");
+  window.location.assign(
+    "/applicationform?tx_ddapplicationform_applicationform%5Baction%5D=show&amp;tx_ddapplicationform_applicationform%5Bcontroller%5D=Applicationform&amp;tx_ddapplicationform_applicationform%5Bjob%5D=9701&amp;cHash=aa72d725a99c045ee3e785e153c6a2ea"
+  );
   // window.location.assign("index.html#forChange");
 };
 

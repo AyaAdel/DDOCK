@@ -20,7 +20,14 @@
   .content {
     width: 80%;
     margin: 0 auto;
-    padding: 96px 0 92px;
+    padding: 80px 0;
+
+    h1 {
+      margin-bottom: 60px;
+      font-size: 35px;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
     .dropdown-btn {
       margin-bottom: 35px;
@@ -109,6 +116,18 @@
 
     .last-dropdown-content {
       margin-bottom: 0;
+    }
+  }
+}
+
+// Media Query
+@media (max-width: 767px) {
+  .candidates-contract {
+    .content {
+      h1 {
+        margin-bottom: 40px;
+        font-size: 28px;
+      }
     }
   }
 }
