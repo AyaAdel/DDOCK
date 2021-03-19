@@ -65,10 +65,10 @@ window.addEventListener('scroll', function(){
   // detects new state and compares it with the new one
   if ((document.body.getBoundingClientRect()).top > scrollPos)
 		// document.getElementById('info-box').setAttribute('data-scroll-direction', 'UP');
-    jobCardSlider.slidePrev(1000);
+    jobCardSlider.slideNext(1000);
 	else
 		// document.getElementById('info-box').setAttribute('data-scroll-direction', 'DOWN');
-    jobCardSlider.slideNext(1000);
+    jobCardSlider.slidePrev(1000);
 	// saves the new position for iteration.
 	scrollPos = (document.body.getBoundingClientRect()).top;
 });
