@@ -113,7 +113,8 @@
     @include flexCenter;
   }
 
-  .btn {
+  .btn.between,
+  .btn.personal {
     border-radius: 10px;
     font-family: ParBold;
     @include flexCenter;

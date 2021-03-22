@@ -1,47 +1,47 @@
-const header = document.getElementById("header");
-const langSwitch = document.getElementById("langSwitch");
-const eng = document.getElementById("eng");
-const dt = document.getElementById("dt");
-const formSearch = document.getElementById("formSearch");
-const mobSearch = document.getElementById("mobSearch");
+const header = document.getElementById('header');
+const langSwitch = document.getElementById('langSwitch');
+const eng = document.getElementById('eng');
+const dt = document.getElementById('dt');
+const formSearch = document.getElementById('formSearch');
+const mobSearch = document.getElementById('mobSearch');
 
 const displayMenu = () => {
-  header.classList.toggle("display-menu");
+  header.classList.toggle('display-menu');
 };
 
 const hideMenu = () => {
-  header.classList.remove("display-menu");
+  header.classList.remove('display-menu');
 };
 
 const switchEng = () => {
-  langSwitch.classList.remove("is-dt");
-  langSwitch.classList.add("is-eng");
+  langSwitch.classList.remove('is-dt');
+  langSwitch.classList.add('is-eng');
 };
 
 const switchDt = () => {
-  langSwitch.classList.remove("is-eng");
-  langSwitch.classList.add("is-dt");
+  langSwitch.classList.remove('is-eng');
+  langSwitch.classList.add('is-dt');
 };
 
 const displayForm = () => {
-  mobSearch.classList.add("hide");
-  formSearch.classList.add("show");
+  mobSearch.classList.add('hide');
+  formSearch.classList.add('show');
 };
 
-const displayTeamContact = (element) => element.classList.add("active");
+const displayTeamContact = (element) => element.classList.add('active');
 
-const hideTeamContact = (element) => element.classList.remove("active");
+const hideTeamContact = (element) => element.classList.remove('active');
 
 const changeStar = (element) => {
-  element.classList.toggle("favorite");
+  element.classList.toggle('favorite');
 };
 
-const diaplaySelectItems = (element) => element.parentElement.classList.toggle("show-items");
+const diaplaySelectItems = (element) => element.parentElement.classList.toggle('show-items');
 
-const radioChecked = (element) => element.parentElement.parentElement.classList.toggle("checked");
+const radioChecked = (element) => element.parentElement.parentElement.classList.toggle('checked');
 
-const jobCardSlider = new Swiper(".block-job__slider", {
-  slidesPerView: "auto",
+const jobCardSlider = new Swiper('.block-job__slider', {
+  slidesPerView: 'auto',
   spaceBetween: 20,
   centeredSlides: true,
   loop: true,
@@ -53,57 +53,56 @@ const jobCardSlider = new Swiper(".block-job__slider", {
   freeMode: true,
   freeModeMomentumRatio: 0.6,
   freeModeMomentumVelocityRatio: 0.6,
-  wrapperClass: "block-job__slider-container",
-  slideClass: "block-job__slider-item",
-  slideActiveClass: "is-active",
+  wrapperClass: 'block-job__slider-container',
+  slideClass: 'block-job__slider-item',
+  slideActiveClass: 'is-active',
 });
 
 // Initial state
 var scrollPos = 0;
 // adding scroll event
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
   // detects new state and compares it with the new one
-  if ((document.body.getBoundingClientRect()).top > scrollPos)
-		// document.getElementById('info-box').setAttribute('data-scroll-direction', 'UP');
+  if (document.body.getBoundingClientRect().top > scrollPos)
+    // document.getElementById('info-box').setAttribute('data-scroll-direction', 'UP');
     jobCardSlider.slideNext(1000);
-	else
-		// document.getElementById('info-box').setAttribute('data-scroll-direction', 'DOWN');
-    jobCardSlider.slidePrev(1000);
-	// saves the new position for iteration.
-	scrollPos = (document.body.getBoundingClientRect()).top;
+  // document.getElementById('info-box').setAttribute('data-scroll-direction', 'DOWN');
+  else jobCardSlider.slidePrev(1000);
+  // saves the new position for iteration.
+  scrollPos = document.body.getBoundingClientRect().top;
 });
 
-const closeRegion = document.getElementById("closeRegion");
+const closeRegion = document.getElementById('closeRegion');
 
 const searchEmployees = () => {
-  let contactEmployees = document.getElementById("contactEmployees");
+  let contactEmployees = document.getElementById('contactEmployees');
   let filter = contactEmployees.value.toUpperCase();
 
   for (let i = 0; i < li.length; i++) {
     let textValue = li[i].textContent || li[i].innerText;
 
     if (textValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-      specificEmployeesList.classList.remove("hide");
+      li[i].style.display = '';
+      specificEmployeesList.classList.remove('hide');
     } else {
-      li[i].style.display = "none";
+      li[i].style.display = 'none';
     }
   }
 
-  if (contactEmployees.value === "") {
-    closeRegion.classList.remove("show");
+  if (contactEmployees.value === '') {
+    closeRegion.classList.remove('show');
   } else {
-    closeRegion.classList.add("show");
+    closeRegion.classList.add('show');
   }
 
-  let specificEmployeesListWrapper = document.getElementsByClassName("specific-employees-list-wrapper");
+  let specificEmployeesListWrapper = document.getElementsByClassName('specific-employees-list-wrapper');
 
   for (let i = 0; i < specificEmployeesListWrapper.length; i++) {
     let childrenLi = specificEmployeesListWrapper[i].childNodes[1].childNodes;
     let allHidden = false;
 
     for (let v = 0; v < childrenLi.length; v++) {
-      if (getComputedStyle(childrenLi[v]).display !== "none") {
+      if (getComputedStyle(childrenLi[v]).display !== 'none') {
         allHidden = false;
         break;
       }
@@ -111,44 +110,44 @@ const searchEmployees = () => {
     }
 
     if (allHidden) {
-      specificEmployeesListWrapper[i].childNodes[0].style.display = "none";
-      specificEmployeesListWrapper[i].style.display = "none";
+      specificEmployeesListWrapper[i].childNodes[0].style.display = 'none';
+      specificEmployeesListWrapper[i].style.display = 'none';
     } else {
-      specificEmployeesListWrapper[i].childNodes[0].style.display = "";
-      specificEmployeesListWrapper[i].style.display = "";
+      specificEmployeesListWrapper[i].childNodes[0].style.display = '';
+      specificEmployeesListWrapper[i].style.display = '';
     }
   }
 };
 
-const specificEmployeesList = document.getElementById("specificEmployeesList");
-const specificEmployees = document.getElementById("specificEmployees");
-const li = document.getElementsByClassName("specific-employees-item");
-const employeeId = document.getElementById("employee_id");
+const specificEmployeesList = document.getElementById('specificEmployeesList');
+const specificEmployees = document.getElementById('specificEmployees');
+const li = document.getElementsByClassName('specific-employees-item');
+const employeeId = document.getElementById('employee_id');
 
 for (let i = 0; i < li.length; i++) {
-  li[i].addEventListener("click", function selectRegion() {
+  li[i].addEventListener('click', function selectRegion() {
     contactEmployees.value = this.innerText;
     employeeId.value = this.id;
-    specificEmployeesList.classList.add("hide");
-    closeRegion.classList.add("show");
+    specificEmployeesList.classList.add('hide');
+    closeRegion.classList.add('show');
   });
 }
 
 const clearRegion = (item) => {
-  contactEmployees.value = "";
+  contactEmployees.value = '';
   searchEmployees();
-  item.classList.remove("show");
+  item.classList.remove('show');
 };
 
-var defaultMessage = "Upload Or Drop your CV/Portfolio",
-  deleteMessage = "Remove file",
-  cancelMessage = "Cancel upload",
-  fileTooBig = "Your attachment is too big! Please limit them to 30MB";
+var defaultMessage = 'Upload Or Drop your CV/Portfolio',
+  deleteMessage = 'Remove file',
+  cancelMessage = 'Cancel upload',
+  fileTooBig = 'Your attachment is too big! Please limit them to 30MB';
 
-if (document.getElementById("fileUpload")) {
-  var dropzone2 = new Dropzone("#fileUpload", {
-    paramName: "file",
-    url: "http://ddock.webofficeit.com/",
+if (document.getElementById('fileUpload')) {
+  var dropzone2 = new Dropzone('#fileUpload', {
+    paramName: 'file',
+    url: 'http://ddock.webofficeit.com/',
     addRemoveLinks: true,
     createImageThumbnails: false,
     dictDefaultMessage: defaultMessage,
@@ -165,8 +164,8 @@ var jobNumbers;
 (function () {
   var xhttp = new XMLHttpRequest();
   xhttp.open(
-    "GET",
-    "?type=100&tx_ddapplicationform_applicationform%5Baction%5D=renderjob&tx_ddapplicationform_applicationform%5Bcontroller%5D=Application"
+    'GET',
+    '?type=100&tx_ddapplicationform_applicationform%5Baction%5D=renderjob&tx_ddapplicationform_applicationform%5Bcontroller%5D=Application'
   );
   // xhttp.open('get', 'scripts/jobNumber.json');
   xhttp.send();
@@ -177,23 +176,23 @@ var jobNumbers;
   };
 })();
 
-const jobNumberContainer = document.getElementById("jobNumberContainer");
-const jobnumbersHidden = document.getElementById("jobnumbers-hidden");
+const jobNumberContainer = document.getElementById('jobNumberContainer');
+const jobnumbersHidden = document.getElementById('jobnumbers-hidden');
 
 var jobNumberSelect = function () {
-  const jobNumber = document.getElementById("jobNumber");
-  const singleDropdown = document.getElementById("singleDropdown");
-  const displayRadioJob = document.getElementById("displayRadioJob");
-  const closeJob = document.getElementById("closeJob");
+  const jobNumber = document.getElementById('jobNumber');
+  const singleDropdown = document.getElementById('singleDropdown');
+  const displayRadioJob = document.getElementById('displayRadioJob');
+  const closeJob = document.getElementById('closeJob');
   let filter = jobNumber.value.toUpperCase();
-  const jobNumberSelected = jobNumberContainer.getElementsByClassName("job-number-selected");
+  const jobNumberSelected = jobNumberContainer.getElementsByClassName('job-number-selected');
 
-  closeJob.classList.add("show");
+  closeJob.classList.add('show');
 
   if (filter.length >= 4) {
     let filterJobNumbers = jobNumbers.filter((item) => item.id !== null && item.id.includes(filter));
 
-    singleDropdown.innerHTML = "";
+    singleDropdown.innerHTML = '';
 
     for (let job of filterJobNumbers) {
       let matchselectedJob = false;
@@ -204,21 +203,21 @@ var jobNumberSelect = function () {
       }
       if (!matchselectedJob) {
         singleDropdown.innerHTML += `<li onclick="setValue(this)">${job.text}</li>`;
-        closeJob.classList.add("show");
-        forChange.classList.add("display-job-number-list");
+        closeJob.classList.add('show');
+        forChange.classList.add('display-job-number-list');
       }
 
-      if (singleDropdown.length !== 0 || jobNumber.value !== "") {
-        displayRadioJob.classList.add("show-list");
+      if (singleDropdown.length !== 0 || jobNumber.value !== '') {
+        displayRadioJob.classList.add('show-list');
       } else {
-        displayRadioJob.classList.remove("show-list");
+        displayRadioJob.classList.remove('show-list');
       }
     }
   } else {
     filterJobNumbers = [];
-    singleDropdown.innerHTML = "";
-    closeJob.classList.remove("show");
-    forChange.classList.remove("display-first-model");
+    singleDropdown.innerHTML = '';
+    closeJob.classList.remove('show');
+    forChange.classList.remove('display-first-model');
   }
 };
 
@@ -234,12 +233,12 @@ const addJobNumber = (element) => {
 const setValue = (element) => {
   addJobNumber(element.innerText.substring(0, 6));
   if (jobnumbersHidden.value.length > 5) {
-    jobnumbersHidden.value += "," + element.innerText.substring(0, 6);
+    jobnumbersHidden.value += ',' + element.innerText.substring(0, 6);
   } else {
     jobnumbersHidden.value += element.innerText.substring(0, 6);
   }
-  element.classList.add("hide");
-  closeJob.classList.add("show");
+  element.classList.add('hide');
+  closeJob.classList.add('show');
 };
 
 const removeJob = (element) => {
@@ -248,70 +247,75 @@ const removeJob = (element) => {
 };
 
 const clearJob = () => {
-  jobNumber.value = "";
-  closeJob.classList.remove("show");
-  singleDropdown.innerHTML = "";
+  jobNumber.value = '';
+  closeJob.classList.remove('show');
+  singleDropdown.innerHTML = '';
 };
 
-const forChange = document.getElementById("forChange");
-const btnCollapseFirst = document.getElementById("btnCollapseFirst");
-const btnCollapseSecond = document.getElementById("btnCollapseSecond");
-const selectBtnFirst = document.getElementById("selectBtnFirst");
-const selectBtnSecond = document.getElementById("selectBtnSecond");
+const forChange = document.getElementById('forChange');
+const btnCollapseFirst = document.getElementById('btnCollapseFirst');
+const btnCollapseSecond = document.getElementById('btnCollapseSecond');
+const selectBtnFirst = document.getElementById('selectBtnFirst');
+const selectBtnSecond = document.getElementById('selectBtnSecond');
 
-const displayMaskBackgroundForFirstModel = () => forChange.classList.toggle("display-first-model");
+const displayMaskBackgroundForFirstModel = () => forChange.classList.toggle('display-first-model');
 
 const removeMaskBackground = () => {
-  forChange.classList.remove("display-first-model");
-  forChange.classList.remove("display-second-model");
-  forChange.classList.remove("display-job-number-list");
-  btnCollapseFirst.classList.remove("show");
-  btnCollapseSecond.classList.remove("show");
-  selectBtnFirst.setAttribute("aria-expanded", "false");
-  selectBtnSecond.setAttribute("aria-expanded", "false");
+  forChange.classList.remove('display-first-model');
+  forChange.classList.remove('display-second-model');
+  forChange.classList.remove('display-job-number-list');
+  btnCollapseFirst.classList.remove('show');
+  btnCollapseSecond.classList.remove('show');
+  selectBtnFirst.setAttribute('aria-expanded', 'false');
+  selectBtnSecond.setAttribute('aria-expanded', 'false');
   clearJob();
 };
 
-const displayMaskBackgroundForSecondModel = () => forChange.classList.toggle("display-second-model");
+const displayMaskBackgroundForSecondModel = () => forChange.classList.toggle('display-second-model');
 
-const singleJobNumber = document.getElementById("singleJobNumber");
-const switchSliderCheckedfirst = document.getElementById("switchSliderCheckedfirst");
+const singleJobNumber = document.getElementById('singleJobNumber');
+const switchSliderCheckedfirst = document.getElementById('switchSliderCheckedfirst');
 
 const moveJobToApplicationForm = () => {
-  localStorage.setItem("jobNumber", singleJobNumber.innerText);
-  window.location.assign(
-    "/applicationform?tx_ddapplicationform_applicationform%5Baction%5D=show&amp;tx_ddapplicationform_applicationform%5Bcontroller%5D=Applicationform&amp;tx_ddapplicationform_applicationform%5Bjob%5D=9701&amp;cHash=aa72d725a99c045ee3e785e153c6a2ea"
-  );
+  const getIdFromURL = window.location.href.slice(window.location.href.length - 6).toLowerCase();
+  const getIdFromJob = singleJobNumber.innerText.toLowerCase();
+
+  if (getIdFromURL == getIdFromJob) {
+    localStorage.setItem('jobNumber', singleJobNumber.innerText);
+    window.location.assign(
+      '/applicationform?tx_ddapplicationform_applicationform%5Baction%5D=show&amp;tx_ddapplicationform_applicationform%5Bcontroller%5D=Applicationform&amp;tx_ddapplicationform_applicationform%5Bjob%5D=9701&amp;cHash=aa72d725a99c045ee3e785e153c6a2ea'
+    );
+  }
   // window.location.assign("index.html#forChange");
 };
 
 window.onload = () => {
-  if (localStorage.getItem("jobNumber") !== "") {
-    document.getElementById("myonoffswitch1").checked = true;
+  if (localStorage.getItem('jobNumber') !== '') {
+    document.getElementById('myonoffswitch1').checked = true;
 
-    if (document.getElementById("myonoffswitch1").checked) {
-      switchSliderCheckedfirst.classList.add("checked");
+    if (document.getElementById('myonoffswitch1').checked) {
+      switchSliderCheckedfirst.classList.add('checked');
     }
 
-    displayRadioJob.classList.add("show-list");
-    addJobNumber(localStorage.getItem("jobNumber"));
-    localStorage.setItem("jobNumber", "");
+    displayRadioJob.classList.add('show-list');
+    addJobNumber(localStorage.getItem('jobNumber'));
+    localStorage.setItem('jobNumber', '');
   }
 };
 
 $(document).ready(function () {
-  $(".js-example-basic-single").select2();
+  $('.js-example-basic-single').select2();
 
-  $(".marking-design-slider").slick({
+  $('.marking-design-slider').slick({
     prevArrow: '<i class="fa fa-angle-left" aria-hidden="true"></i>',
     nextArrow: '<i class="fa fa-angle-right" aria-hidden="true"></i>',
   });
 
-  $(".img-parallax").each(function () {
+  $('.img-parallax').each(function () {
     var img = $(this);
     var imgParent = $(this).parent();
     function parallaxImg() {
-      var speed = img.data("speed");
+      var speed = img.data('speed');
       var imgY = imgParent.offset().top;
       var winY = $(this).scrollTop();
       var winH = $(this).height();
@@ -330,8 +334,8 @@ $(document).ready(function () {
         var imgPercent = (imgBottom / imgTop) * 100 + (50 - speed * 50);
       }
       img.css({
-        top: imgPercent + "%",
-        transform: "translate(-50%, -" + imgPercent + "%)",
+        top: imgPercent + '%',
+        transform: 'translate(-50%, -' + imgPercent + '%)',
       });
     }
     $(document).on({
