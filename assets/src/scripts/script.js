@@ -169,10 +169,8 @@ var jobNumbers;
   );
   // xhttp.open('get', 'scripts/jobNumber.json');
   xhttp.send();
-  console.log(xhttp.responseText);
   xhttp.onload = function () {
     jobNumbers = JSON.parse(xhttp.responseText);
-    console.log(jobNumbers);
   };
 })();
 
@@ -277,20 +275,12 @@ const singleJobNumber = document.getElementById('singleJobNumber');
 const switchSliderCheckedfirst = document.getElementById('switchSliderCheckedfirst');
 
 const moveJobToApplicationForm = () => {
-  const getIdFromURL = window.location.href.slice(window.location.href.length - 6).toLowerCase();
-  const getIdFromJob = singleJobNumber.innerText.toLowerCase();
-
-  if (getIdFromURL == getIdFromJob) {
-    localStorage.setItem('jobNumber', singleJobNumber.innerText);
-    window.location.assign(
-      '/applicationform?tx_ddapplicationform_applicationform%5Baction%5D=show&amp;tx_ddapplicationform_applicationform%5Bcontroller%5D=Applicationform&amp;tx_ddapplicationform_applicationform%5Bjob%5D=9701&amp;cHash=aa72d725a99c045ee3e785e153c6a2ea'
-    );
-  }
+  localStorage.setItem('jobNumber', singleJobNumber.innerText);
   // window.location.assign("index.html#forChange");
 };
 
 window.onload = () => {
-  if (localStorage.getItem('jobNumber') !== '') {
+  if (localStorage.getItem('jobNumber') !== '' && window.location.href.includes('Hash')) {
     document.getElementById('myonoffswitch1').checked = true;
 
     if (document.getElementById('myonoffswitch1').checked) {
