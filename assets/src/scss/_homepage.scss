@@ -118,6 +118,10 @@
     }
   }
 
+  .mobile-header {
+    display: none;
+  }
+
   .marking-design {
     width: 85%;
     margin: 0 auto;
@@ -455,6 +459,14 @@
 
 @media (max-width: 767px) {
   .homepage {
+    .desktop-header {
+      display: none;
+    }
+
+    .mobile-header {
+      display: flex;
+    }
+
     header {
       height: 766px;
 

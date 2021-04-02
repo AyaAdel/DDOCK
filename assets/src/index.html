@@ -4,7 +4,7 @@
 
   <body>
     <div class="homepage">
-      <header style="background-image: url('imgs/homepage-banner.gif')" id="header">
+      <header style="background-image: url('imgs/homepage-banner.gif')" class="desktop-header" id="header">
         <div id="behind" class="background-behind" onclick="hideMenu()"></div>
         @@include('./partials/navbar.html')
         <div class="header-content">
@@ -28,6 +28,23 @@
             <li><a href="#">STUTTGART</a></li>
             <li><a href="#">WIEN</a></li>
           </ul>
+        </div>
+      </header>
+      <header style="background-image: url('imgs/homepage-banner-mobile.gif')" class="mobile-header" id="header">
+        <div id="behind" class="background-behind" onclick="hideMenu()"></div>
+        @@include('./partials/navbar.html')
+        <div class="header-content">
+          <div class="header-content-info">
+            <h1><span>JUMPSTART</span>YOUR CAREER</h1>
+            <p>Ready to go to the next level? We'll support you all the way. For free.</p>
+            <div class="editing-section">
+              <a href="#" class="btn editing">Bewerben</a>
+              <div class="editing-section-links">
+                <a href="#"><span>309 Offene Stellen</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                <a href="#"><span>Personal Finden</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+              </div>
+            </div>
+          </div>
           <form class="choose-your-city">
             <div class="form-item">
               <select class="js-example-basic-single form-control" name="state">

@@ -1,17 +1,17 @@
-@import '_variables';
-@import '_about';
-@import '_find-job';
-@import '_candidates-contract';
-@import '_single-job';
-@import '_personal-search';
-@import '_city-office';
-@import '_professions';
-@import '_terms-business';
-@import '_contacts';
-@import '_homepage';
-@import '_just-cards';
-@import '_applicarion-form';
-@import '_preproduction&copyright';
+@import "_variables";
+@import "_about";
+@import "_find-job";
+@import "_candidates-contract";
+@import "_single-job";
+@import "_personal-search";
+@import "_city-office";
+@import "_professions";
+@import "_terms-business";
+@import "_contacts";
+@import "_homepage";
+@import "_just-cards";
+@import "_applicarion-form";
+@import "_preproduction&copyright";
 
 // Fonts
 @font-face {
@@ -37,10 +37,10 @@
 @font-face {
   font-family: PFRegular;
   src: url(../fonts/PFDINDisplayPro-Regular.eot);
-  src: url(../fonts/PFDINDisplayPro-Regular.eot?#iefix) format('embedded-opentype'),
-    url(./../assets/fonts/PFDINDisplayPro-Regular.woff2) format('woff2'),
-    url(../fonts/PFDINDisplayPro-Regular.woff) format('woff'),
-    url(../fonts/PFDINDisplayPro-Regular.ttf) format('truetype');
+  src: url(../fonts/PFDINDisplayPro-Regular.eot?#iefix) format("embedded-opentype"),
+    url(./../assets/fonts/PFDINDisplayPro-Regular.woff2) format("woff2"),
+    url(../fonts/PFDINDisplayPro-Regular.woff) format("woff"),
+    url(../fonts/PFDINDisplayPro-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -49,9 +49,9 @@
 @font-face {
   font-family: PFMedium;
   src: url(../fonts/PFDINDisplayPro-Medium.eot);
-  src: url(../fonts/PFDINDisplayPro-Medium.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/PFDINDisplayPro-Medium.woff2) format('woff2'), url(../fonts/PFDINDisplayPro-Medium.woff) format('woff'),
-    url(../fonts/PFDINDisplayPro-Medium.ttf) format('truetype');
+  src: url(../fonts/PFDINDisplayPro-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/PFDINDisplayPro-Medium.woff2) format("woff2"), url(../fonts/PFDINDisplayPro-Medium.woff) format("woff"),
+    url(../fonts/PFDINDisplayPro-Medium.ttf) format("truetype");
   font-weight: medium;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -59,11 +59,11 @@
 
 @font-face {
   font-family: PFBold;
-  src: url('./../assets/fonts/PFDINDisplayPro-Bold.eot');
-  src: url('./../assets/fonts/PFDINDisplayPro-Bold.eot?#iefix') format('embedded-opentype'),
-    url('./../assets/fonts/PFDINDisplayPro-Bold.woff2') format('woff2'),
-    url('./../assets/fonts/PFDINDisplayPro-Bold.woff') format('woff'),
-    url('./../assets/fonts/PFDINDisplayPro-Bold.ttf') format('truetype');
+  src: url("./../assets/fonts/PFDINDisplayPro-Bold.eot");
+  src: url("./../assets/fonts/PFDINDisplayPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./../assets/fonts/PFDINDisplayPro-Bold.woff2") format("woff2"),
+    url("./../assets/fonts/PFDINDisplayPro-Bold.woff") format("woff"),
+    url("./../assets/fonts/PFDINDisplayPro-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -108,6 +108,11 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+h1 span,
+h2 span {
+  color: #b1c110;
 }
 
 img {
@@ -320,7 +325,7 @@ header.display-menu {
   @include margin(right, 106px);
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: -1px;
     right: 0;
@@ -525,6 +530,13 @@ footer {
 
   .copyright {
     display: none;
+  }
+}
+
+// Common Page
+.common-page {
+  header {
+    @include flexCenter;
   }
 }
 
@@ -804,7 +816,7 @@ footer {
     justify-content: center;
   }
 
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     height: auto;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -813,9 +825,9 @@ footer {
     content: none;
   }
 
-  input[type='checkbox']:before {
-    font-family: 'FontAwesome';
-    content: '\f00c';
+  input[type="checkbox"]:before {
+    font-family: "FontAwesome";
+    content: "\f00c";
     font-size: 11px;
     color: transparent !important;
     background: transparent;
@@ -826,7 +838,7 @@ footer {
     border-radius: 5px;
   }
 
-  input[type='checkbox']:checked:before {
+  input[type="checkbox"]:checked:before {
     color: #fff !important;
     background-color: $primary-color;
     display: flex;
@@ -844,7 +856,7 @@ footer {
     justify-content: center;
   }
 
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     height: auto;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -854,8 +866,8 @@ footer {
     cursor: pointer;
   }
 
-  input[type='checkbox']:before {
-    content: '';
+  input[type="checkbox"]:before {
+    content: "";
     background: transparent;
     display: block;
     width: 39px;
@@ -866,11 +878,11 @@ footer {
     @include flexCenter;
   }
 
-  input[type='checkbox'].select-vollz:before {
-    content: 'Vollz';
+  input[type="checkbox"].select-vollz:before {
+    content: "Vollz";
   }
 
-  input[type='checkbox']:checked:before {
+  input[type="checkbox"]:checked:before {
     color: #fff !important;
     background-color: $primary-color;
     border-color: $primary-color;
@@ -954,12 +966,12 @@ footer {
     border-radius: 10px;
     @include flexBetween;
 
-    &[aria-expanded='true'] i {
+    &[aria-expanded="true"] i {
       transform: rotate(180deg);
       transition: all 0.3s ease-in-out;
     }
 
-    &[aria-expanded='false'] i {
+    &[aria-expanded="false"] i {
       transition: all 0.3s ease-in-out;
     }
   }
@@ -1294,14 +1306,14 @@ footer {
   }
 
   .onoffswitch-inner:before {
-    content: 'YES';
+    content: "YES";
     padding-left: 15px;
     background-color: #c5d806;
     color: #ffffff;
   }
 
   .onoffswitch-inner:after {
-    content: 'NO';
+    content: "NO";
     padding-right: 15px;
     background-color: #8c980e;
     color: #ffffff;
@@ -1432,7 +1444,7 @@ footer {
       display: block;
     }
 
-    button[data-target='#btnCollapseFirst'] {
+    button[data-target="#btnCollapseFirst"] {
       position: relative;
       z-index: 4;
     }
@@ -1443,7 +1455,7 @@ footer {
       display: block;
     }
 
-    button[data-target='#btnCollapseSecond'] {
+    button[data-target="#btnCollapseSecond"] {
       position: relative;
       z-index: 4;
     }
@@ -1703,7 +1715,7 @@ footer {
         justify-content: space-between;
         display: none;
 
-        input[type='checkbox']:before {
+        input[type="checkbox"]:before {
           width: 55px;
           height: 25px;
           font-size: 16px;
@@ -1720,11 +1732,11 @@ footer {
       }
     }
 
-    input[type='checkbox']:checked:before {
+    input[type="checkbox"]:checked:before {
       align-items: center;
     }
 
-    input[type='checkbox']:before {
+    input[type="checkbox"]:before {
       width: 25px;
       height: 25px;
       font-size: 16px;
@@ -1852,4 +1864,4 @@ footer {
   }
 }
 
-@import '_responsive';
+@import "_responsive";
