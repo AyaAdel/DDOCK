@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Dockblog Entry" })
+
+  <body>
+    <div class="dockblog-entry">
+      <header id="header">
+        <div id="behind" class="background-behind" onclick="hideMenu()"></div>
+        @@include('./partials/navbar.html',{ "navLink": '<a href="./dockblog.html">Dockblog</a>' , "subNavLink": "Blog Entry" })
+      </header>
+      <div class="content">
+        <div class="dockblog-entry-container">
+
+        </div>
+      </div>
+      @@include('./partials/contact-form.html')
+      @@include('./partials/footer.html')
+    </div>
+
+    @@include('./partials/scripts.html')
+  </body>
+</html>
