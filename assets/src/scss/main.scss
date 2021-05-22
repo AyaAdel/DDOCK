@@ -13,6 +13,7 @@
 @import "_applicarion-form";
 @import "_preproduction&copyright";
 @import "_dockblog";
+@import "_dockblog-entry";
 
 // Fonts
 @font-face {
@@ -1497,9 +1498,10 @@ footer {
       display: flex;
     }
 
-    li {
+    a {
       width: 71px;
       height: 28px;
+      margin-right: 21px;
       font-size: 14px;
       border: 1px solid #000;
       border-radius: 5px;

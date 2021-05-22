@@ -1,20 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Dockblog Entry" })
+  @@include('./partials/head.html',{ "title": "DESIGNERDOCK - Blog Entry" })
 
   <body>
-    <div class="dockblog-entry">
+    <div class="dockblog dockblog-entry">
       <header id="header">
         <div id="behind" class="background-behind" onclick="hideMenu()"></div>
         @@include('./partials/navbar.html',{ "navLink": '<a href="./dockblog.html">Dockblog</a>' , "subNavLink": "Blog Entry" })
       </header>
       <div class="content">
-        <div class="dockblog-entry-container">
-
+        <div class="dock-container">
+          <div class="all-entries">
+            <a href="/"><i class="fa fa-angle-left"></i>All Entries</a>
+          </div>
+          <div class="blog-entry-wrapper">
+            <div class="blog-entry-content-wrapper">
+              @@include('./partials/dockblog-item-image.html')
+              <div class="blog-entry-content">
+                <h2>Gesundheit im Home Office – Ein Reminder</h2>
+                <div class="item-content-date">18.03.2021 Arbeitswelt</div>
+                <div class="item-content-date">Alexander Dewhirst, Designerdock Gründer</div>
+                <p class="blog-first-p">
+                  Wir haben in den vergangenen Monaten schon eine ganze Menge darüber gelesen, aber mit der Zeit
+                  schleichen sich alte Muster ein, weil wir uns ans Home Office gewöhnen oder uns zuhause einfacg zu
+                  sehr zuhause fühlen um hier auch noch auf die eigene Personalhygiene zu achten. Das gilt auch für all
+                  diejenigen unter uns, die nicht erst seit einem einem guten Jahr von zuhause aus arbeiten.
+                </p>
+              </div>
+              <div class="blog-entry-content">
+                <div class="item-title">Was kann ich für mich tun?</div>
+                <p class="item-content-p">
+                  Mit der Normalität, die ein Arbeiten in relativer Isolation für uns inzwischen darstellt, steigt die
+                  Gefahr, dass wir die Verantwortung für das eigene Arbeitsumfeld und die Abläufe darin vernachlässigen,
+                  die uns im Home Office zusätzlich zur Erledigung unserer Aufgaben zukommt. Die Selbstfürsorge am
+                  Arbeitsplatz darf nicht darunter leiden, dass er sich in den eigenen vier Wänden befindet. Je mehr
+                  sich Arbeit und Privatleben vermischen, desto wichtiger ist ein Augenmerk auf die eigenen Ressourcen
+                  und die Regeneration dieser.
+                </p>
+                <p>Die folgenden Aspekte sollte man dabei nicht außer Acht lassen:</p>
+              </div>
+              <div class="blog-entry-content">
+                <div class="item-title">Arbeit und Freizeit trennen</div>
+                <p class="item-content-p">
+                  Schon einige Zeit vor Beginn der Corona-Krise fand eine Studie der Hans-Böckler-Stiftung heraus, dass
+                  rund 45% der im Home Office beschäftigten nach der Arbeit schlecht abschalten können (Die Quote ohne
+                  Home Office lag bei 26%). Durch die angespannte Lage am Arbeitsmarkt dürfte sich der Druck, stets
+                  erreichbar zu sein, noch erhöht haben. Dadurch steigt auch die Gefahr, dass die wichtigen
+                  Erholungsphasen kürzer werden und ihre ausgleichende Wirkung nicht mehr entfalten können. Damit tun
+                  wir weder uns selbst, noch dem vermeintlich auf unsere Erreichbarkeit erpichten Arbeitgeber einen
+                  Gefallen. Die volle Leistung können wir nur dann entfalten, wenn wir ausgeruht sind. Wie entgehe also
+                  ich der Falle, dass ich mich am Arbeitsplatz wie zuhause fühle und umgekehrt? Folgendes kann helfen:
+                </p>
+                <p class="item-content-p">
+                  Feste Arbeitszeiten kommunizieren und einhalten: Der Fokus auf das Einhalten der eigenen Arbeitszeiten
+                  ist im Home Office viel wichtiger als im Büro, weil die räumliche Distanz zur Arbeit fehlt. Es kann
+                  hilfreich sein, sich einen Wecker zum Arbeitsende zu stellen und/oder das damit einhergehende Ende der
+                  geschäftlichen Erreichbarkeit zu kommunizieren, zum Beispiel durch eine entsprechende E-Mail Signatur,
+                  in der steht, von wann bis wann man erreichbar ist.
+                </p>
+                <p class="item-content-p">
+                  Das Büro abschließen: Nicht jeder hat zuhause den Luxus eines eigenen Büros, dass er oder sie zum Ende
+                  der Arbeitszeit verlassen kann. Hier kann es helfen, eine Schublade oder ein Schrankfach frei zu
+                  räumen, in dem man seine Arbeitsutensilien außer Sichtweite verstaut, um den Arbeitstag mental
+                  abzuschließen.
+                </p>
+                <p class="item-content-p">
+                  Die Uniform ablegen: Eine weitere Zäsur, die man zwischen Arbeit und Feierabend im Home Office setzen
+                  kann, ist das Tragen von Arbeitskleidung. Man muss sich dazu im eigenen Heim nicht unnatürlich
+                  aufbrezeln. Es genügt der Wechsel von einem bequemen Outfit in ein anderes.
+                </p>
+                <p>
+                  Zur Arbeit und nachhause gehen: Den inneren Overachiever, der sich auf diese Weise nicht vom
+                  Feierabend überzeugen lässt, kann man auch überlisten, indem einen Arbeitsweg vortäuscht. Das
+                  Abschalten und Runterkommen, das man sonst gezwungenermaßen auf einem Transfer vom Arbeitsplatz per
+                  Fahrrad, Auto oder ÖPNV erleben würde, fehlt im Home Office genauso wie umgekehrt auch das Einstellen
+                  auf den Arbeitstag auf dem Weg dorthin. Beides kann man durch einen kurzen Spaziergang simulieren, den
+                  man vor oder nach der Arbeitszeit einlegt.
+                </p>
+              </div>
+              <div class="blog-entry-content">
+                <div class="item-title">Bewegung und Ernährung</div>
+                <p class="item-content-p">
+                  Der tägliche Spaziergang tut auch in Pausen gut. Nicht nur um den Kopf freizubekommen und kreativen
+                  Akku aufzuladen. Auch Bewegung ist im Home Office mitunter wichtiger als im „echten“ Büro, sei es weil
+                  der ergonomische Bürostuhl oder der höhenverstellbare Schreibtisch fehlen, oder weil man in
+                  Ermangelung physischer Meeting-Räume über längere Zeitstrecken am Arbeitsplatz klebt. Die embryonale
+                  Haltung, die wir im Home Office mitunter zu oft zum Arbeiten einnehmen, kann zu ernsthaften
+                  gesundheitlichen Problemen führen. In der klassisch zusammengedrückten Arbeitshaltung auf dem Sofa
+                  quetschen wir zum Beispiel unsere Organe ein und beeinträchtigen so ihre Funktion. Wir sollten also
+                  für die Möglichkeit einer gesünderen Sitzhaltung sorgen und uns regelmäßig daran erinnern, diese
+                  einzunehmen.
+                </p>
+                <p>
+                  Wie im „normalen“ Büro sollte man auch im Home Office mindestens einmal pro Stunde aufstehen und sich
+                  bewegen. Daran kann man sich bequem per App erinnern lassen. Ob man dann eine kurze, den Rücken
+                  entspannende Übung wie Armkreisen macht, eine kurze Meditation, oder lüftet oder eine Runde um den
+                  Block geht ist einerlei. Es hilft auch schon ein Gang zum Kühlschrank oder zum Wasserkocher. So ist es
+                  auch sinnvoll, wenn wir Essen oder Trinken nicht direkt an unserem Arbeitsplatz horten, sondern jedes
+                  Mal extra aufstehen müssen, wenn wir zum Beispiel ein neues Glas Wasser möchten. Doch nicht nur der
+                  Weg ist das Ziel. „Du bist, was du isst“ gilt auch im Home Office. Genau wie die goldene
+                  Gesundheitsregel, dass man den Körper einmal am Tag ins Schwitzen bringen sollte, um den Kreislauf bei
+                  der Stange zu halten.
+                </p>
+              </div>
+              <div class="blog-entry-content">
+                <div class="item-title">Meetings sinnvoll gestalten</div>
+                <p class="item-content-p">
+                  Zu guter Letzt kann ein Reality-Check in Sachen Meetingkultur im Home Office genauso wenig schaden wie
+                  im Büroalltag. Täglich acht Stunden in Videomeetigs zu verbringen, ist anstrengend und in den
+                  wenigsten Fällen sinnvoll. Die Verlockung, das eigene Engagement für ein Thema durch Anwesenheit im
+                  Meeting zu demonstrieren ist zwar in Zeiten der relativen Isolation noch höher als sonst, bleibt aber
+                  genauso fragwürdig.
+                </p>
+                <p class="item-content-p">
+                  Es ist wichtig, mit den Kollegen in Kontakt und Austausch zu bleiben. Das funktioniert aber durch
+                  sporadische Telefonate oder Spaziergänge, zu denen man sich zu zweit verabredet, besser als in
+                  virtuellen Gruppentreffen.
+                </p>
+                <div class="social-media-mobile">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <a href="#" class="show-more">Zurück</a>
+              </div>
+              <div class="blog-comments">
+                <h2 class="blog-heading">Kommentare (0)</h2>
+                <p>Keine Kommentare gefunden!</p>
+              </div>
+              <div class="blog-comments-form">
+                <h2 class="blog-heading">Neuen Kommentar schreiben</h2>
+                <form action="">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="John Doe" id="name" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-Mail-Adresse:</label>
+                    <input type="email" placeholder="Email" id="email" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">Kommentar:</label>
+                    <textarea id="comment">Kommentar…</textarea>
+                  </div>
+                  <button class="btn">Absenden</button>
+                </form>
+              </div>
+            </div>
+            @@include('./partials/dockblog-subscription-wrapper.html')
+          </div>
         </div>
       </div>
-      @@include('./partials/contact-form.html')
-      @@include('./partials/footer.html')
+      @@include('./partials/contact-form.html') @@include('./partials/footer.html')
     </div>
 
     @@include('./partials/scripts.html')
