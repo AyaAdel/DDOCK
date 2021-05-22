@@ -130,6 +130,8 @@
     }
 
     .social-media-mobile {
+      display: none;
+
       ul {
         display: flex;
       }
@@ -229,7 +231,8 @@
         float: none;
       }
 
-      .blog-item-image {
+      .blog-item-image,
+      .social-media-mobile {
         display: block;
       }
 
